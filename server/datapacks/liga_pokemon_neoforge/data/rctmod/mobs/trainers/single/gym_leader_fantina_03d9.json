@@ -1,0 +1,25 @@
+{
+  "battleCooldownTicks": 240,
+  "biomeTagBlacklist": [
+    "is_void",
+    "is_nether"
+  ],
+  "biomeTagWhitelist": [
+    "is_spooky",
+    "is_sparse_vegetation"
+  ],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "optional": false,
+  "requiredDefeats": [
+    [
+      "gym_leader_wake_03d7"
+    ]
+  ],
+  "series": [
+    "bdsp"
+  ],
+  "signatureItem": "minecraft:ender_eye",
+  "spawnWeightFactor": 0.25,
+  "type": "leader"
+}

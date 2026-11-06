@@ -1,0 +1,284 @@
+{
+	id: "0000000000000001"
+	group: "1000000000000001"
+	order_index: 1
+	filename: "00_guia_iniciante_pokemon"
+	title: "&b0. Escola Pokemon (Iniciantes)"
+	icon: {
+		id: "cobblemon:exp_share"
+	}
+	default_quest_shape: "rsquare"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "0000000000000010"
+			title: "&e1. Bem-vindo ao Mundo Pokemon!"
+			subtitle: "Os botoes basicos para quem nunca jogou"
+			icon: {
+				id: "cobblemon:poke_ball"
+			}
+			description: [
+				"Bem-vindo a &6Firma League&r! Mesmo que voce nunca tenha jogado Pokemon na vida, este capitulo vai te ensinar tudo passo a passo!"
+				""
+				"• &6Tecla [M]:&r Abre o menu para escolher seu &aPokemon Inicial&r (Charmander, Squirtle, Bulbasaur, etc.)."
+				"• &6Tecla [R]:&r Arremessa seu Pokemon para fora da Pokebola. Se voce mirar num Pokemon selvagem e apertar &e[R]&r, voce inicia uma Batalha!"
+				"• &6Setas Cima/Baixo (ou Scroll segurando R):&r Escolhe qual dos seus 6 Pokemon sera enviado."
+				""
+				"&aObjetivo:&r Escolha seu inicial no menu &e[M]&r e faca ou pegue suas primeiras Pokebolas!"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "pentagon"
+			size: 1.50d
+			tasks: [
+				{
+					id: "0000000000000011"
+					type: "checkmark"
+					title: "Escolhi meu Pokemon Inicial no menu [M]!"
+				}
+			]
+			rewards: [
+				{
+					id: "0000000000000024"
+					type: "item"
+					item: {
+						id: "cobblemon:poke_ball"
+						count: 15
+					}
+				}
+				{
+					id: "0000000000000025"
+					type: "item"
+					item: {
+						id: "cobblemon:potion"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "0000000000000040"
+			title: "&c2. Sua Primeira Captura!"
+			subtitle: "Enfraqueca antes de jogar a Pokebola"
+			icon: {
+				id: "cobblemon:great_ball"
+			}
+			description: [
+				"Se voce jogar uma Pokebola direto num Pokemon com a vida cheia, ele quase sempre vai escapar!"
+				""
+				"&eComo capturar qualquer Pokemon facil:&r"
+				"1. Mire no Pokemon selvagem e aperte &e[R]&r para lutar."
+				"2. Use ataques ate a barra de vida dele ficar &eAmarela&r ou &cVermelha&r (cuidado para nao desmaiar ele!)."
+				"3. Se usar golpes que causam &dSono (Sleep)&r ou &eParalisia (Thunder Wave)&r, a chance de captura dobra!"
+				"4. Clique em &bBag (Mochila) -> Pokebolas&r e arremesse a Pokebola!"
+				""
+				"&aObjetivo:&r Capture seu primeiro Pokemon selvagem (Conquista oficial &eFirst Catch&r)!"
+			]
+			dependencies: ["0000000000000010"]
+			x: 2.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0000000000000041"
+					type: "advancement"
+					title: "Capture seu 1o Pokemon selvagem!"
+					advancement: "cobblemon:catching/first_catch"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0000000000000054"
+					type: "item"
+					item: {
+						id: "cobblemon:great_ball"
+						count: 10
+					}
+				}
+				{
+					id: "0000000000000055"
+					type: "item"
+					item: {
+						id: "cobblemon:super_potion"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0000000000000070"
+			title: "&a3. Tabela de Tipos e Efetividade [2x / 4x]"
+			subtitle: "O mod mostra na tela qual golpe usar!"
+			icon: {
+				id: "cobblemon:water_stone"
+			}
+			description: [
+				"Todo Pokemon e todo golpe tem um &bTipo Elemental&r (como Pedra, Papel e Tesoura):"
+				"• &9Agua&r vence &cFogo&r, &6Terra&r e &7Pedra&r (&a2x de dano!&r)."
+				"• &aPlanta&r vence &9Agua&r, &6Terra&r e &7Pedra&r (&a2x de dano!&r)."
+				"• &cFogo&r vence &aPlanta&r, &bGelo&r, &2Inseto&r e &7Metalico&r (&a2x de dano!&r)."
+				"• &eEletrico&r vence &9Agua&r e &bVoador&r, mas &6Terra&r e &cImune (0x)&r a Eletrico!"
+				""
+				"&6DICA DE OURO:&r Durante a batalha, olhe para os seus 4 botoes de ataque! O nosso mod &bCobblemon Battle Extras&r ja escreve &a[2x]&r ou &a[4x]&r nos golpes Super Efetivos!"
+			]
+			dependencies: ["0000000000000010"]
+			x: 2.5d
+			y: -2.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0000000000000071"
+					type: "checkmark"
+					title: "Vi o indicador [2x] nos botoes de ataque!"
+				}
+			]
+			rewards: [
+				{
+					id: "0000000000000084"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_s"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "00000000000000A0"
+			title: "&b4. Equipe Completa (6 Pokemon)"
+			subtitle: "Monte um time variado para nao ter fraquezas"
+			icon: {
+				id: "cobblemon:safari_ball"
+			}
+			description: [
+				"Voce pode carregar ate &e6 Pokemon&r na sua equipe ativa (os demais vao automaticamente para o seu &bPC&r!)."
+				""
+				"• Tente ter tipos diferentes no time (ex.: 1 de Fogo, 1 de Agua, 1 de Planta/Eletrico, 1 Voador, 1 de Terra/Pedra e 1 Psiquico/Fantasma)."
+				""
+				"&aObjetivo:&r Complete uma equipe de 6 Pokemon na sua Party!"
+			]
+			dependencies: ["0000000000000040"]
+			x: 5.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "00000000000000A1"
+					type: "advancement"
+					title: "Tenha 6 Pokemon na sua equipe!"
+					advancement: "cobblemon:catching/full_party"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "00000000000000B4"
+					type: "item"
+					item: {
+						id: "cobblemon:quick_ball"
+						count: 10
+					}
+				}
+				{
+					id: "00000000000000B5"
+					type: "item"
+					item: {
+						id: "cobblemon:revive"
+						count: 3
+					}
+				}
+			]
+		}
+		{
+			id: "00000000000000D0"
+			title: "&d5. Evoluindo e Trocando Golpes no Menu [M]"
+			subtitle: "Seu Pokemon nao evolui sozinho no meio da luta!"
+			icon: {
+				id: "cobblemon:rare_candy"
+			}
+			description: [
+				"No Cobblemon, quando seu Pokemon atinge o nivel de evoluir, aparece uma notificacao no chat e um &bbrilho ao lado dele&r:"
+				"1. Aperte &e[M]&r para abrir sua equipe."
+				"2. Clique no Pokemon e clique no botao &bEvolve (Evoluir)&r!"
+				"3. Nessa mesma tela, clique em &eMoves (Golpes)&r: voce pode reaprender ou trocar os 4 ataques dele a qualquer hora de graca!"
+				"4. &6Dica:&r Digite &e/pwiki nome_do_pokemon&r no chat para ver em qual nivel ou com qual pedra qualquer Pokemon evolui!"
+			]
+			dependencies: ["0000000000000040"]
+			x: 5.0d
+			y: 2.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "00000000000000D1"
+					type: "advancement"
+					title: "Evolua um Pokemon pela primeira vez!"
+					advancement: "cobblemon:catching/first_evolution"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "00000000000000E4"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+				{
+					id: "00000000000000E5"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_m"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0000000000000100"
+			title: "&66. Ataque Fisico vs. Ataque Especial"
+			subtitle: "O segredo para causar o dobro de dano"
+			icon: {
+				id: "cobblemon:muscle_band"
+			}
+			description: [
+				"Todo Pokemon tem dois atributos de ataque nos Status dele (aperte &e[M] -> Summary -> Stats&r):"
+				"• &cAttack (Ataque Fisico):&r Alto em Pokemon musculosos (Machamp, Gyarados, Garchomp, Scizor). Coloque neles golpes com o icone de &cExplosao Vermelha (Physical)&r!"
+				"• &9Special Attack (Ataque Especial):&r Alto em Pokemon magicos/elementais (Alakazam, Gengar, Starmie, Gardevoir). Coloque neles golpes com o icone de &9Ondas Azuis (Special)&r!"
+				"• &7Status (Cinza):&r Golpes que nao tiram vida direto, mas dao buffs (Swords Dance, Dragon Dance), curam (Recover) ou colocam armadilhas (Stealth Rock)."
+			]
+			dependencies: ["0000000000000070", "00000000000000A0", "00000000000000D0"]
+			x: 7.5d
+			y: 0.0d
+			shape: "octagon"
+			size: 1.50d
+			tasks: [
+				{
+					id: "0000000000000101"
+					type: "checkmark"
+					title: "Entendi a diferenca entre Golpe Fisico e Especial!"
+				}
+			]
+			rewards: [
+				{
+					id: "0000000000000114"
+					type: "item"
+					item: {
+						id: "cobblemon:lucky_egg"
+						count: 1
+					}
+				}
+				{
+					id: "0000000000000115"
+					type: "item"
+					item: {
+						id: "cobblemon:leftovers"
+						count: 1
+					}
+				}
+			]
+		}
+	]
+}

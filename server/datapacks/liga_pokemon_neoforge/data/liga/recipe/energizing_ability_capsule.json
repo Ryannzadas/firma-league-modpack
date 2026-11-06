@@ -1,0 +1,22 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "create:electron_tube"
+    },
+    {
+      "item": "cobblemon:rare_candy"
+    },
+    {
+      "item": "cobblemon:yellow_apricorn"
+    },
+    {
+      "item": "cobblemon:pink_apricorn"
+    }
+  ],
+  "energy": 50000,
+  "result": {
+    "id": "cobblemon:ability_capsule",
+    "count": 1
+  }
+}

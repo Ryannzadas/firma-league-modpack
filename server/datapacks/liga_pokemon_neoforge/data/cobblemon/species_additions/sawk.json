@@ -1,0 +1,10 @@
+{
+  "target": "cobblemon:sawk",
+  "implemented": true,
+  "baseScale": 0.85,
+  "hitbox": {
+    "width": 1.0,
+    "height": 2.0,
+    "fixed": false
+  }
+}

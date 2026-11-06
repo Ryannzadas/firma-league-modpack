@@ -1,0 +1,21 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+      {
+      "id": "latias-1",
+      "pokemon": "latias",
+      "type": "pokemon",
+      "spawnablePositionType": "grounded",
+      "bucket": "ultra-rare",
+      "level": "50-75",
+      "weight": 0,
+      "condition": {
+      "biomes": [
+          "cobbleverse:custom_spawn/secret_garden"
+        ]
+      }
+    }
+  ]
+}

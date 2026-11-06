@@ -1,0 +1,21 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "id": "mew-1",
+      "pokemon": "mew",
+      "type": "pokemon",
+      "spawnablePositionType": "grounded",
+      "bucket": "ultra-rare",
+      "level": "75-90",
+      "weight": 0,
+      "condition": {
+        "biomes": [ 
+          "cobbleverse:custom_spawn/origin_temple"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GAG",
+    "GCG",
+    "RER"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "C": {
+      "item": "powah:dielectric_casing"
+    },
+    "R": {
+      "item": "powah:dielectric_rod_horizontal"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "result": {
+    "id": "powah:energizing_orb",
+    "count": 1
+  }
+}

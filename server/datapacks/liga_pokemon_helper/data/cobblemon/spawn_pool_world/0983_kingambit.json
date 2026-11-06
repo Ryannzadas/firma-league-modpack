@@ -1,0 +1,24 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "kingambit-1",
+            "pokemon": "kingambit",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "72-85",
+            "weight": 1.0,
+            "condition": {
+                "biomes": [
+                    "minecraft:bamboo_jungle"
+                ]
+            }
+        }
+    ]
+}

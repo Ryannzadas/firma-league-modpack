@@ -1,0 +1,21 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "phione-1",
+            "pokemon": "phione",
+            "type": "pokemon",
+            "spawnablePositionType": "submerged",
+            "bucket": "ultra-rare",
+            "level": "50",
+            "weight": 0,
+            "condition": {
+                "biomes": [
+                    "cobbleverse:custom_spawn"
+                ]
+            }
+        }
+    ]
+}

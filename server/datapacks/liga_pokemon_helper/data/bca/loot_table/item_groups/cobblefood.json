@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "cobblemon:candied_apple", "weight": 592 },
+        { "type": "item", "name": "cobblemon:candied_berry", "weight": 602 },
+        { "type": "item", "name": "cobblemon:hearty_grains", "weight": 600 },
+        { "type": "item", "name": "cobblemon:moomoo_milk", "weight": 575 },
+        { "type": "item", "name": "cobblemon:poke_cake", "weight": 504 },
+        { "type": "item", "name": "cobblemon:ponigiri", "weight": 0 },
+        { "type": "item", "name": "cobblemon:potato_mochi", "weight": 599 },
+        { "type": "item", "name": "cobblemon:sinister_tea", "weight": 0 },
+        { "type": "item", "name": "cobblemon:tasty_tail", "weight": 613 }
+      ]
+    }
+  ]
+}
+

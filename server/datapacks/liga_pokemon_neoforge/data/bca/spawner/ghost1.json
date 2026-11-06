@@ -1,0 +1,28 @@
+{
+  "pokemon": [
+    {
+      "id": "gastly",
+      "levels": {
+        "min": 10,
+        "range" : 20
+      },
+      "weight": 1
+    },
+    {
+      "id": "misdreavus",
+      "levels": {
+        "min": 15,
+        "range": 30
+      },
+      "weight": 3
+    },
+    {
+      "id": "duskull",
+      "levels": {
+        "min": 10,
+        "range": 20
+      },
+      "weight": 5
+    }
+  ]
+}

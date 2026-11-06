@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GDG",
+    "DFD",
+    "GBG"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "F": {
+      "item": "betterfurnacesreforged:gold_furnace"
+    },
+    "B": {
+      "item": "powah:crystal_blazing"
+    }
+  },
+  "result": {
+    "id": "betterfurnacesreforged:diamond_furnace",
+    "count": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "entryId": "cobblemon:lugia",
+    "forms": [
+      {
+        "displayForm": "Shadow",
+        "unlockForms": ["Shadow"]
+      }
+    ]
+}

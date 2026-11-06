@@ -1,0 +1,494 @@
+{
+	id: "0220000000000001"
+	group: "1000000000000001"
+	order_index: 4
+	filename: "02b_temporada_2_johto"
+	title: "&eTemp. 2: Liga Johto (Historia)"
+	icon: {
+		id: "cobblemonpokemonbadges:rising_badge"
+	}
+	default_quest_shape: "octagon"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "0220000000000010"
+			title: "&eAto II: Rumo a Regiao de Johto!"
+			subtitle: "BLOQUEADO ate vencer o Campeao de Kanto!"
+			icon: {
+				id: "cobblemon:love_ball"
+			}
+			description: [
+				"&6[LORE - ATO II]:&r Com a queda de Giovanni em Kanto, os generais remanescentes da Equipe Rocket tomaram a &cTorre de Radio de Johto&r! As ondas de radio despertaram &eRaikou, Entei e Suicune&r na Burned Tower e agitaram &6Ho-Oh&r e &9Lugia&r!"
+				""
+				"&cRequisito de Desbloqueio:&r Voce precisa ter vencido a &6Liga Kanto&r no Capitulo anterior para iniciar Johto!"
+			]
+			dependencies: ["0200000000000100"]
+			x: 0.0d
+			y: 0.0d
+			shape: "pentagon"
+			size: 1.50d
+			tasks: [
+				{
+					id: "0220000000000011"
+					type: "checkmark"
+					title: "Iniciei minha expedicao em Johto apos zerar Kanto!"
+				}
+			]
+			rewards: [
+				{
+					id: "0220000000000024"
+					type: "item"
+					item: {
+						id: "cobblemon:ultra_ball"
+						count: 20
+					}
+				}
+				{
+					id: "0220000000000025"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_l"
+						count: 8
+					}
+				}
+			]
+		}
+		{
+			id: "0220000000000020"
+			title: "&b1o Ginasio Johto: Falkner (Violet Gym)"
+			subtitle: "Tipo Voador | Insignia Zephyr"
+			icon: {
+				id: "cobblemonpokemonbadges:zephyr_badge"
+			}
+			description: [
+				"Derrote o Lider &bFalkner&r no &bViolet Gym&r para conquistar a &fZephyr Badge&r!"
+			]
+			dependencies: ["0220000000000010"]
+			x: 2.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0220000000000021"
+					type: "item"
+					item: {
+						id: "cobblemon:sharp_beak"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0220000000000034"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:zephyr_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0220000000000035"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0220000000000030"
+			title: "&a2o Ginasio Johto: Bugsy (Azalea Gym)"
+			subtitle: "Tipo Inseto | Insignia Hive"
+			icon: {
+				id: "cobblemonpokemonbadges:hive_badge"
+			}
+			description: [
+				"Supere o Scyther de &aBugsy&r no &aAzalea Gym&r e conquiste a &aHive Badge&r!"
+			]
+			dependencies: ["0220000000000020"]
+			x: 5.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0220000000000031"
+					type: "item"
+					item: {
+						id: "cobblemon:silver_powder"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0220000000000044"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:hive_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0220000000000045"
+					type: "item"
+					item: {
+						id: "cobblemon:net_ball"
+						count: 15
+					}
+				}
+			]
+		}
+		{
+			id: "0220000000000040"
+			title: "&f3o Ginasio Johto: Whitney (Goldenrod Gym)"
+			subtitle: "Tipo Normal | Insignia Plain"
+			icon: {
+				id: "cobblemonpokemonbadges:plain_badge"
+			}
+			description: [
+				"Enfrente a temida Miltank com Rollout da &fWhitney&r no &fGoldenrod Gym&r!"
+			]
+			dependencies: ["0220000000000030"]
+			x: 7.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0220000000000041"
+					type: "item"
+					item: {
+						id: "cobblemon:silk_scarf"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0220000000000054"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:plain_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0220000000000055"
+					type: "item"
+					item: {
+						id: "cobblemon:love_ball"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "0220000000000050"
+			title: "&54o Ginasio Johto: Morty (Ecruteak Gym)"
+			subtitle: "Tipo Fantasma | Insignia Fog"
+			icon: {
+				id: "cobblemonpokemonbadges:fog_badge"
+			}
+			description: [
+				"Derrote o vidente &5Morty&r e seu Gengar em &5Ecruteak&r para ganhar a &5Fog Badge&r!"
+			]
+			dependencies: ["0220000000000040"]
+			x: 10.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0220000000000051"
+					type: "item"
+					item: {
+						id: "cobblemon:spell_tag"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0220000000000064"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:fog_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0220000000000065"
+					type: "item"
+					item: {
+						id: "cobblemon:dusk_ball"
+						count: 15
+					}
+				}
+			]
+		}
+		{
+			id: "0220000000000060"
+			title: "&6As Torres de Ecruteak e Ilhas Redemoinho"
+			subtitle: "Burned Tower, Bell Tower (Ho-Oh) e Whirl Islands (Lugia)"
+			icon: {
+				id: "cobblemon:heavy_ball"
+			}
+			description: [
+				"Em Ecruteak e na costa de Johto, investigue as 3 grandes estruturas da historia:"
+				"• &cBurned Tower:&r Onde despertam &eRaikou, Entei e Suicune&r."
+				"• &6Bell Tower:&r O santuario de &6Ho-Oh&r."
+				"• &9Whirl Islands:&r As cavernas abissais de &9Lugia&r."
+			]
+			dependencies: ["0220000000000050"]
+			x: 10.0d
+			y: 2.5d
+			shape: "hexagon"
+			size: 1.30d
+			tasks: [
+				{
+					id: "0220000000000061"
+					type: "item"
+					item: {
+						id: "cobblemon:max_revive"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0220000000000074"
+					type: "item"
+					item: {
+						id: "cobblemon:heavy_ball"
+						count: 15
+					}
+				}
+				{
+					id: "0220000000000075"
+					type: "item"
+					item: {
+						id: "cobblemon:fast_ball"
+						count: 15
+					}
+				}
+			]
+		}
+		{
+			id: "0220000000000070"
+			title: "&c5o Ginasio Johto: Chuck (Cianwood Gym)"
+			subtitle: "Tipo Lutador | Insignia Storm"
+			icon: {
+				id: "cobblemonpokemonbadges:storm_badge"
+			}
+			description: [
+				"Venca o mestre marcial &cChuck&r no &cCianwood Gym&r!"
+			]
+			dependencies: ["0220000000000050"]
+			x: 7.5d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0220000000000071"
+					type: "item"
+					item: {
+						id: "cobblemon:black_belt"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0220000000000084"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:storm_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0220000000000085"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 6
+					}
+				}
+			]
+		}
+		{
+			id: "0220000000000080"
+			title: "&76o Ginasio Johto: Jasmine (Olivine Gym)"
+			subtitle: "Tipo Metalico | Insignia Mineral"
+			icon: {
+				id: "cobblemonpokemonbadges:mineral_badge"
+			}
+			description: [
+				"Derrote &7Jasmine&r e seu poderoso Steelix no &7Olivine Gym&r!"
+			]
+			dependencies: ["0220000000000070"]
+			x: 5.0d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0220000000000081"
+					type: "item"
+					item: {
+						id: "cobblemon:metal_coat"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0220000000000094"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:mineral_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0220000000000095"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 6
+					}
+				}
+			]
+		}
+		{
+			id: "0220000000000090"
+			title: "&b7o Ginasio Johto: Pryce (Mahogany Gym)"
+			subtitle: "Tipo Gelo | Insignia Glacier"
+			icon: {
+				id: "cobblemonpokemonbadges:glacier_badge"
+			}
+			description: [
+				"Domine o frio de &bPryce&r no &bMahogany Gym&r e expulse os Rockets da Radio Tower!"
+			]
+			dependencies: ["0220000000000080"]
+			x: 2.5d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0220000000000091"
+					type: "item"
+					item: {
+						id: "cobblemon:never_melt_ice"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "02200000000000A4"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:glacier_badge"
+						count: 1
+					}
+				}
+				{
+					id: "02200000000000A5"
+					type: "item"
+					item: {
+						id: "cobblemon:ice_stone"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "02200000000000A0"
+			title: "&98o Ginasio Johto: Clair (Blackthorn Gym)"
+			subtitle: "Tipo Dragao | Insignia Rising"
+			icon: {
+				id: "cobblemonpokemonbadges:rising_badge"
+			}
+			description: [
+				"Conquiste a 8a Insignia de Johto no covil dos dragoes de &9Blackthorn&r!"
+			]
+			dependencies: ["0220000000000090"]
+			x: 0.0d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "02200000000000A1"
+					type: "item"
+					item: {
+						id: "cobblemon:dragon_scale"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "02200000000000B4"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:rising_badge"
+						count: 1
+					}
+				}
+				{
+					id: "02200000000000B5"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "02200000000000B0"
+			title: "&6&lCAMPEAO DE JOHTO (LANCE) E DUELO CONTRA RED!"
+			subtitle: "Destrava a Temporada 3 (Hoenn) e a 2a Copa da Firma!"
+			icon: {
+				id: "cobblemon:master_ball"
+			}
+			description: [
+				"Venca o Campeao &6Lance&r e o lendario treinador &cRed&r!"
+				""
+				"&aO QUE ESTA CONQUISTA DESTRAVA:&r"
+				"1. Libera oficialmente todo o capitulo da &aTemporada 3: Liga Hoenn&r!"
+				"2. Classifica voce para a &62a Liga da Firma (Copa Johto PvP)&r!"
+			]
+			dependencies: ["02200000000000A0"]
+			x: 0.0d
+			y: 5.0d
+			shape: "gear"
+			size: 2.00d
+			tasks: [
+				{
+					id: "02200000000000B1"
+					type: "advancement"
+					title: "Derrote o lendario Red para fechar Johto!"
+					advancement: "rctmod:trainers/defeat_trainer_red"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "02200000000000C4"
+					type: "item"
+					item: {
+						id: "cobblemon:master_ball"
+						count: 1
+					}
+				}
+				{
+					id: "02200000000000C5"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_patch"
+						count: 1
+					}
+				}
+				{
+					id: "02200000000000C6"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 15
+					}
+				}
+			]
+		}
+	]
+}

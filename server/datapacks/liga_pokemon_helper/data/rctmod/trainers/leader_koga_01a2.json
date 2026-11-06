@@ -1,0 +1,105 @@
+{
+  "name": "Líder Koga",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "moveBias": 0.92,
+      "statMoveBias": 0.45,
+      "switchBias": 0.45,
+      "itemBias": 0.85,
+      "maxSelectMargin": 0.18
+    }
+  },
+  "battleFormat": "GEN_9_SINGLES",
+  "battleRules": {
+    "maxItemUses": 1
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:crobat",
+      "gender": "MALE",
+      "level": 64,
+      "nature": "jolly",
+      "ability": "infiltrator",
+      "heldItem": "cobblemon:sharp_beak",
+      "moveset": [
+        "bravebird",
+        "crosspoison",
+        "uturn",
+        "taunt"
+      ],
+      "ivs": { "hp": 26, "attack": 26, "defence": 26, "special_attack": 26, "special_defence": 26, "speed": 26 },
+      "evs": { "hp": 0, "attack": 80, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 80 }
+    },
+    {
+      "species": "cobblemon:weezing",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "bold",
+      "ability": "levitate",
+      "heldItem": "cobblemon:black_sludge",
+      "moveset": [
+        "sludgebomb",
+        "flamethrower",
+        "willowisp",
+        "toxicspikes"
+      ],
+      "ivs": { "hp": 26, "attack": 26, "defence": 26, "special_attack": 26, "special_defence": 26, "speed": 26 },
+      "evs": { "hp": 80, "attack": 0, "defence": 80, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:drapion",
+      "gender": "MALE",
+      "level": 66,
+      "nature": "jolly",
+      "ability": "sniper",
+      "heldItem": "cobblemon:scope_lens",
+      "moveset": [
+        "crosspoison",
+        "nightslash",
+        "earthquake",
+        "swordsdance"
+      ],
+      "ivs": { "hp": 26, "attack": 26, "defence": 26, "special_attack": 26, "special_defence": 26, "speed": 26 },
+      "evs": { "hp": 0, "attack": 80, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 80 }
+    },
+    {
+      "species": "cobblemon:nidoking",
+      "gender": "MALE",
+      "level": 66,
+      "nature": "timid",
+      "ability": "sheerforce",
+      "heldItem": "cobblemon:poison_barb",
+      "moveset": [
+        "sludgebomb",
+        "earthpower",
+        "icebeam",
+        "thunderbolt"
+      ],
+      "ivs": { "hp": 26, "attack": 26, "defence": 26, "special_attack": 26, "special_defence": 26, "speed": 26 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 80, "special_defence": 0, "speed": 80 }
+    },
+    {
+      "species": "cobblemon:toxtricity",
+      "gender": "MALE",
+      "level": 68,
+      "nature": "modest",
+      "ability": "punkrock",
+      "heldItem": "cobblemon:sitrus_berry",
+      "moveset": [
+        "overdrive",
+        "sludgebomb",
+        "boomburst",
+        "voltswitch"
+      ],
+      "ivs": { "hp": 28, "attack": 28, "defence": 28, "special_attack": 28, "special_defence": 28, "speed": 28 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 100, "special_defence": 0, "speed": 100 }
+    }
+  ]
+}

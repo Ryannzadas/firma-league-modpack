@@ -1,0 +1,22 @@
+{
+  "type": "create:crushing",
+  "processing_time": 300,
+  "ingredients": [
+    {
+      "item": "cobblemon:leaf_stone_ore"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblemon:leaf_stone"
+    },
+    {
+      "id": "cobblemon:leaf_stone",
+      "chance": 0.5
+    },
+    {
+      "id": "create:experience_nugget",
+      "chance": 0.75
+    }
+  ]
+}

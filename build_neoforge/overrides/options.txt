@@ -1,0 +1,15 @@
+resourcePacks:["vanilla", "file/COBBLEVERSE-CCC.zip", "file/COBBLEVERSE Soundtrack.zip", "file/COBBLEVERSE RCTmod RP.zip", "file/Cobblemon Interface Modded v1.9.4.zip", "file/Cobblemon Interface v1.6.0.zip", "file/CobblemonAdvancementPlaques-[1.0.2].zip", "file/E19 Cobblemon Minimap Icons.zip", "file/RCT Trainers+ [1.7] v2.2.zip"]
+incompatibleResourcePacks:[]
+key_keybind.name.ZOOM:key.keyboard.c
+key_key.cobblemon_smartphone.scanner:key.keyboard.unknown
+key_key.sophisticatedbackpacks.inventory_interaction:key.keyboard.unknown
+key_iris.keybind.toggleShaders:key.keyboard.unknown
+key_kubejs.kubedex:key.keyboard.unknown
+key_key.jei.bookmark:key.keyboard.unknown
+key_key.mute_microphone:key.keyboard.unknown
+key_xaero_new_waypoint:key.keyboard.unknown
+key_cobblemon-battle-extras.battle_logs:key.keyboard.unknown
+key_key.open_terminal:key.keyboard.unknown
+key_key.travelersbackpack.open_backpack:key.keyboard.unknown
+key_key.toms_storage.inventory_search:key.keyboard.unknown
+key_key.ftbquests.gui_editor.delete:key.keyboard.unknown

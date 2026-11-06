@@ -1,0 +1,16 @@
+{
+  "type": "mekanism:metallurgic_infusing",
+  "chemical_input": {
+    "amount": 80,
+    "tag": "mekanism:carbon"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "minecraft:magma_cream"
+  },
+  "output": {
+    "count": 1,
+    "id": "cobblemon:magmarizer"
+  },
+  "per_tick_usage": false
+}

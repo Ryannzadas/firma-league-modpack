@@ -1,0 +1,15 @@
+﻿{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "loot_table", "value": "bca:item_groups/healing_herbs",    "weight": 2 },
+        { "type": "loot_table", "value": "bca:item_groups/mint_leaves",      "weight": 1 },
+        { "type": "loot_table", "value": "bca:item_groups/medicinal_items",  "weight": 2 },
+        { "type": "loot_table", "value": "bca:item_groups/aprijuice",  "weight": 1 },
+        { "type": "item",       "name": "minecraft:air",                            "weight": 2 }
+      ]
+    }
+  ]
+}

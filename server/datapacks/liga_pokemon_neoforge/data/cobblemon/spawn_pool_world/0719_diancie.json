@@ -1,0 +1,24 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+        {
+            "id": "diancie-1",
+            "pokemon": "diancie",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "45-68",
+            "weight": 2.3,
+            "condition": {
+                "biomes": [
+                    "minecraft:lush_caves"
+                ]
+            }
+        }
+    ]
+}

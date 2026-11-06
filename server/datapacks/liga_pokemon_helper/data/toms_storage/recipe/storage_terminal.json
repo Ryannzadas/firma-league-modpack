@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PEP",
+    "CGA",
+    "PEP"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    },
+    "C": {
+      "tag": "c:chests"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "A": {
+      "item": "cobblemon:yellow_apricorn"
+    }
+  },
+  "result": {
+    "id": "toms_storage:storage_terminal",
+    "count": 1
+  }
+}

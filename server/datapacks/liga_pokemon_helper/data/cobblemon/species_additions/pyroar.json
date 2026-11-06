@@ -1,0 +1,60 @@
+{
+  "target": "cobblemon:pyroar",   
+  "implemented": true,
+  "baseScale": 0.8,
+  "hitbox": {
+    "width": 1.0,
+    "height": 1.6,
+    "fixed": false
+  },
+  "drops": {
+  "amount": "3",
+    "entries": [
+      {
+        "item": "minecraft:rotten_flesh",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "minecraft:blaze_powder",
+        "percentage": 10.0
+      },
+      {
+        "item": "cobblemon:rawst_berry",
+        "percentage": 5.0
+      }
+
+    ]
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "depth": "normal",
+      "light": "0-4"
+    }
+  },
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "SPEED": "60-80",
+          "ACCELERATION": "80-90",
+          "SKILL": "35-45",
+          "JUMP": "15-30",
+          "STAMINA": "50-80"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      }
+    ]
+  }
+}

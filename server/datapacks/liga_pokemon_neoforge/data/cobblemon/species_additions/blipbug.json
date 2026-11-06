@@ -1,0 +1,36 @@
+{
+  "implemented": true,
+  "target": "cobblemon:blipbug",   
+  "shoulderMountable": true,
+  "baseScale": 0.4,
+  "hitbox": {
+    "width": 0.5,
+    "height": 0.4,
+    "fixed": false
+  },
+  "drops": {
+  "amount": "3",
+    "entries": [
+      {
+        "item": "minecraft:string",
+        "quantityRange": "0-3"
+      },
+      {
+        "item": "cobblemon:apple",
+        "percentage": 35
+      },
+      {
+        "item": "minecraft:razz_berry",
+        "percentage": 100
+      }
+    ]
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "depth": "normal",
+      "light": "0-4"
+    }
+  }
+}

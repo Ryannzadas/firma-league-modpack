@@ -1,0 +1,13 @@
+﻿{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "loot_table", "value": "bca:item_groups/ancient_balls", "weight": 1 },
+        { "type": "loot_table", "value": "bca:item_groups/normal_balls",  "weight": 2 },
+        { "type": "item",       "name": "minecraft:air",                         "weight": 2 }
+      ]
+    }
+  ]
+}

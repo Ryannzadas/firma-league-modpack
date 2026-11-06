@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "cobblemon:pokedex_black", "weight": 1 },
+        { "type": "item", "name": "cobblemon:pokedex_blue", "weight": 1 },
+        { "type": "item", "name": "cobblemon:pokedex_green", "weight": 1 },
+        { "type": "item", "name": "cobblemon:pokedex_pink", "weight": 1 },
+        { "type": "item", "name": "cobblemon:pokedex_red", "weight": 1 },
+        { "type": "item", "name": "cobblemon:pokedex_white", "weight": 1 },
+        { "type": "item", "name": "cobblemon:pokedex_yellow", "weight": 1 }
+      ]
+    }
+  ]
+}

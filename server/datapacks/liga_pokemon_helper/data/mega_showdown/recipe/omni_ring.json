@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CDC",
+    "MNZ",
+    "PTP"
+  ],
+  "key": {
+    "C": {
+      "item": "mekanism:elite_control_circuit"
+    },
+    "D": {
+      "item": "mega_showdown:dynamax_band"
+    },
+    "M": [
+      {
+        "item": "mega_showdown:mega_bracelet"
+      },
+      {
+        "item": "mega_showdown:mega_ring"
+      }
+    ],
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "Z": [
+      {
+        "item": "mega_showdown:z_power_ring"
+      },
+      {
+        "item": "mega_showdown:z_ring"
+      }
+    ],
+    "P": {
+      "item": "powah:crystal_niotic"
+    },
+    "T": {
+      "item": "mega_showdown:tera_orb"
+    }
+  },
+  "result": {
+    "id": "mega_showdown:omni_ring",
+    "count": 1
+  }
+}

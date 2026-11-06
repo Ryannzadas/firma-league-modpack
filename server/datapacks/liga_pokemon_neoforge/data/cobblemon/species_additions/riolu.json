@@ -1,0 +1,26 @@
+{
+  "target": "cobblemon:riolu",
+  "baseScale": 0.68,
+  "hitbox": {
+    "width": 0.8,
+    "height": 1.3,
+    "fixed": false
+  },
+  "shoulderMountable": true,
+  "behaviour": {
+    "entityInteract": {
+      "avoidedBySkeleton": true
+    },
+	  "resting": {
+	    "canSleep": true,
+	    "willSleepOnBed": true,
+	    "depth": "normal",
+	    "light": "0-4"
+	  },
+	  "swim": {
+	    "swimSpeed": 0.1,
+	    "canSwimInWater": true,
+	    "canBreatheUnderwater": false
+	  }
+  }
+}

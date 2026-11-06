@@ -1,0 +1,11 @@
+{
+    "target": "cobblemon:pawmi",   
+    "implemented": true,
+    "shoulderMountable": true,
+    "baseScale": 0.6,
+    "hitbox": {
+        "width": 0.5,
+        "height": 0.4,
+        "fixed": false
+    }
+}

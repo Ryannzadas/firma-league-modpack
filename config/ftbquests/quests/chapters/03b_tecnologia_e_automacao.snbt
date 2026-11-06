@@ -1,0 +1,975 @@
+{
+	id: "03B0000000000001"
+	group: "1000000000000002"
+	order_index: 7
+	filename: "03b_tecnologia_e_automacao"
+	title: "&b2A. Engenharia Tech (Create, Mekanism e Powah)"
+	icon: {
+		id: "powah:energizing_orb"
+	}
+	default_quest_shape: "rsquare"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "03B0000000000010"
+			title: "&61. Era 1 (Create): Liga de Andesito e Roda D'Agua"
+			subtitle: "Energia Rotacional (SU) e Engrenagens!"
+			icon: {
+				id: "create:water_wheel"
+			}
+			description: [
+				"Bem-vindo a Engenharia do &6Create&r! Antes da eletricidade, as fabricas da Firma usam forca mecanica:"
+				"1. Misture &7Andesito + Pepitas de Ferro (ou Zinco)&r na bancada para criar &eAndesite Alloy (Liga de Andesito)&r."
+				"2. Construa uma &bWater Wheel (Roda D'Agua)&r e coloque uma correnteza de agua passando por ela para gerar &eForca Rotacional (SU)&r."
+				"3. Use &6Shafts (Eixos)&r e &6Cogwheels (Engrenagens)&r para levar a rotacao ate suas maquinas!"
+				"• &bDica de Ouro:&r Segure a tecla &e[W] (Ponder)&r em cima de qualquer item do Create no inventario para ver uma animacao 3D ensinando a montar!"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "pentagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "03B0000000000011"
+					type: "item"
+					item: {
+						id: "create:andesite_alloy"
+					}
+					count: 16L
+				}
+				{
+					id: "03B0000000000012"
+					type: "item"
+					item: {
+						id: "create:water_wheel"
+					}
+				}
+				{
+					id: "03B0000000000013"
+					type: "item"
+					item: {
+						id: "create:cogwheel"
+					}
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000024"
+					type: "item"
+					item: {
+						id: "create:andesite_casing"
+						count: 8
+					}
+				}
+				{
+					id: "03B0000000000025"
+					type: "item"
+					item: {
+						id: "create:wrench"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03B0000000000020"
+			title: "&f2. Prensa Mecanica e Chapas de Ferro (Pokebolas Tier 2!)"
+			subtitle: "Prensando lingotes para Great Ball, Heavy Ball e Maquinas!"
+			icon: {
+				id: "create:mechanical_press"
+			}
+			description: [
+				"Construa uma &eMechanical Press (Prensa Mecanica)&r e ligue um eixo nela!"
+				""
+				"• Jogue &fBarras de Ferro&r embaixo da Prensa (no chao, num Depot ou numa esteira) para prensar &fIron Sheets (Chapas de Ferro)&r!"
+				"• &6Uso nas Pokebolas:&r Na Firma League, a &fChapa de Ferro&r (ou Liga de Andesito / Osmio) e a base de &bTODAS as Pokebolas Tier 2 (Great Ball, Fast Ball, Heavy Ball, Level Ball, Moon Ball...)&r e tambem do PC, Healer e Pokedex!"
+			]
+			dependencies: ["03B0000000000010"]
+			x: 2.5d
+			y: -1.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03B0000000000021"
+					type: "item"
+					item: {
+						id: "create:mechanical_press"
+					}
+				}
+				{
+					id: "03B0000000000022"
+					type: "item"
+					item: {
+						id: "create:iron_sheet"
+					}
+					count: 12L
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000034"
+					type: "item"
+					item: {
+						id: "cobblemon:great_ball"
+						count: 15
+					}
+				}
+				{
+					id: "03B0000000000035"
+					type: "item"
+					item: {
+						id: "create:iron_sheet"
+						count: 8
+					}
+				}
+			]
+		}
+		{
+			id: "03B0000000000030"
+			title: "&e3. Misturador Mecanico, Latao (Brass) e Automacao Create"
+			subtitle: "Brass Sheet, Electron Tube e Deployer!"
+			icon: {
+				id: "create:deployer"
+			}
+			description: [
+				"Evolua sua oficina do &6Create&r para o nivel de &eLatao (Brass)&r:"
+				"• Use o &6Mechanical Mixer + Basin + Blaze Burner&r para misturar Cobre e Zinco em &eBrass Ingot (Latao)&r e prense em &eBrass Sheet&r (que tambem serve para Pokebolas Tier 3!)."
+				"• Crie &cElectron Tubes&r (Rose Quartz Polido + Chapa de Ferro) e o &eDeployer&r (a mao mecanica que monta itens e Pokebolas sozinha na esteira!)."
+			]
+			dependencies: ["03B0000000000020"]
+			x: 5.0d
+			y: -2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03B0000000000031"
+					type: "item"
+					item: {
+						id: "create:mechanical_mixer"
+					}
+				}
+				{
+					id: "03B0000000000032"
+					type: "item"
+					item: {
+						id: "create:brass_sheet"
+					}
+					count: 8L
+				}
+				{
+					id: "03B0000000000033"
+					type: "item"
+					item: {
+						id: "create:deployer"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000044"
+					type: "item"
+					item: {
+						id: "create:electron_tube"
+						count: 4
+					}
+				}
+				{
+					id: "03B0000000000045"
+					type: "item"
+					item: {
+						id: "create:precision_mechanism"
+						count: 2
+					}
+				}
+			]
+		}
+		{
+			id: "03B0000000000040"
+			title: "&b4. Ponte Eletrica: Create Crafts e Additions!"
+			subtitle: "Transforme Rotacao (SU) em Energia (FE) e vice-versa!"
+			icon: {
+				id: "createaddition:electric_motor"
+			}
+			description: [
+				"O addon &bCreate Crafts e Additions&r conecta o Create ao Mekanism e ao Powah!:"
+				"• &6Alternator (Alternador):&r Gire ele com Rodas D'Agua ou Moinhos do Create para gerar &aEnergia Eletrica (FE)&r gratis!"
+				"• &bElectric Motor (Motor Eletrico):&r Alimente ele com cabos de energia do Mekanism/Powah para girar qualquer maquina do Create em alta velocidade sem precisar de mil engrenagens (zero lag de FPS na base)!"
+			]
+			dependencies: ["03B0000000000030"]
+			x: 7.5d
+			y: -2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03B0000000000041"
+					type: "item"
+					item: {
+						id: "createaddition:alternator"
+					}
+				}
+				{
+					id: "03B0000000000042"
+					type: "item"
+					item: {
+						id: "createaddition:electric_motor"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000054"
+					type: "item"
+					item: {
+						id: "createaddition:capacitor"
+						count: 4
+					}
+				}
+			]
+		}
+		{
+			id: "03B0000000000050"
+			title: "&35. Era 1 (Mekanism): Minerando Osmio e Infusor Metalurgico"
+			subtitle: "A maquina mais importante do Mekanism!"
+			icon: {
+				id: "mekanism:metallurgic_infuser"
+			}
+			description: [
+				"Minere &bOsmium Ore (Minerio de Osmio)&r nas cavernas e construa a sua primeira maquina do &bMekanism&r: o &3Metallurgic Infuser (Infusor Metalurgico)&r!"
+				""
+				"• &eDica:&r Voce pode ligar o Metallurgic Infuser colocando ate mesmo &cRedstone&r no slot de energia dele no comeco, ou conectando a um &6Heat Generator&r (do Mekanism Generators) / &6Alternator&r!"
+			]
+			dependencies: ["03B0000000000010"]
+			x: 2.5d
+			y: 1.0d
+			shape: "pentagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "03B0000000000051"
+					type: "item"
+					item: {
+						id: "mekanism:ingot_osmium"
+					}
+					count: 12L
+				}
+				{
+					id: "03B0000000000052"
+					type: "item"
+					item: {
+						id: "mekanism:metallurgic_infuser"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000064"
+					type: "item"
+					item: {
+						id: "mekanism:ingot_osmium"
+						count: 8
+					}
+				}
+				{
+					id: "03B0000000000065"
+					type: "item"
+					item: {
+						id: "minecraft:redstone"
+						count: 16
+					}
+				}
+			]
+		}
+		{
+			id: "03B0000000000060"
+			title: "&a6. Circuito de Controle Basico e Liga Infundida"
+			subtitle: "O Coracao Eletronico da Silph Co.!"
+			icon: {
+				id: "mekanism:basic_control_circuit"
+			}
+			description: [
+				"Existem &e2 formas&r de produzir o &aBasic Control Circuit (Circuito de Controle Basico)&r e a &cInfused Alloy (Liga Infundida)&r:"
+				"1. &bNo Metallurgic Infuser:&r Infunda &fOsmio + Redstone&r para criar o Circuito Basico, e &fFerro + Redstone&r para criar a Infused Alloy!"
+				"2. &aReceita Bio-Eletronica da Firma (na Bancada):&r 6 Cabos Universais Basicos + 1 Redstone + 1 Chapa de Ferro (Create) + &e1 Apricorn de qualquer cor&r!"
+				""
+				"• &bOnde o Circuito Basico e usado:&r PC Pokemon, Healing Machine, Pasture Block, Pokedex, Exp. Share, Fornalha de Ouro, Mochila de Ouro, Storage Terminal, Explorer's Compass, Mega Bracelet e Tera Orb!"
+			]
+			dependencies: ["03B0000000000020", "03B0000000000050"]
+			x: 5.0d
+			y: 0.0d
+			shape: "hexagon"
+			size: 1.50d
+			tasks: [
+				{
+					id: "03B0000000000061"
+					type: "item"
+					item: {
+						id: "mekanism:basic_control_circuit"
+					}
+					count: 4L
+				}
+				{
+					id: "03B0000000000062"
+					type: "item"
+					item: {
+						id: "mekanism:alloy_infused"
+					}
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000074"
+					type: "item"
+					item: {
+						id: "mekanism:basic_control_circuit"
+						count: 2
+					}
+				}
+				{
+					id: "03B0000000000075"
+					type: "item"
+					item: {
+						id: "mekanism:basic_universal_cable"
+						count: 16
+					}
+				}
+			]
+		}
+		{
+			id: "03B0000000000070"
+			title: "&67. Fornalhas de Ferro e Ouro (Better Furnaces)"
+			subtitle: "Fundicao ultra-rapida para o seu laboratorio"
+			icon: {
+				id: "betterfurnacesreforged:gold_furnace"
+			}
+			description: [
+				"Chega de esperar a fornalha de pedra! Evolua sua fornalha passando pelos tiers da Firma:"
+				"• &fFornalha de Ferro:&r Usa Chapas de Ferro (Create), Bloco Condutor, Cobre e &cRed Apricorn&r."
+				"• &6Fornalha de Ouro:&r Evolui a Fornalha de Ferro com Ouro e &a1 Circuito de Controle Basico (Mekanism)&r!"
+			]
+			dependencies: ["03B0000000000060"]
+			x: 5.0d
+			y: -1.3d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03B0000000000071"
+					type: "item"
+					item: {
+						id: "betterfurnacesreforged:iron_furnace"
+					}
+				}
+				{
+					id: "03B0000000000072"
+					type: "item"
+					item: {
+						id: "betterfurnacesreforged:gold_furnace"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000084"
+					type: "item"
+					item: {
+						id: "betterfurnacesreforged:fuel_efficiency_upgrade"
+						count: 1
+					}
+				}
+				{
+					id: "03B0000000000085"
+					type: "item"
+					item: {
+						id: "betterfurnacesreforged:ore_processing_upgrade"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03B0000000000090"
+			title: "&b8. Dobrando Minerios (Mekanism): Enrichment Chamber e Smelter"
+			subtitle: "1 Minerio Bruto = 2 Barras (e ate 3x/4x/5x depois)!"
+			icon: {
+				id: "mekanism:enrichment_chamber"
+			}
+			description: [
+				"Monte a sua linha industrial do &bMekanism&r:"
+				"• &aEnrichment Chamber (Camara de Enriquecimento):&r Transforma 1 Minerio Bruto em 2 Pos (dobrando seus minerios!) e tambem transforma 1 Redstone/Carvao/Diamante em versão Enriquecida (que rende 8x mais no Metallurgic Infuser!)."
+				"• &eCrusher (Triturador):&r Tritura sobras vegetais/Apricorns em &aBio Fuel&r para gerar muita energia!"
+				"• &6Energized Smelter:&r Fornalha eletrica de alta precisao."
+			]
+			dependencies: ["03B0000000000060"]
+			x: 7.5d
+			y: -1.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03B0000000000091"
+					type: "item"
+					item: {
+						id: "mekanism:enrichment_chamber"
+					}
+				}
+				{
+					id: "03B0000000000092"
+					type: "item"
+					item: {
+						id: "mekanism:crusher"
+					}
+				}
+				{
+					id: "03B0000000000093"
+					type: "item"
+					item: {
+						id: "mekanism:energized_smelter"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B00000000000A4"
+					type: "item"
+					item: {
+						id: "mekanism:upgrade_speed"
+						count: 4
+					}
+				}
+				{
+					id: "03B00000000000A5"
+					type: "item"
+					item: {
+						id: "mekanism:upgrade_energy"
+						count: 4
+					}
+				}
+			]
+		}
+		{
+			id: "03B00000000000B0"
+			title: "&c9. Circuitos Avancado, Elite e Ultimate (Mekanism)"
+			subtitle: "A Escalada Tecnologica ate o Topo!"
+			icon: {
+				id: "mekanism:ultimate_control_circuit"
+			}
+			description: [
+				"Combinando as ligas do Mekanism com os cristais do Powah!, escale os 4 Tiers de Circuitos:"
+				"• &cAdvanced Control Circuit (Tier 2):&r Circuito Basico + 2 Infused Alloys (ou via bancada com Pasta Dieletrica e Aco Energizado)."
+				"• &bElite Control Circuit (Tier 3):&r Circuito Avancado + 2 Reinforced Alloys (Infused Alloy + Po de Diamante no Infuser)."
+				"• &dUltimate Control Circuit (Tier 4):&r Circuito Elite + 2 Atomic Alloys (Reinforced Alloy + Obsidiana Refinada no Infuser)."
+			]
+			dependencies: ["03B0000000000090"]
+			x: 10.0d
+			y: -1.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03B00000000000B1"
+					type: "item"
+					item: {
+						id: "mekanism:advanced_control_circuit"
+					}
+					count: 2L
+				}
+				{
+					id: "03B00000000000B2"
+					type: "item"
+					item: {
+						id: "mekanism:elite_control_circuit"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B00000000000C4"
+					type: "item"
+					item: {
+						id: "mekanism:ultimate_control_circuit"
+						count: 1
+					}
+				}
+				{
+					id: "03B00000000000C5"
+					type: "item"
+					item: {
+						id: "mekanism:alloy_atomic"
+						count: 2
+					}
+				}
+			]
+		}
+		{
+			id: "03B00000000000D0"
+			title: "&610. Equipamentos Mekanism: Jetpack e Atomic Disassembler!"
+			subtitle: "Voe pelo mapa e minere tudo instantaneamente!"
+			icon: {
+				id: "mekanism:atomic_disassembler"
+			}
+			description: [
+				"Recompense seu esforco industrial construindo os equipamentos lendarios do &bMekanism&r:"
+				"• &6Jetpack:&r Voe livremente para explorar montanhas e santuarios!"
+				"• &dAtomic Disassembler:&r A multitool definitiva de energia (Picareta + Pa + Machado + Espada com mineracao em veia!)."
+			]
+			dependencies: ["03B00000000000B0"]
+			x: 12.5d
+			y: -1.0d
+			shape: "hexagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "03B00000000000D1"
+					type: "item"
+					item: {
+						id: "mekanism:energy_tablet"
+					}
+					count: 2L
+				}
+				{
+					id: "03B00000000000D2"
+					type: "item"
+					item: {
+						id: "mekanism:atomic_disassembler"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B00000000000E4"
+					type: "item"
+					item: {
+						id: "mekanism:jetpack"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03B00000000000F0"
+			title: "&811. Pasta Dieletrica e Pokebolas Tier 3 (Powah!)"
+			subtitle: "O isolante para Ultra Ball, Quick Ball, Dusk Ball e Timer Ball!"
+			icon: {
+				id: "powah:dielectric_paste"
+			}
+			description: [
+				"Entrando na &eEra 2 (Powah!)&r, aprenda a fazer &7Dielectric Paste (Pasta Dieletrica)&r com Carvao, Argila e Blaze Powder/Lava (rende 24 unidades por receita!)."
+				""
+				"• &6Uso nas Pokebolas:&r Na Firma League, a Pasta Dieletrica (ou Aco Energizado / Brass Sheet / Infused Alloy) e o nucleo obrigatorio de &bTODAS as Pokebolas Tier 3 (Ultra Ball, Quick Ball, Dusk Ball, Timer Ball, Luxury Ball)&r!"
+			]
+			dependencies: ["03B0000000000060"]
+			x: 5.0d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03B00000000000F1"
+					type: "item"
+					item: {
+						id: "powah:dielectric_paste"
+					}
+					count: 24L
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000104"
+					type: "item"
+					item: {
+						id: "cobblemon:ultra_ball"
+						count: 15
+					}
+				}
+				{
+					id: "03B0000000000105"
+					type: "item"
+					item: {
+						id: "cobblemon:quick_ball"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "03B0000000000110"
+			title: "&b12. Orbe de Energizacao (Energizing Orb e Rod)"
+			subtitle: "Como montar o sintetizador da Grande Convergencia!"
+			icon: {
+				id: "powah:energizing_orb"
+			}
+			description: [
+				"O &bEnergizing Orb&r e a maquina mais importante do modpack para criar itens de Mega Evolucao, Terastal e Competitivo!"
+				""
+				"&eComo montar e usar (Passo a Passo):&r"
+				"1. Construa o &bEnergizing Orb&r (Vidro + Ametista + Dielectric Casing + Circuito Basico do Mekanism) e coloque no chao."
+				"2. Construa pelo menos uma &eEnergizing Rod (Starter ou Basic)&r e coloque a ate 3 blocos de distancia do Orbe."
+				"3. Ligue a Energizing Rod a um &aPainel Solar (Solar Panel)&r, &cFurnator&r ou gerador do Mekanism usando cabos de energia!"
+				"4. Quando colocar os ingredientes certos dentro do Orbe, a haste vai disparar um raio laser e sintetizar o item!"
+			]
+			dependencies: ["03B00000000000F0"]
+			x: 7.5d
+			y: 2.5d
+			shape: "hexagon"
+			size: 1.50d
+			tasks: [
+				{
+					id: "03B0000000000111"
+					type: "item"
+					item: {
+						id: "powah:energizing_orb"
+					}
+				}
+				{
+					id: "03B0000000000112"
+					type: "item"
+					item: {
+						id: "powah:energizing_rod_starter"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000124"
+					type: "item"
+					item: {
+						id: "powah:solar_panel_starter"
+						count: 2
+					}
+				}
+				{
+					id: "03B0000000000125"
+					type: "item"
+					item: {
+						id: "powah:energy_cable_starter"
+						count: 8
+					}
+				}
+			]
+		}
+		{
+			id: "03B0000000000130"
+			title: "&613. Aco Energizado e Cristal Blazing"
+			subtitle: "Energizando metais no Orbe"
+			icon: {
+				id: "powah:steel_energized"
+			}
+			description: [
+				"Coloque no seu &bEnergizing Orb&r:"
+				"• &f1 Ferro + 1 Ouro (10.000 FE)&r -> Gera &62x Energized Steel (Aco Energizado)&r!"
+				"• &c1 Blaze Rod ou 4 Blaze Powders (90.000 FE)&r -> Gera &61x Blazing Crystal&r!"
+				""
+				"Eles sao usados para forjar sua &dMega Bracelet&r, &bTera Orb&r, &bFornalha de Diamante&r, &bMochila de Diamante&r e &cCircuito Avancado&r!"
+			]
+			dependencies: ["03B0000000000110"]
+			x: 10.0d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03B0000000000131"
+					type: "item"
+					item: {
+						id: "powah:steel_energized"
+					}
+					count: 6L
+				}
+				{
+					id: "03B0000000000132"
+					type: "item"
+					item: {
+						id: "powah:crystal_blazing"
+					}
+					count: 2L
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000144"
+					type: "item"
+					item: {
+						id: "powah:energizing_rod_basic"
+						count: 1
+					}
+				}
+				{
+					id: "03B0000000000145"
+					type: "item"
+					item: {
+						id: "powah:solar_panel_basic"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03B0000000000150"
+			title: "&b14. Fornalhas de Diamante e Netherhot"
+			subtitle: "Velocidade extrema com Cristais Energizados"
+			icon: {
+				id: "betterfurnacesreforged:diamond_furnace"
+			}
+			description: [
+				"Use seus &6Cristais Blazing&r e &bCristais Niotic&r para elevar sua Fornalha aos tiers de &bDiamante&r e &cNetherhot&r!"
+			]
+			dependencies: ["03B0000000000070", "03B0000000000130"]
+			x: 10.0d
+			y: 0.8d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03B0000000000151"
+					type: "item"
+					item: {
+						id: "betterfurnacesreforged:diamond_furnace"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000164"
+					type: "item"
+					item: {
+						id: "betterfurnacesreforged:factory_upgrade"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03B0000000000170"
+			title: "&a15. Sintetizacao Pokemon I: Link Cable e Upgrade"
+			subtitle: "Evolua Haunter, Kadabra, Machoke, Graveler e Porygon!"
+			icon: {
+				id: "cobblemon:link_cable"
+			}
+			description: [
+				"Use as receitas exclusivas da Firma no &bEnergizing Orb&r:"
+				"• &aLink Cable (15.000 FE):&r 1 Cabo Universal Basico (Mekanism) + 1 Barra de Ouro + 1 Ender Pearl!"
+				"• &bUpgrade (25.000 FE):&r 1 Circuito de Controle Basico + 1 Pistao + 1 Red Apricorn + 1 Blue Apricorn!"
+			]
+			dependencies: ["03B0000000000110"]
+			x: 7.5d
+			y: 5.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03B0000000000171"
+					type: "item"
+					item: {
+						id: "cobblemon:link_cable"
+					}
+				}
+				{
+					id: "03B0000000000172"
+					type: "item"
+					item: {
+						id: "cobblemon:upgrade"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000184"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "03B0000000000190"
+			title: "&d16. Sintetizacao Pokemon II: Keystone e Ability Capsule"
+			subtitle: "Crie sua propria pedra de Mega Evolucao no laboratorio!"
+			icon: {
+				id: "mega_showdown:keystone"
+			}
+			description: [
+				"Mais receitas exclusivas no &bEnergizing Orb&r:"
+				"• &eAbility Capsule (50.000 FE):&r 1 Basic Capacitor + 1 Rare Candy + 1 Yellow Apricorn + 1 Pink Apricorn."
+				"• &dKeystone (100.000 FE):&r 1 Diamante + 1 Ametista + 1 Blazing Crystal + 1 Sun Stone + 1 Moon Stone!"
+			]
+			dependencies: ["03B0000000000130", "03B0000000000170"]
+			x: 10.0d
+			y: 5.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03B0000000000191"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_capsule"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B00000000001A4"
+					type: "item"
+					item: {
+						id: "mega_showdown:keystone"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03B00000000001B0"
+			title: "&917. Era 3 (Hoenn): Box Link — PC Portatil Quantico!"
+			subtitle: "Acesse seus Pokemon de qualquer lugar do mapa!"
+			icon: {
+				id: "cobblemonboxlink:box_link"
+			}
+			description: [
+				"Com &cCircuito de Controle Avancado (Mekanism)&r + PC + Link Cable + Aco Energizado + Ender Pearl, construa o &dBox Link&r para acessar todos os seus Pokemon do PC de qualquer lugar do mundo (sem precisar ir ao End)!"
+			]
+			dependencies: ["03B0000000000130"]
+			x: 12.5d
+			y: 2.5d
+			shape: "hexagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "03B00000000001B1"
+					type: "item"
+					item: {
+						id: "mekanism:advanced_control_circuit"
+					}
+					count: 2L
+				}
+				{
+					id: "03B00000000001B2"
+					type: "item"
+					item: {
+						id: "cobblemonboxlink:box_link"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B00000000001C4"
+					type: "item"
+					item: {
+						id: "powah:crystal_niotic"
+						count: 2
+					}
+				}
+				{
+					id: "03B00000000001C5"
+					type: "item"
+					item: {
+						id: "cobblemon:dubious_disc"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03B00000000001D0"
+			title: "&b18. Cristais Niotic, Spirited e Nitro (Alta Energia)"
+			subtitle: "Energizando Diamante, Esmeralda e Nether Star!"
+			icon: {
+				id: "powah:crystal_spirited"
+			}
+			description: [
+				"No &bEnergizing Orb&r:"
+				"• &bNiotic Crystal (300.000 FE):&r 1 Diamante."
+				"• &aSpirited Crystal (1.000.000 FE):&r 1 Esmeralda."
+				"• &cNitro Crystal (2.000.000 FE):&r 1 Nether Star + 2 Redstone Blocks + 1 Blazing Crystal Block."
+			]
+			dependencies: ["03B00000000001B0"]
+			x: 12.5d
+			y: 5.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03B00000000001D1"
+					type: "item"
+					item: {
+						id: "powah:crystal_niotic"
+					}
+					count: 2L
+				}
+				{
+					id: "03B00000000001D2"
+					type: "item"
+					item: {
+						id: "powah:crystal_spirited"
+					}
+					count: 2L
+				}
+			]
+			rewards: [
+				{
+					id: "03B00000000001E4"
+					type: "item"
+					item: {
+						id: "powah:energizing_rod_niotic"
+						count: 1
+					}
+				}
+				{
+					id: "03B00000000001E5"
+					type: "item"
+					item: {
+						id: "powah:solar_panel_niotic"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03B00000000001F0"
+			title: "&519. Era 4 (Sinnoh): Ability Patch, Golden Cap e Master Ball!"
+			subtitle: "O Apice da Engenharia Espaco-Tempo"
+			icon: {
+				id: "cobblemon:master_ball"
+			}
+			description: [
+				"Com os Cristais de Elite e Circuitos do Mekanism, voce domina o topo da cadeia tecnologica:"
+				"• &5Ability Patch (150.000 FE no Orbe):&r Circuito de Controle Avancado + Cristal Niotic + Ability Capsule + Bloco de Ametista."
+				"• &6Golden Bottle Cap (200.000 FE no Orbe ou com as 6 Silver Caps):&r Deixa todos os 6 IVs de um Pokemon em 31!"
+				"• &dMaster Ball:&r Cristal Nitro + Circuito de Controle Ultimate + Nether Star + Netherite + Shulker Shell + Pink e Black Apricorn!"
+			]
+			dependencies: ["03B00000000001B0", "03B00000000001D0"]
+			x: 15.0d
+			y: 3.7d
+			shape: "gear"
+			size: 1.80d
+			tasks: [
+				{
+					id: "03B00000000001F1"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_patch"
+					}
+				}
+				{
+					id: "03B00000000001F2"
+					type: "item"
+					item: {
+						id: "cobblemon_utility:goldencap"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03B0000000000204"
+					type: "item"
+					item: {
+						id: "cobblemon:master_ball"
+						count: 1
+					}
+				}
+				{
+					id: "03B0000000000205"
+					type: "item"
+					item: {
+						id: "powah:crystal_nitro"
+						count: 2
+					}
+				}
+			]
+		}
+	]
+}

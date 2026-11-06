@@ -1,0 +1,12 @@
+{
+  "pokemon": [
+    "riolu",
+    "lucario"
+  ],
+  "cosmeticItems": [
+    {
+      "consumedItem": "minecraft:ominous_trial_key",
+      "aspects": ["cosmetic_item-atmxmsd2"]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "target": "cobblemon:mrmime",
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "50-75",
+          "JUMP": "40-60",
+          "SKILL": "20-65",
+          "SPEED": "65-85",
+          "STAMINA": "35-60"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "poseTypes": [ "STAND" ],
+            "offset": {
+              "x": 0.0,
+              "y": -0.6875,
+              "z": 1.0625
+            }
+          },
+          {
+            "poseTypes": [ "WALK" ],
+            "offset": {
+              "x": 0.0,
+              "y": -0.6875,
+              "z": 1.0625
+            }
+          },
+          {
+            "poseTypes": [ "HOVER" ],
+            "offset": {
+              "x": 0.0,
+              "y": -0.6875,
+              "z": 1.0625
+            }
+          },
+          {
+            "poseTypes": [ "FLY" ],
+            "offset": {
+              "x": 0.0,
+              "y": -0.6875,
+              "z": 1.0625
+            }
+          },
+          {
+            "poseTypes": [ "FLOAT" ],
+            "offset": {
+              "x": 0.0,
+              "y": -0.6875,
+              "z": 1.0625
+            }
+          },
+          {
+            "poseTypes": [ "SWIM" ],
+            "offset": {
+              "x": 0.0,
+              "y": -0.6875,
+              "z": 1.0625
+            }
+          },
+          {
+            "poseTypes": [ "GLIDE" ],
+            "offset": {
+              "x": 0.0,
+              "y": -0.6875,
+              "z": 1.0625
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

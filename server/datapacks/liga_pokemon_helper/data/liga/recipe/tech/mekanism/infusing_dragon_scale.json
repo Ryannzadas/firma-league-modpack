@@ -1,0 +1,16 @@
+{
+  "type": "mekanism:metallurgic_infusing",
+  "chemical_input": {
+    "amount": 40,
+    "tag": "mekanism:diamond"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "minecraft:prismarine_shard"
+  },
+  "output": {
+    "count": 1,
+    "id": "cobblemon:dragon_scale"
+  },
+  "per_tick_usage": false
+}

@@ -1,0 +1,26 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "fluttermane-1",
+            "pokemon": "fluttermane",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "rare",
+            "level": "45-60",
+            "weight": 1.5,
+            "condition": {
+                "biomes": [
+                    "#cobblemon:is_spooky",
+                    "minecraft:deep_dark"
+                ]
+            },
+            "timeRange": "night"
+        }
+    ]
+}

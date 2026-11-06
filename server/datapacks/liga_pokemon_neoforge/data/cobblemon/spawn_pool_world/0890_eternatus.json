@@ -1,0 +1,24 @@
+{
+    "enabled": "true",
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "eternatus-1",
+            "pokemon": "eternatus",
+            "type": "pokemon",
+            "presets": [
+                "natural"
+            ],
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "70-90",
+            "weight": 0,
+            "condition": {
+                "biomes": [
+                    "cobbleverse:custom_spawn/eternatus_cocoon"
+                ]
+            }
+        }
+    ]
+}

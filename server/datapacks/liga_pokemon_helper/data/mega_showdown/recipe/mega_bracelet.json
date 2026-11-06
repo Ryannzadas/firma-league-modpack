@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IDI",
+    "AKA",
+    "IEI"
+  ],
+  "key": {
+    "I": {
+      "item": "powah:steel_energized"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "A": {
+      "item": "cobblemon:white_apricorn"
+    },
+    "K": {
+      "item": "mega_showdown:keystone"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "result": {
+    "id": "mega_showdown:mega_bracelet",
+    "count": 1
+  }
+}

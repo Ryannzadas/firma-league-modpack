@@ -1,0 +1,44 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "incineroar-1",
+            "pokemon": "incineroar",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "34-53",
+            "weight": 0.4,
+            "condition": {
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_jungle"
+                ],
+                "isRaining": false
+            }
+        },
+        {
+            "id": "incineroar-2",
+            "pokemon": "incineroar",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "34-52",
+            "weight": 0.7,
+            "condition": {
+                "biomes": [
+                    "minecraft:crimson_forest"
+                ]
+            }
+        }
+    ]
+}

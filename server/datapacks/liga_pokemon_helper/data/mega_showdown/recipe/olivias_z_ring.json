@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "C": {
+      "item": "powah:steel_energized"
+    },
+    "P": {
+      "item": "cobblemon:pink_apricorn"
+    },
+    "S": {
+      "item": "mega_showdown:sparkling_stone_light"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "pattern": [
+    "PSP",
+    "CAC",
+    "CEC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:olivias_z_ring"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "#bca:special_structures/witch_hut",
+  "spawn_overrides": {},
+  "start_pool": "bca:special_structures/swamp_witches_hut",
+  "size": 4,
+  "step": "lakes",
+  "start_height": {
+    "absolute": 0
+  },
+  "project_start_to_heightmap": "MOTION_BLOCKING_NO_LEAVES",
+  "max_distance_from_center": 116,
+  "terrain_adaptation": "beard_thin",
+  "use_expansion_hack": false
+}

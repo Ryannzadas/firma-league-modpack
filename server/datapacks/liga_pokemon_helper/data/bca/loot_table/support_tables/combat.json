@@ -1,0 +1,15 @@
+﻿{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "loot_table", "value": "bca:item_groups/stat_boosters",        "weight": 20 },
+        { "type": "loot_table", "value": "bca:item_groups/held_items",           "weight": 3 },
+        { "type": "loot_table", "value": "bca:item_groups/type_boosting_items",  "weight": 2 },
+        { "type": "loot_table", "value": "bca:item_groups/battle_consumables",   "weight": 15 },
+        { "type": "item",       "name": "minecraft:air",                                "weight": 40 }
+      ]
+    }
+  ]
+}

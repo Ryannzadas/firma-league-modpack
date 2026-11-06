@@ -1,0 +1,21 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "celebi-1",
+            "pokemon": "celebi",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "75-80",
+            "weight": 0,
+            "condition": {
+                "biomes": [
+                    "cobbleverse:custom_spawn/ilex_shrine"
+				]
+            }
+        }
+	]
+}

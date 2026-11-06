@@ -1,0 +1,86 @@
+{
+  "name": "Líder Brock",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "moveBias": 0.9,
+      "statMoveBias": 0.35,
+      "switchBias": 0.35,
+      "itemBias": 0.8,
+      "maxSelectMargin": 0.25
+    }
+  },
+  "battleFormat": "GEN_9_SINGLES",
+  "battleRules": {
+    "maxItemUses": 1
+  },
+  "bag": [
+    {
+      "item": "cobblemon:potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:geodude",
+      "gender": "MALE",
+      "level": 12,
+      "nature": "impish",
+      "ability": "sturdy",
+      "moveset": [
+        "rocktomb",
+        "bulldoze",
+        "stealthrock",
+        "tackle"
+      ],
+      "ivs": { "hp": 20, "attack": 20, "defence": 20, "special_attack": 20, "special_defence": 20, "speed": 20 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:vulpix",
+      "gender": "FEMALE",
+      "level": 13,
+      "nature": "timid",
+      "ability": "flashfire",
+      "moveset": [
+        "incinerate",
+        "willowisp",
+        "quickattack",
+        "babydolleyes"
+      ],
+      "ivs": { "hp": 20, "attack": 20, "defence": 20, "special_attack": 20, "special_defence": 20, "speed": 20 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:anorith",
+      "gender": "MALE",
+      "level": 13,
+      "nature": "adamant",
+      "ability": "battle_armor",
+      "moveset": [
+        "bugbite",
+        "rocktomb",
+        "aquajet",
+        "harden"
+      ],
+      "ivs": { "hp": 20, "attack": 20, "defence": 20, "special_attack": 20, "special_defence": 20, "speed": 20 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:onix",
+      "gender": "MALE",
+      "level": 15,
+      "nature": "jolly",
+      "ability": "rockhead",
+      "heldItem": "cobblemon:oran_berry",
+      "moveset": [
+        "rocktomb",
+        "bulldoze",
+        "bind",
+        "screech"
+      ],
+      "ivs": { "hp": 25, "attack": 25, "defence": 25, "special_attack": 25, "special_defence": 25, "speed": 25 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    }
+  ]
+}

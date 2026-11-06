@@ -1,0 +1,24 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "glastrier-1",
+            "pokemon": "glastrier",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "60",
+            "weight": 0,
+            "condition": {
+                "biomes": [
+                    "cobbleverse:custom_spawn/crown_spire"
+                ]
+            }
+        }
+    ]
+}

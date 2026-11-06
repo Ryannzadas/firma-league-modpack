@@ -1,0 +1,10 @@
+{
+  "target": "cobblemon:runerigus",
+  "implemented": true,
+  "baseScale": 0.55,
+  "hitbox": {
+    "width": 2.0,
+    "height": 3.0,
+    "fixed": false
+  }
+}

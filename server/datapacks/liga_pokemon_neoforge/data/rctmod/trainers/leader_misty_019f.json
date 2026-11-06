@@ -1,0 +1,86 @@
+{
+  "name": "Líder Misty",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "moveBias": 0.9,
+      "statMoveBias": 0.4,
+      "switchBias": 0.4,
+      "itemBias": 0.8,
+      "maxSelectMargin": 0.25
+    }
+  },
+  "battleFormat": "GEN_9_SINGLES",
+  "battleRules": {
+    "maxItemUses": 1
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:frogadier",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "hasty",
+      "ability": "protean",
+      "moveset": [
+        "waterpulse",
+        "icywind",
+        "uturn",
+        "quickattack"
+      ],
+      "ivs": { "hp": 22, "attack": 22, "defence": 22, "special_attack": 22, "special_defence": 22, "speed": 22 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:lanturn",
+      "gender": "FEMALE",
+      "level": 25,
+      "nature": "calm",
+      "ability": "voltabsorb",
+      "moveset": [
+        "scald",
+        "volt_switch",
+        "icywind",
+        "thunderwave"
+      ],
+      "ivs": { "hp": 22, "attack": 22, "defence": 22, "special_attack": 22, "special_defence": 22, "speed": 22 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:floatzel",
+      "gender": "MALE",
+      "level": 25,
+      "nature": "jolly",
+      "ability": "swiftswim",
+      "moveset": [
+        "aquajet",
+        "liquidation",
+        "icepunch",
+        "crunch"
+      ],
+      "ivs": { "hp": 22, "attack": 22, "defence": 22, "special_attack": 22, "special_defence": 22, "speed": 22 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:starmie",
+      "gender": "GENDERLESS",
+      "level": 27,
+      "nature": "timid",
+      "ability": "naturalcure",
+      "heldItem": "cobblemon:sitrus_berry",
+      "moveset": [
+        "scald",
+        "psybeam",
+        "icywind",
+        "recover"
+      ],
+      "ivs": { "hp": 25, "attack": 25, "defence": 25, "special_attack": 25, "special_defence": 25, "speed": 25 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    }
+  ]
+}

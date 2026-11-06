@@ -1,0 +1,37 @@
+{
+  "implemented": true,
+  "target": "cobblemon:pangoro",   
+  "shoulderMountable": false,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.92,
+    "height": 2,
+    "fixed": false
+  },
+  "drops": {
+  "amount": "2",
+    "entries": [
+      {
+        "item": "minecraft:stick",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "cobblemon:string",
+        "percentage": 100
+      },
+      {
+        "item": "minecraft:bamboo",
+        "percentage": 100
+      }
+    ]
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "walkSpeed": 0.25,         
+      "depth": "normal",
+      "light": "0-4"
+    }
+  }
+}

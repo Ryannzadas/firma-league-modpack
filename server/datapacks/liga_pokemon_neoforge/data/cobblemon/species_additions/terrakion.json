@@ -1,0 +1,66 @@
+{
+  "target": "cobblemon:terrakion",
+	"implemented": true,
+  "baseScale": 0.95,
+  "hitbox": {
+    "width": 1.8,
+    "height": 1.8,
+    "fixed": false
+  },
+	"behaviour": {
+    "herd": {
+      "maxSize": "1"
+    },
+    "resting": {
+      "canSleep": true,
+      "depth": "normal",
+      "light": "0-4"
+    },
+    "moving": {
+      "canLook": false,
+      "walk": {
+		    "walkSpeed": 0.190,
+        "canWalk": true,
+        "avoidsLand": false
+      },
+      "swim": {
+        "swimSpeed": 0.1,
+        "canSwimInWater": false,
+        "canBreatheUnderwater": false
+      }
+    }
+  },
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "35-50",
+          "JUMP": "30-45",
+          "SKILL": "35-55",
+          "SPEED": "85-100",
+          "STAMINA": "70-95"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 1.2,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "offset": {
+              "x": 0.0,
+              "y": -1.3,
+              "z": 0.0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

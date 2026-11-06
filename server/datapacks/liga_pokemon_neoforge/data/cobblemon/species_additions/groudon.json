@@ -1,0 +1,262 @@
+{
+  "implemented": true,
+  "target": "cobblemon:groudon",
+  "features": [
+    "virus"
+  ],
+  "baseScale": 1,
+  "hitbox": {
+    "width": 5.5,
+    "height": 6,
+    "fixed": false
+  },
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "SPEED": "35-65",
+          "ACCELERATION": "40-70",
+          "SKILL": "30-55",
+          "JUMP": "30-65",
+          "STAMINA": "80-135"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "offset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "poseTypes": [
+              "STAND"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "poseTypes": [
+              "WALK"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "poseTypes": [
+              "HOVER"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "behaviour": {
+    "herd": {
+      "maxSize": "1"
+    },
+    "moving": {
+      "canLook": true,
+      "walk": {
+        "walkSpeed": 0.6,
+        "canWalk": true,
+        "avoidsLand": false
+      },
+      "swim": {
+        "hurtByLava": false,
+        "canWalkOnLava": true
+      }
+    },
+    "fireImmune": true
+  },
+  "forms": [
+    {
+      "name": "Virus",
+      "primaryType": "ground",
+      "secondaryType": "poison",
+      "aspects": [
+        "virus"
+      ],
+      "pokedex": [
+        "cobblemon.species.groudon-virus.desc"
+      ],
+      "baseScale": 1.45,
+      "abilities": [
+        "eartheater",
+        "thermalexchange"
+      ],
+      "baseStats": {
+        "hp": 113,
+        "attack": 97,
+        "defence": 130,
+        "special_attack": 147,
+        "special_defence": 113,
+        "speed": 70
+      },
+      "moves": [
+        "1:mudshot",
+        "1:scaryface",
+        "1:lavaplume",
+        "1:ancientpower",
+        "1:precipiceblades",
+        "1:gigadrain",
+        "5:ingrain",
+        "5:leechseed",
+        "7:vinewhip",
+        "9:earthpower",
+        "10:synthesis",
+        "12:sludge",
+        "18:bulkup",
+        "20:acidarmor",
+        "22:sludgewave",
+        "25:venoshock",
+        "27:earthquake",
+        "30:sludgebomb",
+        "35:powerwhip",
+        "36:hammerarm",
+        "45:fissure",
+        "50:venomdrench",
+        "54:rest",
+        "72:fireblast",
+        "75:strengthsap",
+        "81:solarbeam",
+        "90:eruption",
+        "tm:aerialace",
+        "tm:ancientpower",
+        "tm:block",
+        "tm:bodypress",
+        "tm:bodyslam",
+        "tm:brickbreak",
+        "tm:brutalswing",
+        "tm:bulkup",
+        "tm:bulldoze",
+        "tm:crunch",
+        "tm:cut",
+        "tm:dig",
+        "tm:doubleedge",
+        "tm:dragonclaw",
+        "tm:dragonpulse",
+        "tm:earthpower",
+        "tm:earthquake",
+        "tm:endure",
+        "tm:facade",
+        "tm:fireblast",
+        "tm:firefang",
+        "tm:firepunch",
+        "tm:flamethrower",
+        "tm:fling",
+        "tm:focusblast",
+        "tm:focuspunch",
+        "tm:furycutter",
+        "tm:gigaimpact",
+        "tm:headbutt",
+        "tm:heatcrash",
+        "tm:heatwave",
+        "tm:heavyslam",
+        "tm:helpinghand",
+        "tm:highhorsepower",
+        "tm:honeclaws",
+        "tm:hyperbeam",
+        "tm:incinerate",
+        "tm:ironhead",
+        "tm:irontail",
+        "tm:megakick",
+        "tm:megapunch",
+        "tm:metalclaw",
+        "tm:mudshot",
+        "tm:mudslap",
+        "tm:overheat",
+        "tm:poweruppunch",
+        "tm:protect",
+        "tm:rest",
+        "tm:roar",
+        "tm:rockblast",
+        "tm:rockclimb",
+        "tm:rockpolish",
+        "tm:rockslide",
+        "tm:rocksmash",
+        "tm:rocktomb",
+        "tm:rollout",
+        "tm:safeguard",
+        "tm:sandstorm",
+        "tm:sandtomb",
+        "tm:scaryface",
+        "tm:scorchingsands",
+        "tm:shadowclaw",
+        "tm:shockwave",
+        "tm:sleeptalk",
+        "tm:smackdown",
+        "tm:solarbeam",
+        "tm:spikes",
+        "tm:stealthrock",
+        "tm:stompingtantrum",
+        "tm:stoneedge",
+        "tm:strength",
+        "tm:strengthsap",
+        "tm:substitute",
+        "tm:sunnyday",
+        "tm:swordsdance",
+        "tm:takedown",
+        "tm:terablast",
+        "tm:thunder",
+        "tm:thunderbolt",
+        "tm:thunderpunch",
+        "tm:thunderwave",
+        "tm:toxic",
+        "tm:toxicspikes",
+        "tm:willowisp",
+        "tm:zenheadbutt",
+        "tutor:aerialace",
+        "tutor:ancientpower",
+        "tutor:block",
+        "tutor:bulkup",
+        "tutor:bulldoze",
+        "tutor:dragonpulse",
+        "tutor:earthpower",
+        "tutor:firefang",
+        "tutor:firepunch",
+        "tutor:flamethrower",
+        "tutor:focuspunch",
+        "tutor:furycutter",
+        "tutor:gigaimpact",
+        "tutor:heatwave",
+        "tutor:helpinghand",
+        "tutor:highhorsepower",
+        "tutor:hyperbeam",
+        "tutor:ironhead",
+        "tutor:irontail",
+        "tutor:mudslap",
+        "tutor:rest",
+        "tutor:rockslide",
+        "tutor:rocksmash",
+        "tutor:rollout",
+        "tutor:scorchingsands",
+        "tutor:shadowclaw",
+        "tutor:shockwave",
+        "tutor:sleeptalk",
+        "tutor:spikes",
+        "tutor:stealthrock",
+        "tutor:stompingtantrum",
+        "tutor:stoneedge",
+        "tutor:thunderbolt",
+        "tutor:thunderpunch",
+        "tutor:zenheadbutt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "minecraft:chainmail_leggings", "weight": 240, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "minecraft:chainmail_leggings", "weight": 360, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "minecraft:diamond_leggings", "weight": 20, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "minecraft:diamond_leggings", "weight": 30, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "minecraft:golden_leggings", "weight": 220, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "minecraft:golden_leggings", "weight": 330, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "minecraft:iron_leggings", "weight": 180, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "minecraft:iron_leggings", "weight": 270, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "minecraft:leather_leggings", "weight": 300, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "minecraft:leather_leggings", "weight": 450, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "minecraft:netherite_leggings", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "minecraft:netherite_leggings", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] }
+      ]
+    }
+  ]
+}

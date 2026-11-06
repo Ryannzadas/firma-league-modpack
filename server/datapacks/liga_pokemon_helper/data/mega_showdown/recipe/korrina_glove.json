@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "cobblemon:red_apricorn"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "I": {
+      "item": "powah:steel_energized"
+    },
+    "K": {
+      "item": "mega_showdown:keystone"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "pattern": [
+    " D ",
+    "IKI",
+    "AEA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:korrina_glove"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "target": "cobblemon:stonjourner",
+  "hitbox": {
+   "width": 1.5,
+   "height": 2.5,
+   "fixed": false
+ },
+ "behaviour": {
+  "moving": {
+    "walk": {
+      "walkSpeed": 0.2
+    }
+  }
+},  
+    "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "5-10",
+          "JUMP": "0-5",
+          "SKILL": "20-40",
+          "SPEED": "10-15",
+          "STAMINA": "60-120"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      }
+    ]
+  }
+}

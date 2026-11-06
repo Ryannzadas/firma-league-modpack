@@ -1,0 +1,24 @@
+[
+  {
+    "dimension": "minecraft:the_end",
+    "mob": "minecraft:enderman",
+    "spawner": false,
+    "random": 0.85,
+    "result": "deny"
+  },
+  {
+    "dimension": "minecraft:the_nether",
+    "hostile": true,
+    "spawner": false,
+    "random": 0.35,
+    "result": "deny"
+  },
+  {
+    "dimension": "minecraft:overworld",
+    "hostile": true,
+    "seesky": true,
+    "spawner": false,
+    "random": 0.5,
+    "result": "deny"
+  }
+]

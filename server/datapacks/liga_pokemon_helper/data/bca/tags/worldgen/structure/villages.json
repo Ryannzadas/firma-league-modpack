@@ -1,0 +1,13 @@
+{
+    "values": [
+        "bca:village/default_small",
+        "bca:village/default_mid",
+        "bca:village/default_large",
+        "bca:village/dark_small",
+        "bca:village/dark_mid",
+        "bca:village/fighting_small",
+        "bca:village/fighting_mid",
+        "bca:village/fighting_large",
+        "bca:village/witch_hut"
+    ]
+}

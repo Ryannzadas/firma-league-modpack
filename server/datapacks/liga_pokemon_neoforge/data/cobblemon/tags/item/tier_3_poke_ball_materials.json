@@ -1,0 +1,9 @@
+{
+  "replace": true,
+  "values": [
+    "create:brass_sheet",
+    "mekanism:alloy_infused",
+    "powah:dielectric_paste",
+    "powah:steel_energized"
+  ]
+}

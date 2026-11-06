@@ -1,0 +1,35 @@
+{
+  "implemented": true,
+  "target": "cobblemon:gulpin",   
+  "baseScale": 0.9,
+  "hitbox": {
+    "width": 1,
+    "height": 0.8,
+    "fixed": false
+  },
+  "drops": {
+  "amount": "2",
+    "entries": [
+      {
+        "item": "minecraft:slime_ball",
+        "quantityRange": "0-3"
+      },
+      {
+        "item": "cobblemon:black_sludge",
+        "percentage": 20
+      },
+      {
+        "item": "minecraft:oran_berry",
+        "percentage": 25
+      }
+    ]
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "depth": "normal",
+      "light": "0-4"
+    }
+  }
+}

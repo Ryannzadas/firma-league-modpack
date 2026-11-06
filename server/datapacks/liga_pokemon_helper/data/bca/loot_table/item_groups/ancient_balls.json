@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "cobblemon:ancient_azure_ball", "weight": 50 },
+        { "type": "item", "name": "cobblemon:ancient_citrine_ball", "weight": 50 },
+        { "type": "item", "name": "cobblemon:ancient_feather_ball", "weight": 50 },
+        { "type": "item", "name": "cobblemon:ancient_gigaton_ball", "weight": 10 },
+        { "type": "item", "name": "cobblemon:ancient_great_ball", "weight": 10 },
+        { "type": "item", "name": "cobblemon:ancient_heavy_ball", "weight": 10 },
+        { "type": "item", "name": "cobblemon:ancient_ivory_ball", "weight": 50 },
+        { "type": "item", "name": "cobblemon:ancient_jet_ball", "weight": 10 },
+        { "type": "item", "name": "cobblemon:ancient_leaden_ball", "weight": 10 },
+        { "type": "item", "name": "cobblemon:ancient_origin_ball", "weight": 1 },
+        { "type": "item", "name": "cobblemon:ancient_poke_ball", "weight": 50 },
+        { "type": "item", "name": "cobblemon:ancient_roseate_ball", "weight": 10 },
+        { "type": "item", "name": "cobblemon:ancient_slate_ball", "weight": 50 },
+        { "type": "item", "name": "cobblemon:ancient_ultra_ball", "weight": 5 },
+        { "type": "item", "name": "cobblemon:ancient_verdant_ball", "weight": 50 },
+        { "type": "item", "name": "cobblemon:ancient_wing_ball", "weight": 10 }
+      ]
+    }
+  ]
+}

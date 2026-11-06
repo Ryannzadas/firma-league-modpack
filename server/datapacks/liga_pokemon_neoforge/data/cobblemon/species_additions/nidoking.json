@@ -1,0 +1,55 @@
+{
+  "target": "cobblemon:nidoking",
+  "implemented": true,
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "SPEED": "10-35",
+          "ACCELERATION": "15-25",
+          "SKILL": "40-60",
+          "JUMP": "10-25",
+          "STAMINA": "30-45"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "offset": {
+              "x": 0.0,
+              "y": -0.5,
+              "z": 0.2
+            },
+            "poseTypes": [
+              "STAND",
+              "HOVER",
+              "FLY",
+              "GLIDE"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.0,
+              "y": -0.5,
+              "z": 0.15
+            },
+            "poseTypes": [
+              "WALK",
+              "FLOAT",
+              "SWIM"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

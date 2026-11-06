@@ -1,0 +1,43 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+        "id": "mimikyu-1",
+        "pokemon": "mimikyu",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "spawnablePositionType": "grounded",
+        "bucket": "rare",
+        "level": "23-48",
+        "weight": 10.0,
+        "condition": {
+            "timeRange": "night",
+            "biomes": [
+            "#cobblemon:is_spooky"
+            ]
+        }
+        },
+        {
+            "id": "mimikyu-2",
+            "pokemon": "mimikyu",
+            "presets": [
+                "mansion"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "uncommon",
+            "level": "23-48",
+            "weight": 10.0,
+            "condition": {
+                "canSeeSky": false,
+                "biomes": [
+                    "#cobblemon:is_overworld"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "moltres-1",
+            "pokemon": "moltres",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "50-60",
+            "weight": 0,
+            "condition": {
+                "biomes": [
+                    "cobbleverse:custom_spawn/moltres_tower"
+                ]
+            }
+        },
+        {
+            "id": "moltres-2",
+            "pokemon": "moltres galarian",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "60",
+            "weight": 4.0,
+            "condition": {
+                "structures": [
+                    "cobbleverse:dyna_tree"
+                ],
+                "timeRange": "day"
+            }
+        }
+    ]
+}

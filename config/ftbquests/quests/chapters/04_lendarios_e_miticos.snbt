@@ -1,0 +1,204 @@
+{
+	id: "0400000000000001"
+	group: "1000000000000001"
+	order_index: 11
+	filename: "04_lendarios_e_miticos"
+	title: "&54. Estruturas e Lendarios"
+	icon: {
+		id: "cobblemon:cherish_ball"
+	}
+	default_quest_shape: "hexagon"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "0400000000000010"
+			title: "&cLendarios de Kanto: Aves Lendarias e Templo de Mew"
+			subtitle: "Power Plant (Zapdos), Seafoam (Articuno), Volcano (Moltres) e Jungle Temple"
+			icon: {
+				id: "cobblemon:ultra_ball"
+			}
+			description: [
+				"Use sua &6Explorer's Compass&r para localizar os Santuarios Lendarios de Kanto:"
+				"• &ePower Plant:&r Zapdos"
+				"• &bCaverna Glacial:&r Articuno"
+				"• &cVulcao:&r Moltres"
+				"• &dOvergrown Temple (Selva):&r Mew e Mewtwo!"
+				""
+				"&cRequisito:&r Ter derrotado a 4a Insignia de Kanto (Erika) e trazer 10 Ultra Balls para a expedicao!"
+			]
+			dependencies: ["0200000000000040"]
+			x: 0.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0400000000000011"
+					type: "item"
+					item: {
+						id: "cobblemon:ultra_ball"
+					}
+					count: 10L
+				}
+			]
+			rewards: [
+				{
+					id: "0400000000000024"
+					type: "item"
+					item: {
+						id: "cobblemon:timer_ball"
+						count: 15
+					}
+				}
+				{
+					id: "0400000000000025"
+					type: "item"
+					item: {
+						id: "cobblemon:dusk_ball"
+						count: 15
+					}
+				}
+			]
+		}
+		{
+			id: "0400000000000030"
+			title: "&eLendarios de Johto: Burned Tower, Bell Tower e Whirl Islands"
+			subtitle: "Raikou, Entei, Suicune, Ho-Oh, Lugia e Celebi (BLOQUEADO ate zerar Kanto!)"
+			icon: {
+				id: "cobblemon:heavy_ball"
+			}
+			description: [
+				"Apos vencer o &6Campeao de Kanto&r, explore os Santuarios Lendarios de Johto:"
+				"• &cBurned Tower:&r Raikou, Entei e Suicune"
+				"• &6Bell Tower:&r Ho-Oh"
+				"• &9Whirl Islands:&r Lugia"
+				"• &aIlex Shrine:&r Celebi"
+			]
+			dependencies: ["0200000000000100"]
+			x: 2.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0400000000000031"
+					type: "item"
+					item: {
+						id: "cobblemon:heavy_ball"
+					}
+					count: 10L
+				}
+			]
+			rewards: [
+				{
+					id: "0400000000000044"
+					type: "item"
+					item: {
+						id: "cobblemon:max_revive"
+						count: 5
+					}
+				}
+				{
+					id: "0400000000000045"
+					type: "item"
+					item: {
+						id: "cobblemon:fast_ball"
+						count: 15
+					}
+				}
+			]
+		}
+		{
+			id: "0400000000000050"
+			title: "&aLendarios de Hoenn: Sky Pillar, Regi Temples e Meteorito"
+			subtitle: "Groudon, Kyogre, Rayquaza, Regis, Latios/Latias, Jirachi e Deoxys"
+			icon: {
+				id: "cobblemon:timer_ball"
+			}
+			description: [
+				"Apos concluir &eJohto&r, desbrave as estruturas lendarias de Hoenn:"
+				"• &cGroudon Volcano&r e &9Kyogre Dome&r"
+				"• &2Sky Pillar (Rayquaza)&r"
+				"• &7Titan Temples (Regirock, Regice, Registeel)&r"
+				"• &dSecret Garden (Latias e Latios)&r, &eWish Cave (Jirachi)&r e &5Deoxys Meteorite&r!"
+			]
+			dependencies: ["02200000000000B0"]
+			x: 5.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0400000000000051"
+					type: "item"
+					item: {
+						id: "cobblemon:timer_ball"
+					}
+					count: 15L
+				}
+			]
+			rewards: [
+				{
+					id: "0400000000000064"
+					type: "item"
+					item: {
+						id: "cobblemon:cherish_ball"
+						count: 5
+					}
+				}
+				{
+					id: "0400000000000065"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "0400000000000070"
+			title: "&dLendarios de Sinnoh: Os 3 Lagos, Spear Pillar e Hall of Origin"
+			subtitle: "Uxie, Mesprit, Azelf, Dialga, Palkia, Giratina, Darkrai e Arceus!"
+			icon: {
+				id: "cobblemon:master_ball"
+			}
+			description: [
+				"Apos vencer &bSteven Stone em Hoenn&r, enfrente o panteao mitologico de Sinnoh:"
+				"• &bLake Verity, Lake Valor e Lake Acuity&r (Mesprit, Azelf e Uxie)"
+				"• &8Turnback Cave e Distortion World&r (Giratina)"
+				"• &9Spear Pillar e Hall of Origin&r (Dialga, Palkia e Arceus!)"
+			]
+			dependencies: ["02300000000000C0"]
+			x: 7.5d
+			y: 0.0d
+			shape: "octagon"
+			size: 1.50d
+			tasks: [
+				{
+					id: "0400000000000071"
+					type: "item"
+					item: {
+						id: "cobblemon:dusk_ball"
+					}
+					count: 20L
+				}
+			]
+			rewards: [
+				{
+					id: "0400000000000084"
+					type: "item"
+					item: {
+						id: "cobblemon:master_ball"
+						count: 1
+					}
+				}
+				{
+					id: "0400000000000085"
+					type: "item"
+					item: {
+						id: "cobblemon:cherish_ball"
+						count: 5
+					}
+				}
+			]
+		}
+	]
+}

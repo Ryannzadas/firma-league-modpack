@@ -1,0 +1,9 @@
+{
+  "entryId": "cobblemon:dialga",
+  "forms": [
+    {
+      "displayForm": "Primal",
+      "unlockForms": ["Primal"]
+    }
+  ]
+}

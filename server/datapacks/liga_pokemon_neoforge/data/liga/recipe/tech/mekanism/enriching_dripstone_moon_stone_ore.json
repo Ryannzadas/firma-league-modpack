@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "count": 1,
+    "item": "cobblemon:dripstone_moon_stone_ore"
+  },
+  "output": {
+    "count": 2,
+    "id": "cobblemon:moon_stone"
+  }
+}

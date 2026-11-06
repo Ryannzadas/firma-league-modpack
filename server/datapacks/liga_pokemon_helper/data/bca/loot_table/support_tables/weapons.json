@@ -1,0 +1,15 @@
+﻿{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "loot_table", "value": "bca:item_groups/sword",          "weight": 10 },
+        { "type": "loot_table", "value": "bca:item_groups/bow",            "weight": 10 },
+        { "type": "loot_table", "value": "bca:item_groups/arrow",          "weight": 40 },
+        { "type": "loot_table", "value": "bca:item_groups/other_weapons",  "weight": 1 },
+        { "type": "item",       "name": "minecraft:air",                          "weight": 20 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "target": "cobblemon:zeraora",   
+  "implemented": true,
+  "shoulderMountable": false,
+  "baseScale": 0.65,
+  "hitbox": {
+    "width": 0.7,
+    "height": 2.3,
+    "fixed": false
+  },
+  "behaviour": {
+    "herd": {
+      "maxSize": "1"
+    },
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "depth": "normal",
+      "light": "0-4"
+    }
+  }
+}

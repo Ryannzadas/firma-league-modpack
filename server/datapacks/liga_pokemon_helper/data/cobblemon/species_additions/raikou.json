@@ -1,0 +1,48 @@
+{
+  "target": "cobblemon:raikou",
+  "implemented": true,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1.8,
+    "height": 2,
+    "fixed": false
+  },
+  "behaviour": {
+    "herd": {
+      "maxSize": "1"
+    },
+    "moving": {
+      "canLook": true,
+      "fly": {
+        "canFly": false
+      },
+      "swim": {
+        "canWalkOnWater": true
+      }
+    }
+  },
+    "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "90-120",
+          "JUMP": "40-65",
+          "SKILL": "30-50",
+          "SPEED": "100-130",
+          "STAMINA": "60-120"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      }
+    ]
+  }
+}

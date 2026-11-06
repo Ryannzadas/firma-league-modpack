@@ -1,0 +1,29 @@
+{
+  "battleCooldownTicks": 240,
+  "biomeTagBlacklist": [
+    "is_void",
+    "is_nether",
+    "is_end",
+    "is_water",
+    "is_underground"
+  ],
+  "biomeTagWhitelist": [
+    "is_peak",
+    "is_hill",
+    "is_mountain"
+  ],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "optional": false,
+  "requiredDefeats": [
+    [
+      "gym_leader_gardenia_03d6"
+    ]
+  ],
+  "series": [
+    "bdsp"
+  ],
+  "signatureItem": "cobblemon:black_belt",
+  "spawnWeightFactor": 0.25,
+  "type": "leader"
+}

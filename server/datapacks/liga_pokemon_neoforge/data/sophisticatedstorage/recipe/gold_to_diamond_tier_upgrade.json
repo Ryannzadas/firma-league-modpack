@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DDD",
+    "DRD",
+    "DSD"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "R": {
+      "item": "mekanism:basic_control_circuit"
+    },
+    "S": {
+      "item": "powah:steel_energized"
+    }
+  },
+  "result": {
+    "id": "sophisticatedstorage:gold_to_diamond_tier_upgrade",
+    "count": 1
+  }
+}

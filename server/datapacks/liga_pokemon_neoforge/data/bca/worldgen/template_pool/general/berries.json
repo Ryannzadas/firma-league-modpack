@@ -1,0 +1,735 @@
+{
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_1",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_2",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_3",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_4",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_5",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_6",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_7",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_8",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_9",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_10",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_11",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_12",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_13",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_14",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_15",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_16",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_17",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_18",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_19",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_20",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_21",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_22",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_23",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_24",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_25",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_26",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_27",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_28",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_29",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_30",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_31",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_32",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_33",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_34",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_35",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_36",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_37",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_38",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_39",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_40",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_41",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_42",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_43",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_44",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_45",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_46",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_47",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_48",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_49",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_50",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_51",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_52",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_53",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_54",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_55",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_56",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_57",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_58",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_59",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_60",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_61",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_62",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_63",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_64",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_65",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_66",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_67",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_68",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_69",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_70",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_71",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_72",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/berries/berry_73",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    }
+  ]
+}

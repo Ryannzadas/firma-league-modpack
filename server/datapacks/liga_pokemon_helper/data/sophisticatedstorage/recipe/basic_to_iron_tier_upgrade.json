@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "IRI",
+    "IAI"
+  ],
+  "key": {
+    "I": {
+      "item": "create:iron_sheet"
+    },
+    "R": {
+      "item": "minecraft:redstone_torch"
+    },
+    "A": {
+      "tag": "cobblemon:apricorns"
+    }
+  },
+  "result": {
+    "id": "sophisticatedstorage:basic_to_iron_tier_upgrade",
+    "count": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "powah:steel_energized"
+    },
+    "K": {
+      "item": "mega_showdown:keystone"
+    },
+    "S": {
+      "item": "minecraft:nautilus_shell"
+    },
+    "Y": {
+      "item": "cobblemon:yellow_apricorn"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "pattern": [
+    "YSY",
+    "IKI",
+    "YEY"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:may_bracelet"
+  }
+}

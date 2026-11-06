@@ -1,0 +1,19 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "cobblemon:grass_gem"
+    },
+    {
+      "item": "cobblemon:grass_gem"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    }
+  ],
+  "energy": 30000,
+  "result": {
+    "id": "cobblemon:leaf_stone",
+    "count": 1
+  }
+}

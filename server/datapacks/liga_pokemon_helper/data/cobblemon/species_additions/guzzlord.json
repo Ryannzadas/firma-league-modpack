@@ -1,0 +1,18 @@
+{
+  "target": "cobblemon:guzzlord",
+  "implemented": true,
+  "baseScale": 0.4,
+  "hitbox": {
+    "width": 10.0,
+    "height": 11.0,
+    "fixed": false
+  },
+  "moving": {
+    "canLook": false,
+    "walk": {
+      "walkSpeed": 0.175,
+      "canWalk": true,
+      "avoidsLand": false
+    }
+  }
+}

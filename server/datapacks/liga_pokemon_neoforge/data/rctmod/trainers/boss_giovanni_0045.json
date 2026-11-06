@@ -1,0 +1,120 @@
+{
+  "name": "Chefe & Líder Giovanni",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "moveBias": 0.94,
+      "statMoveBias": 0.5,
+      "switchBias": 0.45,
+      "itemBias": 0.9,
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleFormat": "GEN_9_SINGLES",
+  "battleRules": {
+    "maxItemUses": 1
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:dugtrio",
+      "gender": "MALE",
+      "level": 76,
+      "nature": "jolly",
+      "ability": "arenatrap",
+      "heldItem": "cobblemon:focus_sash",
+      "moveset": [
+        "earthquake",
+        "stoneedge",
+        "suckerpunch",
+        "stealthrock"
+      ],
+      "ivs": { "hp": 28, "attack": 28, "defence": 28, "special_attack": 28, "special_defence": 28, "speed": 28 },
+      "evs": { "hp": 0, "attack": 120, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 120 }
+    },
+    {
+      "species": "cobblemon:nidoking",
+      "gender": "MALE",
+      "level": 77,
+      "nature": "timid",
+      "ability": "sheerforce",
+      "heldItem": "cobblemon:life_orb",
+      "moveset": [
+        "earthpower",
+        "sludgebomb",
+        "icebeam",
+        "thunderbolt"
+      ],
+      "ivs": { "hp": 28, "attack": 28, "defence": 28, "special_attack": 28, "special_defence": 28, "speed": 28 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 120, "special_defence": 0, "speed": 120 }
+    },
+    {
+      "species": "cobblemon:nidoqueen",
+      "gender": "FEMALE",
+      "level": 77,
+      "nature": "bold",
+      "ability": "sheerforce",
+      "heldItem": "cobblemon:black_sludge",
+      "moveset": [
+        "earthpower",
+        "sludgebomb",
+        "flamethrower",
+        "toxicspikes"
+      ],
+      "ivs": { "hp": 28, "attack": 28, "defence": 28, "special_attack": 28, "special_defence": 28, "speed": 28 },
+      "evs": { "hp": 120, "attack": 0, "defence": 120, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:krookodile",
+      "gender": "MALE",
+      "level": 78,
+      "nature": "jolly",
+      "ability": "intimidate",
+      "moveset": [
+        "earthquake",
+        "knockoff",
+        "closecombat",
+        "stoneedge"
+      ],
+      "ivs": { "hp": 28, "attack": 28, "defence": 28, "special_attack": 28, "special_defence": 28, "speed": 28 },
+      "evs": { "hp": 0, "attack": 120, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 120 }
+    },
+    {
+      "species": "cobblemon:rhyperior",
+      "gender": "MALE",
+      "level": 78,
+      "nature": "adamant",
+      "ability": "solidrock",
+      "heldItem": "cobblemon:assault_vest",
+      "moveset": [
+        "earthquake",
+        "rockwrecker",
+        "icepunch",
+        "megahorn"
+      ],
+      "ivs": { "hp": 28, "attack": 28, "defence": 28, "special_attack": 28, "special_defence": 28, "speed": 28 },
+      "evs": { "hp": 120, "attack": 120, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:mewtwo",
+      "gender": "GENDERLESS",
+      "level": 80,
+      "nature": "timid",
+      "ability": "pressure",
+      "heldItem": "cobblemon:sitrus_berry",
+      "moveset": [
+        "psystrike",
+        "aurasphere",
+        "icebeam",
+        "recover"
+      ],
+      "ivs": { "hp": 30, "attack": 30, "defence": 30, "special_attack": 30, "special_defence": 30, "speed": 30 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 120, "special_defence": 0, "speed": 120 }
+    }
+  ]
+}

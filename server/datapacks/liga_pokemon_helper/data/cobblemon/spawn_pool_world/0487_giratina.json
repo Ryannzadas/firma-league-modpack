@@ -1,0 +1,21 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "id": "giratina-1",
+      "pokemon": "giratina",
+      "type": "pokemon",
+      "spawnablePositionType": "grounded",
+      "bucket": "ultra-rare",
+      "level": "75-95",
+      "weight": 0,
+      "condition": {
+        "biomes": [ 
+          "cobbleverse:custom_spawn"
+        ]
+      }
+    }
+  ]
+}

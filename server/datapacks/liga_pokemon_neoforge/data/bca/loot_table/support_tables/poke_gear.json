@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "loot_table", "value": "bca:item_groups/fishingnav",   "weight": 1 },
+        { "type": "loot_table", "value": "bca:item_groups/pokedex",      "weight": 3 },
+        { "type": "loot_table", "value": "bca:item_groups/pokefinder",   "weight": 2 },
+        { "type": "loot_table", "value": "bca:item_groups/pokenav",      "weight": 2 },
+        { "type": "loot_table", "value": "bca:item_groups/pokestaff",    "weight": 2 },
+        { "type": "item",       "name": "minecraft:air",                        "weight": 4 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "klinklang-1",
+            "pokemon": "klinklang",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "49-52",
+            "weight": 0.1,
+            "condition": {
+                "biomes": [
+                "#cobblemon:is_badlands"
+                ]
+            }
+        },
+        {
+            "id": "klinklang-2",
+            "pokemon": "klinklang",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "49-52",
+            "weight": 0.02,
+            "condition": {
+                "biomes": [
+                    "#cobblemon:is_cave"
+                ]
+            }
+        }
+    ]
+}

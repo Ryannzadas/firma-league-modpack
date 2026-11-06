@@ -1,0 +1,24 @@
+{
+  "target": "cobblemon:necrozma",
+  "implemented": true,
+  "baseScale": 1.0,
+  "hitbox": {
+    "width": 2.2,
+    "height": 4.8,
+    "fixed": false
+   },
+   "behaviour": {
+    "herd": {
+      "maxSize": "1"
+    },
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.4
+      },
+      "fly": {
+        "canFly": true,
+        "flySpeedHorizontal": 0.75
+      }
+    }
+  }
+}

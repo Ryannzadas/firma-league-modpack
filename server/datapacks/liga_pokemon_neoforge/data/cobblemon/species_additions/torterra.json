@@ -1,0 +1,69 @@
+{
+  "target": "cobblemon:torterra",
+  "implemented": true,
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "SPEED": "15-25",
+          "ACCELERATION": "5-15",
+          "SKILL": "35-60",
+          "JUMP": "0-1",
+          "STAMINA": "55-90"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "offset": {
+              "x": 0.0,
+              "y": -1.5,
+              "z": 0.0
+            },
+            "poseTypes": [
+              "STAND",
+              "WALK",
+              "HOVER",
+              "FLOAT",
+              "SWIM",
+              "GLIDE"
+            ]
+          }
+        ]
+      },
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "offset": {
+              "x": 0.0,
+              "y": -1.5,
+              "z": 0.0
+            },
+            "poseTypes": [
+              "STAND",
+              "WALK",
+              "HOVER",
+              "FLOAT",
+              "SWIM",
+              "GLIDE"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

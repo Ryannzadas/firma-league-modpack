@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "cobblemon:oran_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:cheri_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:chesto_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:pecha_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:rawst_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:aspear_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:persim_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:razz_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:bluk_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:nanab_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:wepear_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:pinap_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:occa_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:passho_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:wacan_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:rindo_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:yache_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:chople_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:kebia_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:shuca_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:coba_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:payapa_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:tanga_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:charti_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:kasib_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:haban_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:colbur_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:babiri_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:chilan_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:roseli_berry", "weight": 1 },
+        { "type": "item", "name": "cobblemon:eggant_berry", "weight": 1 }
+      ]
+    }
+  ]
+}

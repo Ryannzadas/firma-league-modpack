@@ -1,0 +1,10 @@
+{
+    "target": "cobblemon:audino",   
+    "implemented": true,
+	"baseScale": 0.7,
+    "hitbox": {
+        "width": 0.8,
+        "height": 1.2,
+        "fixed": false
+    }
+}

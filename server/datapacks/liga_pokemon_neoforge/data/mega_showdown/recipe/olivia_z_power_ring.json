@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "cobblemon:pink_apricorn"
+    },
+    "I": {
+      "item": "powah:steel_energized"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "S": {
+      "item": "mega_showdown:sparkling_stone_dark"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "pattern": [
+    "ASA",
+    "NIN",
+    "NEN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:olivia_z_power_ring"
+  }
+}

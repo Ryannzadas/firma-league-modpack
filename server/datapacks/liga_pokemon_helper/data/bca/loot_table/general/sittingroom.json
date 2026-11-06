@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": { "min": 10, "max":16 },
+      "entries": [
+        { "type": "loot_table", "value": "bca:support_tables/sittingroom",   "weight": 12 },
+        { "type": "loot_table", "value": "bca:support_tables/poke_currency", "weight": 3 },
+        { "type": "item",       "name": "minecraft:air",                            "weight": 28 }
+      ]
+    }
+  ]
+}

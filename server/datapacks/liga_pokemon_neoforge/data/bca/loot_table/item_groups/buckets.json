@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "minecraft:axolotl_bucket", "weight": 1 },
+        { "type": "item", "name": "minecraft:tadpole_bucket", "weight": 2 }
+      ]
+    }
+  ]
+}

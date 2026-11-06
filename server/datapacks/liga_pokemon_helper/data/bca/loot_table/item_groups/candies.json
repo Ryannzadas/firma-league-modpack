@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "cobblemon:exp_candy_l", "weight": 5 },
+        { "type": "item", "name": "cobblemon:exp_candy_m", "weight": 30 },
+        { "type": "item", "name": "cobblemon:exp_candy_s", "weight": 150 },
+        { "type": "item", "name": "cobblemon:exp_candy_xl", "weight": 1 },
+        { "type": "item", "name": "cobblemon:exp_candy_xs", "weight": 200 },
+        { "type": "item", "name": "cobblemon:rare_candy", "weight": 5 }
+      ]
+    }
+  ]
+}

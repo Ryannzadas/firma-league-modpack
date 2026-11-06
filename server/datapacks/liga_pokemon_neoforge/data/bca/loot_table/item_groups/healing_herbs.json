@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "cobblemon:energy_root", "weight": 1 },
+        { "type": "item", "name": "cobblemon:heal_powder", "weight": 2 },
+        { "type": "item", "name": "cobblemon:revival_herb", "weight": 1 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "spawn_cap":  6,
+  "pokemon": [
+    {
+      "id": "gastly",
+      "levels": {
+        "min": 10,
+        "range" : 20
+      }
+    },
+    {
+      "id": "misdreavus",
+      "levels": {
+        "min": 15,
+        "range": 30
+      }
+    },
+    {
+      "id": "duskull",
+      "levels": {
+        "min": 10,
+        "range": 20
+      }
+    }
+  ]
+}

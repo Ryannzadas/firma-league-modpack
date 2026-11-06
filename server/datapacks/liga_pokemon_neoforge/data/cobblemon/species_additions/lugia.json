@@ -1,0 +1,580 @@
+{
+  "target": "cobblemon:lugia",
+  "implemented": true,
+  "baseScale": 0.5,
+  "hitbox": {
+    "width": 2.2,
+    "height": 7.0,
+    "fixed": false
+  },
+  "features": [
+    "shadow"
+  ],
+  "behaviour": {
+    "herd": {
+      "maxSize": "1"
+    },
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.55
+      },
+      "fly": {
+        "canFly": true,
+        "flySpeedHorizontal": 0.7
+      },
+      "swim": {
+        "swimSpeed": 0.7,
+        "canBreatheUnderwater": true,
+        "canWalkOnWater": false,
+        "canSwimInWater": true,
+        "canSwimInLava": false
+      }
+    }
+  },
+  "riding": {
+    "behaviours": {
+      "AIR": {
+        "key": "cobblemon:air/bird",
+        "rideSounds": [
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": false,
+            "playForPassengers": true,
+            "soundLocation": "cobblemon:ride.loop.wind.stereo",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          },
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": true,
+            "playForPassengers": false,
+            "soundLocation": "cobblemon:ride.loop.wind.mono",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          },
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": false,
+            "playForPassengers": true,
+            "soundLocation": "cobblemon:ride.loop.plumage.stereo",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          },
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": true,
+            "playForPassengers": false,
+            "soundLocation": "cobblemon:ride.loop.plumage.mono",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          }
+        ],
+        "stats": {
+          "SPEED": "110-130",
+          "ACCELERATION": "40-70",
+          "SKILL": "70-90",
+          "JUMP": "25-50",
+          "STAMINA": "130-150"
+        }
+      },
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "SPEED": "10-20",
+          "ACCELERATION": "90-100",
+          "SKILL": "15-30",
+          "JUMP": "10-20",
+          "STAMINA": "15-30"
+        }
+      },
+      "LIQUID": {
+        "key": "cobblemon:liquid/dolphin",
+        "rideSounds": [
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": false,
+            "playForPassengers": true,
+            "soundLocation": "cobblemon:ride.loop.water_surface.stereo",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          },
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": true,
+            "playForPassengers": false,
+            "soundLocation": "cobblemon:ride.loop.water_surface.mono",
+            "submerged": false,
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          },
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": false,
+            "playForPassengers": true,
+            "soundLocation": "cobblemon:ride.loop.underwater.stereo",
+            "submerged": true,
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          }
+        ],
+        "stats": {
+          "SPEED": "90-110",
+          "ACCELERATION": "70-90",
+          "SKILL": "60-80",
+          "JUMP": "30-65",
+          "STAMINA": "80-135"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "offset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "poseTypes": [
+              "STAND"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "poseTypes": [
+              "WALK"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "poseTypes": [
+              "HOVER"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "poseTypes": [
+              "FLY"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "poseTypes": [
+              "FLOAT"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "poseTypes": [
+              "SWIM"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "poseTypes": [
+              "GLIDE"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "evolutions": [],
+  "forms": [
+    {
+      "name": "Shadow",
+      "primaryType": "dark",
+      "secondaryType": "flying",
+      "aspects": [
+        "shadow"
+      ],
+      "abilities": [
+        "darkaura",
+        "h:shadowshield"
+      ],
+      "pokedex": [
+        "cobblemon.species.lugia-shadow.desc"
+      ],
+      "baseStats": {
+        "hp": 106,
+        "attack": 130,
+        "defence": 90,
+        "special_attack": 154,
+        "special_defence": 90,
+        "speed": 110
+      },
+      "moves": [
+        "1:whirlwind",
+        "1:weatherball",
+        "1:gust",
+        "1:dragonrush",
+        "1:punishment",
+        "1:ancientpower",
+        "1:naturalgift",
+        "1:pursuit",
+        "1:shadowsneak",
+        "9:mist",
+        "14:taunt",
+        "18:safeguard",
+        "23:feintattack",
+        "27:calmmind",
+        "31:snarl",
+        "36:extrasensory",
+        "41:payback",
+        "45:recover",
+        "48:nastyplot",
+        "51:nightshade",
+        "53:nightslash",
+        "54:aeroblast",
+        "56:darkpulse",
+        "60:suckerpunch",
+        "63:raindance",
+        "68:nightdaze",
+        "72:hydropump",
+        "81:futuresight",
+        "90:skyattack",
+        "tm:acrobatics",
+        "tm:aerialace",
+        "tm:aircutter",
+        "tm:airslash",
+        "tm:ancientpower",
+        "tm:aquatail",
+        "tm:avalanche",
+        "tm:blizzard",
+        "tm:bodyslam",
+        "tm:bravebird",
+        "tm:brine",
+        "tm:calmmind",
+        "tm:chargebeam",
+        "tm:chillingwater",
+        "tm:curse",
+        "tm:defog",
+        "tm:dive",
+        "tm:doubleedge",
+        "tm:dragonpulse",
+        "tm:dragontail",
+        "tm:dreameater",
+        "tm:dualwingbeat",
+        "tm:earthpower",
+        "tm:earthquake",
+        "tm:echoedvoice",
+        "tm:endure",
+        "tm:facade",
+        "tm:flash",
+        "tm:fly",
+        "tm:futuresight",
+        "tm:gigadrain",
+        "tm:gigaimpact",
+        "tm:hail",
+        "tm:headbutt",
+        "tm:helpinghand",
+        "tm:hurricane",
+        "tm:hydropump",
+        "tm:hyperbeam",
+        "tm:hypervoice",
+        "tm:icebeam",
+        "tm:icywind",
+        "tm:imprison",
+        "tm:ironhead",
+        "tm:irontail",
+        "tm:laserfocus",
+        "tm:lightscreen",
+        "tm:liquidation",
+        "tm:naturalgift",
+        "tm:ominouswind",
+        "tm:protect",
+        "tm:psychic",
+        "tm:psychicnoise",
+        "tm:psychup",
+        "tm:psyshock",
+        "tm:raindance",
+        "tm:reflect",
+        "tm:rest",
+        "tm:rocksmash",
+        "tm:roost",
+        "tm:safeguard",
+        "tm:sandstorm",
+        "tm:scaleshot",
+        "tm:scaryface",
+        "tm:shadowball",
+        "tm:shockwave",
+        "tm:signalbeam",
+        "tm:skillswap",
+        "tm:skyattack",
+        "tm:skydrop",
+        "tm:sleeptalk",
+        "tm:steelwing",
+        "tm:strength",
+        "tm:substitute",
+        "tm:sunnyday",
+        "tm:surf",
+        "tm:swift",
+        "tm:tailwind",
+        "tm:takedown",
+        "tm:telekinesis",
+        "tm:terablast",
+        "tm:thunder",
+        "tm:thunderbolt",
+        "tm:trick",
+        "tm:twister",
+        "tm:waterfall",
+        "tm:waterpulse",
+        "tm:weatherball",
+        "tm:whirlpool",
+        "tm:wonderroom",
+        "tm:zenheadbutt",
+        "tutor:aerialace",
+        "tutor:aircutter",
+        "tutor:ancientpower",
+        "tutor:aquatail",
+        "tutor:calmmind",
+        "tutor:chargebeam",
+        "tutor:defog",
+        "tutor:dive",
+        "tutor:dragonpulse",
+        "tutor:dualwingbeat",
+        "tutor:earthpower",
+        "tutor:gigadrain",
+        "tutor:gigaimpact",
+        "tutor:helpinghand",
+        "tutor:hyperbeam",
+        "tutor:hypervoice",
+        "tutor:icebeam",
+        "tutor:icywind",
+        "tutor:ironhead",
+        "tutor:irontail",
+        "tutor:laserfocus",
+        "tutor:liquidation",
+        "tutor:ominouswind",
+        "tutor:psychic",
+        "tutor:rest",
+        "tutor:rocksmash",
+        "tutor:roost",
+        "tutor:scaleshot",
+        "tutor:shadowball",
+        "tutor:shockwave",
+        "tutor:signalbeam",
+        "tutor:skillswap",
+        "tutor:skyattack",
+        "tutor:sleeptalk",
+        "tutor:swift",
+        "tutor:tailwind",
+        "tutor:telekinesis",
+        "tutor:thunderbolt",
+        "tutor:trick",
+        "tutor:twister",
+        "tutor:waterpulse",
+        "tutor:wonderroom",
+        "tutor:zenheadbutt"
+      ],
+      "riding": {
+        "behaviours": {
+          "AIR": {
+            "key": "cobblemon:air/bird",
+            "rideSounds": [
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": false,
+                "playForPassengers": true,
+                "soundLocation": "cobblemon:ride.loop.wind.stereo",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              },
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": true,
+                "playForPassengers": false,
+                "soundLocation": "cobblemon:ride.loop.wind.mono",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              },
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": false,
+                "playForPassengers": true,
+                "soundLocation": "cobblemon:ride.loop.plumage.stereo",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              },
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": true,
+                "playForPassengers": false,
+                "soundLocation": "cobblemon:ride.loop.plumage.mono",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              }
+            ],
+            "stats": {
+              "SPEED": "120-145",
+              "ACCELERATION": "60-90",
+              "SKILL": "80-100",
+              "JUMP": "25-50",
+              "STAMINA": "150-180"
+            }
+          },
+          "LAND": {
+            "key": "cobblemon:land/horse",
+            "rideSounds": [],
+            "stats": {
+              "SPEED": "10-20",
+              "ACCELERATION": "90-100",
+              "SKILL": "15-30",
+              "JUMP": "10-20",
+              "STAMINA": "15-30"
+            }
+          },
+          "LIQUID": {
+            "key": "cobblemon:liquid/dolphin",
+            "rideSounds": [
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": false,
+                "playForPassengers": true,
+                "soundLocation": "cobblemon:ride.loop.water_surface.stereo",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              },
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": true,
+                "playForPassengers": false,
+                "soundLocation": "cobblemon:ride.loop.water_surface.mono",
+                "submerged": false,
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              },
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": false,
+                "playForPassengers": true,
+                "soundLocation": "cobblemon:ride.loop.underwater.stereo",
+                "submerged": true,
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              }
+            ],
+            "stats": {
+              "SPEED": "100-120",
+              "ACCELERATION": "80-100",
+              "SKILL": "70-90",
+              "JUMP": "30-65",
+              "STAMINA": "80-135"
+            }
+          }
+        },
+        "seats": [
+          {
+            "offset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "poseOffsets": [
+              {
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "poseTypes": [
+                  "STAND"
+                ]
+              },
+              {
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "poseTypes": [
+                  "WALK"
+                ]
+              },
+              {
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "poseTypes": [
+                  "HOVER"
+                ]
+              },
+              {
+                "offset": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "poseTypes": [
+                  "FLY"
+                ]
+              },
+              {
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "poseTypes": [
+                  "FLOAT"
+                ]
+              },
+              {
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "poseTypes": [
+                  "SWIM"
+                ]
+              },
+              {
+                "offset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "poseTypes": [
+                  "GLIDE"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

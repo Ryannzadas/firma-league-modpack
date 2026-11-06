@@ -1,0 +1,40 @@
+// Firma League - Sparse Structures Configuration
+// Previne que masmorras e estruturas colidam com vilas e cidades do Cobblemon
+{
+  "spreadFactor": 1.5,
+  "idBasedSalt": true,
+  "customSpreadFactors": [
+    {
+      "structure": "minecraft:village_plains",
+      "factor": 1.0
+    },
+    {
+      "structure": "cobbletowns:cherrygrove_city",
+      "factor": 1.0
+    },
+    {
+      "structure": "cobbletowns:pallet_town",
+      "factor": 1.0
+    },
+    {
+      "structure": "cobbletowns:floaroma_town",
+      "factor": 1.0
+    },
+    {
+      "structure": "cobbletowns:lavender_town",
+      "factor": 1.0
+    },
+    {
+      "structure": "cobbletowns:twinleaf_town",
+      "factor": 1.0
+    },
+    {
+      "structure": "cobbletowns:pokecenter",
+      "factor": 1.0
+    },
+    {
+      "structure": "cobbletowns:pokemart",
+      "factor": 1.0
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item": "powah:crystal_blazing"
+    },
+    {
+      "item": "cobblemon:sun_stone"
+    },
+    {
+      "item": "cobblemon:moon_stone"
+    }
+  ],
+  "energy": 100000,
+  "result": {
+    "id": "mega_showdown:keystone",
+    "count": 1
+  }
+}

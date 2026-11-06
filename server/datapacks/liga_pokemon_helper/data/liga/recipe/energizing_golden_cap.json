@@ -1,0 +1,22 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_block"
+    },
+    {
+      "item": "mekanism:advanced_control_circuit"
+    },
+    {
+      "item": "powah:crystal_spirited"
+    },
+    {
+      "item": "cobblemon:rare_candy"
+    }
+  ],
+  "energy": 200000,
+  "result": {
+    "id": "cobblemon_utility:goldencap",
+    "count": 1
+  }
+}

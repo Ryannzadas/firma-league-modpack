@@ -1,0 +1,335 @@
+{
+  "target": "cobblemon:lucario",
+  "features": ["costume"],
+  "baseScale": 0.68,
+  "hitbox": {
+    "width": 0.85,
+    "height": 2.8,
+    "fixed": false
+  },
+  "shoulderMountable": true,
+  "behaviour": {
+	"entityInteract": {
+      "avoidedBySkeleton": true
+    },
+	  "resting": {
+	    "canSleep": true,
+	    "willSleepOnBed": true,
+	    "depth": "normal",
+	    "light": "0-4"
+	  },
+	  "swim": {
+	    "swimSpeed": 0.1,
+	    "canSwimInWater": true,
+	    "canBreatheUnderwater": false
+	  }
+  },
+  "forms": [
+    {
+      "name": "Cafe-Costume",
+      "aspects": ["cafe-costume"],
+      "pokedex": ["cobblemon.species.lucario-cafe.desc"]
+    },
+    {
+      "name": "Captain-Costume",
+      "aspects": ["captain-costume"],
+      "pokedex": ["cobblemon.species.lucario-captain.desc"]
+    },
+    {
+      "name": "Chef-Costume",
+      "aspects": ["chef-costume"],
+      "pokedex": ["cobblemon.species.lucario-chef.desc"]
+    },
+    {
+      "name": "Concert-Costume",
+      "aspects": ["concert-costume"],
+      "pokedex": ["cobblemon.species.lucario-concert.desc"]
+    },
+    {
+      "name": "Costume_Party-Costume",
+      "aspects": ["costume_party-costume"],
+      "pokedex": ["cobblemon.species.lucario-costume_party.desc"]
+    },
+    {
+      "name": "Holiday-Costume",
+      "aspects": ["holiday-costume"],
+      "pokedex": ["cobblemon.species.lucario-holiday.desc"]
+    },
+    {
+      "name": "Martial_Arts-Costume",
+      "aspects": ["martial_arts-costume"],
+      "pokedex": ["cobblemon.species.lucario-martial_arts.desc"]
+    },
+    {
+      "name": "Ruins-Costume",
+      "aspects": ["ruins-costume"],
+      "pokedex": ["cobblemon.species.lucario-ruins.desc"]
+    },
+    {
+      "name": "Space-Costume",
+      "aspects": ["space-costume"],
+      "pokedex": ["cobblemon.species.lucario-space.desc"]
+    },
+    {
+      "name": "Mega-Cafe-Costume",
+      "height": 13,
+      "weight": 575,
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "abilities": [
+        "adaptability",
+        "h:adaptability"
+      ],
+      "baseStats": {
+        "hp": 70,
+        "attack": 145,
+        "defence": 88,
+        "special_attack": 140,
+        "special_defence": 70,
+        "speed": 112
+      },
+      "baseExperienceYield": 219,
+      "dynamaxBlocked": true,
+      "battleOnly": true,
+      "aspects": [
+        "cafe-costume",
+        "mega"
+      ],
+      "pokedex": ["cobblemon.species.lucario-cafe.desc"]
+    },
+    {
+      "name": "Mega-Captain-Costume",
+	    "height": 13,
+      "weight": 575,
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "abilities": [
+        "adaptability",
+        "h:adaptability"
+      ],
+      "baseStats": {
+        "hp": 70,
+        "attack": 145,
+        "defence": 88,
+        "special_attack": 140,
+        "special_defence": 70,
+        "speed": 112
+      },
+      "baseExperienceYield": 219,
+      "dynamaxBlocked": true,
+      "battleOnly": true,
+      "aspects": [
+        "captain-costume",
+		    "mega"
+      ],
+      "pokedex": ["cobblemon.species.lucario-captain.desc"]
+    },
+	  {
+      "name": "Mega-Chef-Costume",
+	  "height": 13,
+      "weight": 575,
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "abilities": [
+        "adaptability",
+        "h:adaptability"
+      ],
+      "baseStats": {
+        "hp": 70,
+        "attack": 145,
+        "defence": 88,
+        "special_attack": 140,
+        "special_defence": 70,
+        "speed": 112
+      },
+      "baseExperienceYield": 219,
+      "dynamaxBlocked": true,
+      "battleOnly": true,
+      "aspects": [
+        "chef-costume",
+		    "mega"
+      ],
+      "pokedex": ["cobblemon.species.lucario-chef.desc"]
+    },
+	  {
+      "name": "Mega-Concert-Costume",
+	    "height": 13,
+      "weight": 575,
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "abilities": [
+        "adaptability",
+        "h:adaptability"
+      ],
+      "baseStats": {
+        "hp": 70,
+        "attack": 145,
+        "defence": 88,
+        "special_attack": 140,
+        "special_defence": 70,
+        "speed": 112
+      },
+      "baseExperienceYield": 219,
+      "dynamaxBlocked": true,
+      "battleOnly": true,
+      "aspects": [
+        "concert-costume",
+		    "mega"
+      ],
+      "pokedex": ["cobblemon.species.lucario-concert.desc"]
+    },
+    {
+      "name": "Mega-Costume_Party-Costume",
+	    "height": 13,
+      "weight": 575,
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "abilities": [
+        "adaptability",
+        "h:adaptability"
+      ],
+      "baseStats": {
+        "hp": 70,
+        "attack": 145,
+        "defence": 88,
+        "special_attack": 140,
+        "special_defence": 70,
+        "speed": 112
+      },
+      "baseExperienceYield": 219,
+      "dynamaxBlocked": true,
+      "battleOnly": true,
+      "aspects": [
+        "costume_party-costume",
+		    "mega"
+      ],
+      "pokedex": ["cobblemon.species.lucario-costume_party.desc"]
+    },
+	  {
+      "name": "Mega-Holiday-Costume",
+	    "height": 13,
+      "weight": 575,
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "abilities": [
+        "adaptability",
+        "h:adaptability"
+      ],
+      "baseStats": {
+        "hp": 70,
+        "attack": 145,
+        "defence": 88,
+        "special_attack": 140,
+        "special_defence": 70,
+        "speed": 112
+      },
+      "baseExperienceYield": 219,
+      "dynamaxBlocked": true,
+      "battleOnly": true,
+      "aspects": [
+        "holiday-costume",
+		    "mega"
+      ],
+      "pokedex": ["cobblemon.species.lucario-holiday.desc"]
+    },
+    {
+      "name": "Mega-Martial_Arts-Costume",
+	    "height": 13,
+      "weight": 575,
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "abilities": [
+        "adaptability",
+        "h:adaptability"
+      ],
+      "baseStats": {
+        "hp": 70,
+        "attack": 145,
+        "defence": 88,
+        "special_attack": 140,
+        "special_defence": 70,
+        "speed": 112
+      },
+      "baseExperienceYield": 219,
+      "dynamaxBlocked": true,
+      "battleOnly": true,
+      "aspects": [
+        "martial_arts-costume",
+		    "mega"
+      ],
+      "pokedex": ["cobblemon.species.lucario-martial_arts.desc"]
+    },
+	  {
+      "name": "Mega-Ruins-Costume",
+	    "height": 13,
+      "weight": 575,
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "abilities": [
+        "adaptability",
+        "h:adaptability"
+      ],
+      "baseStats": {
+        "hp": 70,
+        "attack": 145,
+        "defence": 88,
+        "special_attack": 140,
+        "special_defence": 70,
+        "speed": 112
+      },
+      "baseExperienceYield": 219,
+      "dynamaxBlocked": true,
+      "battleOnly": true,
+      "aspects": [
+        "ruins-costume",
+		    "mega"
+      ],
+      "pokedex": ["cobblemon.species.lucario-ruins.desc"]
+    },
+	  {
+      "name": "Mega-Space-Costume",
+	    "height": 13,
+      "weight": 575,
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "abilities": [
+        "adaptability",
+        "h:adaptability"
+      ],
+      "baseStats": {
+        "hp": 70,
+        "attack": 145,
+        "defence": 88,
+        "special_attack": 140,
+        "special_defence": 70,
+        "speed": 112
+      },
+      "baseExperienceYield": 219,
+      "dynamaxBlocked": true,
+      "battleOnly": true,
+      "aspects": [
+        "space-costume",
+		    "mega"
+      ],
+      "pokedex": ["cobblemon.species.lucario-space.desc"]
+    }
+  ]
+}

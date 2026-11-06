@@ -1,0 +1,18 @@
+{
+	default_A: [
+		"00_lore_da_firma"
+		"00_guia_iniciante_pokemon"
+		"01_inicio_jornada"
+		"02_ginasios_historia"
+		"02b_temporada_2_johto"
+		"02c_temporada_3_hoenn"
+		"02d_temporada_4_sinnoh"
+		"03b_tecnologia_e_automacao"
+		"03c_armazenamento_e_mochilas"
+		"03d_fabrica_pokemon"
+		"03_equipes_vilas_e_megas"
+		"04_lendarios_e_miticos"
+		"05_liga_dos_amigos"
+		"06_exploracao_e_raids"
+	]
+}

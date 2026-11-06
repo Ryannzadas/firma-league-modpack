@@ -1,0 +1,22 @@
+{
+    "enabled": "true",
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "ironthorns",
+            "pokemon": "ironthorns",
+            "presets": [],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "rare",
+            "level": "40-65",
+            "weight": 3.0,
+            "condition": {
+                "biomes": [
+                    "#cobblemon:is_mountain"
+                    ]
+            }
+        }
+    ]
+}

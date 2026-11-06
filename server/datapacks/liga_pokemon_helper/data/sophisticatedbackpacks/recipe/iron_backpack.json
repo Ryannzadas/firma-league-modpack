@@ -1,0 +1,24 @@
+{
+  "type": "sophisticatedbackpacks:backpack_upgrade",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "IBI",
+    "IAI"
+  ],
+  "key": {
+    "I": {
+      "item": "create:iron_sheet"
+    },
+    "B": {
+      "item": "sophisticatedbackpacks:backpack"
+    },
+    "A": {
+      "tag": "cobblemon:apricorns"
+    }
+  },
+  "result": {
+    "id": "sophisticatedbackpacks:iron_backpack",
+    "count": 1
+  }
+}

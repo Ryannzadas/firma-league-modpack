@@ -1,0 +1,23 @@
+{
+  "target": "cobblemon:urshifu",
+  "implemented": true,
+  "baseScale": 0.85,
+  "hitbox": {
+    "width": 1.2,
+    "height": 2.85,
+    "fixed": false
+  },
+  "behaviour": {
+    "herd": {
+      "maxSize": "1"
+    },
+    "moving": {
+      "canLook": true,
+      "walk": {
+        "walkSpeed": 0.33,
+        "canWalk": true,
+        "avoidsLand": false
+      }
+    }
+  }
+}

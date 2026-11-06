@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "cobblemon:blue_apricorn"
+    },
+    "I": {
+      "item": "powah:steel_energized"
+    },
+    "S": {
+      "item": "mega_showdown:sparkling_stone_light"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "pattern": [
+    "ISI",
+    "A A",
+    "IEI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:z_ring_blue"
+  }
+}

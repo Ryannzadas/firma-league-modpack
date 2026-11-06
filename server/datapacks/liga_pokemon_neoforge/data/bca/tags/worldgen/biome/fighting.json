@@ -1,0 +1,17 @@
+{
+  "values": [
+    "minecraft:sunflower_plains",
+    "minecraft:plains",
+    "minecraft:savanna",
+    "minecraft:meadow",
+    "minecraft:savanna_plateau",
+    {
+      "id": "terralith:bushland",
+      "required": false
+    },{
+      "id": "terralith:tropical_savanna",
+      "required": false
+    }
+  ],
+  "replace": true
+}

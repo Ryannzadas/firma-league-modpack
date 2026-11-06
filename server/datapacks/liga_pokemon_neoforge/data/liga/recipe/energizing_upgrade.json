@@ -1,0 +1,22 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "mekanism:basic_control_circuit"
+    },
+    {
+      "item": "minecraft:piston"
+    },
+    {
+      "item": "cobblemon:red_apricorn"
+    },
+    {
+      "item": "cobblemon:blue_apricorn"
+    }
+  ],
+  "energy": 25000,
+  "result": {
+    "id": "cobblemon:upgrade",
+    "count": 1
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "CPC",
+    "DDD"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:glass_panes"
+    },
+    "C": {
+      "item": "powah:capacitor_basic_tiny"
+    },
+    "P": {
+      "item": "mekanism:basic_control_circuit"
+    },
+    "D": {
+      "item": "powah:dielectric_paste"
+    }
+  },
+  "result": {
+    "id": "powah:solar_panel_starter",
+    "count": 1
+  }
+}

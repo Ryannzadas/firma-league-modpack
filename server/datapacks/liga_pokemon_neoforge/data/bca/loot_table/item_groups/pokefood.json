@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "cobblemon:big_malasada", "weight": 538 },
+        { "type": "item", "name": "cobblemon:casteliacone", "weight": 588 },
+        { "type": "item", "name": "cobblemon:jubilife_muffin", "weight": 573 },
+        { "type": "item", "name": "cobblemon:lava_cookie", "weight": 615 },
+        { "type": "item", "name": "cobblemon:lumiose_galette", "weight": 590 },
+        { "type": "item", "name": "cobblemon:old_gateau", "weight": 568 },
+        { "type": "item", "name": "cobblemon:open_faced_sandwich", "weight": 202 },
+        { "type": "item", "name": "cobblemon:pewter_crunchies", "weight": 560 },
+        { "type": "item", "name": "cobblemon:poke_snack", "weight": 575 },
+        { "type": "item", "name": "cobblemon:rage_candy_bar", "weight": 555 },
+        { "type": "item", "name": "cobblemon:smoked_tail_curry", "weight": 250 }
+      ]
+    }
+  ]
+}
+

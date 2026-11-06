@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X#X",
+    "#S#",
+    "X#X"
+  ],
+  "key": {
+    "#": {
+      "item": "cobblemon:pink_mint_leaf"
+    },
+    "S": [
+      {
+        "item": "obc:bottle_cap"
+      },
+      {
+        "item": "obc:bottle_cap_hp"
+      },
+      {
+        "item": "obc:bottle_cap_attack"
+      },
+      {
+        "item": "obc:bottle_cap_defence"
+      },
+      {
+        "item": "obc:bottle_cap_special_attack"
+      },
+      {
+        "item": "obc:bottle_cap_speed"
+      }
+    ],
+    "X": {
+      "item": "cobblemon:exp_candy_xl"
+    }
+  },
+  "result": {
+    "id": "obc:bottle_cap_special_defence",
+    "count": 1
+  }
+}

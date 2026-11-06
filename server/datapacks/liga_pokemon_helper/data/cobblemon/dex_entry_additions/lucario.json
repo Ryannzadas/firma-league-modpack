@@ -1,0 +1,53 @@
+{
+  "entryId": "cobblemon:lucario",
+  "forms": [
+    {
+      "displayForm": "Cafe-Costume",
+      "unlockForms": ["cafe-costume"]
+    },
+	{
+      "displayForm": "Captain-Costume",
+      "unlockForms": ["captain-costume"]
+    },
+	{
+      "displayForm": "Chef-Costume",
+      "unlockForms": ["chef-costume"]
+    },
+	{
+      "displayForm": "Cafe-Costume",
+      "unlockForms": ["cafe-costume"]
+    },
+	{
+      "displayForm": "Concert-Costume",
+      "unlockForms": ["concert-costume"]
+    },
+	{
+      "displayForm": "Costume_Party-Costume",
+      "unlockForms": ["costume_party-costume"]
+    },
+	{
+      "displayForm": "Holiday-Costume",
+      "unlockForms": ["holiday-costume"]
+    },
+	{
+      "displayForm": "Martial_Arts-Costume",
+      "unlockForms": ["martial_arts-costume"]
+    },
+	{
+      "displayForm": "Ruins-Costume",
+      "unlockForms": ["ruins-costume"]
+    },
+	{
+      "displayForm": "Space-Costume",
+      "unlockForms": ["space-costume"]
+    },
+    {
+      "displayForm": "PMD-Scarf",
+      "unlockForms": ["pmd-scarf"]
+    },
+	{
+      "displayForm": "PSMD-Scarf",
+      "unlockForms": ["psmd-scarf"]
+    }
+  ]
+}

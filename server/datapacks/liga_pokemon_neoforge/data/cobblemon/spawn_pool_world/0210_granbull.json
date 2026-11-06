@@ -1,0 +1,42 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "id": "granbull-1",
+      "pokemon": "granbull",
+      "presets": [
+        "natural"
+      ],
+      "type": "pokemon",
+      "spawnablePositionType": "grounded",
+      "bucket": "common",
+      "level": "23-45",
+      "weight": 0.2,
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_savanna",
+          "#cobblemon:is_plains"
+        ]
+      }
+    },
+    {
+      "id": "granbull-2",
+      "pokemon": "granbull",
+      "presets": [
+        "natural"
+      ],
+      "type": "pokemon",
+      "spawnablePositionType": "grounded",
+      "bucket": "common",
+      "level": "23-45",
+      "weight": 0.6,
+      "condition": {
+        "structures": [
+          "#minecraft:village"
+        ]
+      }
+    }
+  ]
+}

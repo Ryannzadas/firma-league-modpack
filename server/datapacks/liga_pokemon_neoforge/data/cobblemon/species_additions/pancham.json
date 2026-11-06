@@ -1,0 +1,36 @@
+{
+  "implemented": true,
+  "target": "cobblemon:pancham",   
+  "shoulderMountable": false,
+  "baseScale": 0.68,
+  "hitbox": {
+    "width": 0.6,
+    "height": 1.18,
+    "fixed": false
+  },
+  "drops": {
+  "amount": "1",
+    "entries": [
+      {
+        "item": "minecraft:stick",
+        "quantityRange": "0-3"
+      },
+      {
+        "item": "cobblemon:bamboo",
+        "percentage": 100
+      },
+      {
+        "item": "minecraft:string",
+        "percentage": 90
+      }
+    ]
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "depth": "normal",
+      "light": "0-4"
+    }
+  }
+}

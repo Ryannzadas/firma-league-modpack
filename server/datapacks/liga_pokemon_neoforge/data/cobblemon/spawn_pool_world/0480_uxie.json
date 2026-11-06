@@ -1,0 +1,21 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "id": "uxie-1",
+      "pokemon": "uxie",
+      "type": "pokemon",
+      "spawnablePositionType": "grounded",
+      "bucket": "ultra-rare",
+      "level": "40-65",
+      "weight": 0,
+      "condition": {
+        "biomes": [ 
+          "cobbleverse:custom_spawn" 
+        ]
+      }
+    }
+  ]
+}

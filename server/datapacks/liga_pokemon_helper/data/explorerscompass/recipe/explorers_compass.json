@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "tools",
+  "pattern": [
+    "AEA",
+    "SCS",
+    "ARA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    },
+    "S": {
+      "item": "minecraft:cracked_stone_bricks"
+    },
+    "C": {
+      "item": "minecraft:compass"
+    },
+    "R": {
+      "item": "cobblemon:red_apricorn"
+    }
+  },
+  "result": {
+    "id": "explorerscompass:explorerscompass",
+    "count": 1
+  }
+}

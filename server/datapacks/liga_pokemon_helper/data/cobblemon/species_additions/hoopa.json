@@ -1,0 +1,30 @@
+{
+  "target": "cobblemon:hoopa",
+  "implemented": true,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1.0,
+    "height": 1.8,
+    "fixed": false
+  },
+  "behaviour": {
+    "herd": {
+      "maxSize": "1"
+    },
+    "moving": {
+      "walk": {
+        "canWalk": true,
+        "walkSpeed": 0.6
+      },
+      "fly": {
+        "canFly": true
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "depth": "normal",
+      "light": "0-4"
+    }
+  }
+}

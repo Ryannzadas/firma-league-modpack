@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "pokemon_pcs",
+  "pattern": [
+    "IGI",
+    "AEB",
+    "SCS"
+  ],
+  "key": {
+    "I": {
+      "item": "create:iron_sheet"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "A": {
+      "item": "cobblemon:red_apricorn"
+    },
+    "B": {
+      "item": "cobblemon:blue_apricorn"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "id": "cobblemon:pc",
+    "count": 1
+  }
+}

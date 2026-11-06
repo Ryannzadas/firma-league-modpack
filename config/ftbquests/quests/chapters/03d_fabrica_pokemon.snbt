@@ -1,0 +1,389 @@
+{
+	id: "03D0000000000001"
+	group: "1000000000000002"
+	order_index: 9
+	filename: "03d_fabrica_pokemon"
+	title: "&e2C. Fabrica Pokemon (Tech + Cobblemon)"
+	icon: {
+		id: "create:deployer"
+	}
+	default_quest_shape: "rsquare"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "03D0000000000010"
+			title: "&e1. Fazenda de Apricorns Automatica"
+			subtitle: "A materia-prima de toda Pokebola"
+			icon: {
+				id: "cobblemon:red_apricorn"
+			}
+			description: [
+				"Antes de montar a fabrica, garanta um fluxo constante de &eApricorns&r!"
+				"• &6Create:&r Use um &eMechanical Harvester&r num trem/carrinho ou rolamento passando pelas arvores de Apricorn."
+				"• &2Industrial Foregoing:&r O &aPlant Gatherer&r colhe sozinho e manda tudo para os seus baus."
+				""
+				"&7Dica: Apricorns sobrando viram &aBio Fuel&7 no Crusher do Mekanism (4 por Apricorn)!"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03D0000000000011"
+					type: "item"
+					item: {
+						id: "cobblemon:red_apricorn"
+					}
+					count: 64L
+				}
+				{
+					id: "03D0000000000012"
+					type: "item"
+					item: {
+						id: "cobblemon:blue_apricorn"
+					}
+					count: 32L
+				}
+			]
+			rewards: [
+				{
+					id: "03D0000000000024"
+					type: "item"
+					item: {
+						id: "create:mechanical_harvester"
+						count: 2
+					}
+				}
+			]
+		}
+		{
+			id: "03D0000000000020"
+			title: "&c2. Linha de Montagem de Pokebolas (Create)"
+			subtitle: "Sequenced Assembly: 4 Pokebolas por ciclo!"
+			icon: {
+				id: "create:deployer"
+			}
+			description: [
+				"Monte uma esteira (&eMechanical Belt&r) com &eDeployers&r e uma &ePrensa Mecanica&r:"
+				"• &fPoke Ball:&r Chapa de Ferro -> Red Apricorn -> Botao de Pedra -> Prensa = &f4x&r"
+				"• &9Great Ball:&r Chapa de Ferro -> Blue Apricorn -> Red Apricorn -> Botao -> Prensa = &f4x&r"
+				"• &ePremier Ball:&r Chapa de Ferro -> 2 White Apricorn -> Botao -> Prensa = &f4x&r"
+				"• &6Ultra Ball:&r Chapa de Latao -> Yellow Apricorn -> Black Apricorn -> Electron Tube -> Prensa = &f4x&r"
+				""
+				"Use o &bEMI&r em qualquer Pokebola para ver a sequencia exata!"
+			]
+			dependencies: ["03D0000000000010"]
+			x: 2.5d
+			y: 0.0d
+			shape: "hexagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "03D0000000000021"
+					type: "item"
+					item: {
+						id: "cobblemon:great_ball"
+					}
+					count: 16L
+				}
+			]
+			rewards: [
+				{
+					id: "03D0000000000034"
+					type: "item"
+					item: {
+						id: "create:deployer"
+						count: 2
+					}
+				}
+				{
+					id: "03D0000000000035"
+					type: "item"
+					item: {
+						id: "create:mechanical_press"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03D0000000000030"
+			title: "&b3. Ultra Balls em Massa"
+			subtitle: "Chapas de Latao + Electron Tubes"
+			icon: {
+				id: "cobblemon:ultra_ball"
+			}
+			description: [
+				"Automatize a linha de &6Ultra Balls&r com &6Chapas de Latao&r (Brass Sheet) e &bElectron Tubes&r para nunca mais faltar bola boa nas cacadas!"
+			]
+			dependencies: ["03D0000000000020"]
+			x: 5.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03D0000000000031"
+					type: "item"
+					item: {
+						id: "cobblemon:ultra_ball"
+					}
+					count: 32L
+				}
+			]
+			rewards: [
+				{
+					id: "03D0000000000044"
+					type: "item"
+					item: {
+						id: "cobblemon:dusk_ball"
+						count: 8
+					}
+				}
+				{
+					id: "03D0000000000045"
+					type: "item"
+					item: {
+						id: "cobblemon:quick_ball"
+						count: 8
+					}
+				}
+			]
+		}
+		{
+			id: "03D0000000000040"
+			title: "&a4. Fabrica de Doces de EXP (Create Mixer)"
+			subtitle: "Experience Nuggets viram Exp. Candies!"
+			icon: {
+				id: "cobblemon:exp_candy_m"
+			}
+			description: [
+				"Todo minerio passado na &eCrushing Wheel&r solta &aExperience Nuggets&r. Leve-os ao &eMixer + Basin&r com &cBlaze Burner&r:"
+				"• &a4 Experience Nuggets + Acucar&r (aquecido) -> &fExp. Candy S&r"
+				"• &f3 Exp. Candy S + Garrafa de Mel&r (aquecido) -> &eExp. Candy M&r"
+				"• &e3 Exp. Candy M + Glow Berries&r (&csuperaquecido&r) -> &6Exp. Candy L&r"
+				"• &62 Exp. Candy L + Maca Dourada&r (&csuperaquecido&r) -> &dRare Candy&r"
+				""
+				"&7Superaquecer: alimente o Blaze Burner com Blaze Cake!"
+			]
+			dependencies: ["03D0000000000010"]
+			x: 0.0d
+			y: 2.5d
+			shape: "hexagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "03D0000000000041"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_m"
+					}
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "03D0000000000054"
+					type: "item"
+					item: {
+						id: "create:blaze_burner"
+						count: 1
+					}
+				}
+				{
+					id: "03D0000000000055"
+					type: "item"
+					item: {
+						id: "create:blaze_cake"
+						count: 2
+					}
+				}
+			]
+		}
+		{
+			id: "03D0000000000050"
+			title: "&d5. Vitaminas de EV no Mixer"
+			subtitle: "HP Up, Protein, Iron, Calcium, Zinc e Carbos"
+			icon: {
+				id: "cobblemon:protein"
+			}
+			description: [
+				"Base: &aMedicinal Leek + Acucar + 250mB de Agua&r no Mixer aquecido, mais 1 ingrediente:"
+				"• &cHP Up:&r Cenoura Dourada | &cProtein:&r Carne Assada | &7Iron:&r Chapa de Ferro"
+				"• &9Calcium:&r Bloco de Osso | &bZinc:&r Cristal de Prismarinho | &eCarbos:&r Cana-de-Acucar"
+				""
+				"Treine os EVs da equipe inteira para a Firma League!"
+			]
+			dependencies: ["03D0000000000040"]
+			x: 2.5d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03D0000000000051"
+					type: "item"
+					item: {
+						id: "cobblemon:hp_up"
+					}
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "03D0000000000064"
+					type: "item"
+					item: {
+						id: "cobblemon:protein"
+						count: 2
+					}
+				}
+				{
+					id: "03D0000000000065"
+					type: "item"
+					item: {
+						id: "cobblemon:carbos"
+						count: 2
+					}
+				}
+			]
+		}
+		{
+			id: "03D0000000000060"
+			title: "&66. Pedras de Evolucao: Duplicacao de Minerio"
+			subtitle: "Crushing Wheel (Create) e Enrichment Chamber (Mekanism)"
+			icon: {
+				id: "cobblemon:thunder_stone"
+			}
+			description: [
+				"Nao quebre minerios de Pedras de Evolucao na picareta! Processe-os:"
+				"• &6Crushing Wheel:&r 1 minerio -> 1 a 2 pedras + Experience Nugget"
+				"• &bEnrichment Chamber:&r 1 minerio -> &a2 pedras&r garantidas"
+				""
+				"Use &eSilk Touch&r para trazer o minerio inteiro para a base!"
+				"&7Bonus: jogue Moon Stones num ventilador com Fogo de Alma (Haunting) para virar &8Dusk Stone&7!"
+			]
+			x: 0.0d
+			y: 5.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03D0000000000061"
+					type: "item"
+					item: {
+						id: "mekanism:enrichment_chamber"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03D0000000000074"
+					type: "item"
+					item: {
+						id: "cobblemon:fire_stone"
+						count: 1
+					}
+				}
+				{
+					id: "03D0000000000075"
+					type: "item"
+					item: {
+						id: "cobblemon:water_stone"
+						count: 1
+					}
+				}
+				{
+					id: "03D0000000000076"
+					type: "item"
+					item: {
+						id: "cobblemon:thunder_stone"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03D0000000000070"
+			title: "&b7. Gemas de Tipo -> Pedras de Evolucao (Powah!)"
+			subtitle: "Energizing Orb: 2 Gemas + 1 Ametista (30.000 FE)"
+			icon: {
+				id: "cobblemon:shiny_stone"
+			}
+			description: [
+				"Transforme Gemas de Tipo em Pedras de Evolucao no &bEnergizing Orb&r:"
+				"• &cFire Gem&r -> Fire Stone | &9Water Gem&r -> Water Stone | &eElectric Gem&r -> Thunder Stone"
+				"• &aGrass Gem&r -> Leaf Stone | &bIce Gem&r -> Ice Stone | &dFairy Gem&r -> Moon Stone"
+				"• &fNormal Gem&r -> Sun Stone | &5Psychic Gem&r -> Dawn Stone | &8Ghost Gem&r -> Dusk Stone"
+				"• &6Dragon Gem&r -> &fShiny Stone&r"
+			]
+			dependencies: ["03D0000000000060"]
+			x: 2.5d
+			y: 5.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03D0000000000071"
+					type: "item"
+					item: {
+						id: "cobblemon:shiny_stone"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03D0000000000084"
+					type: "item"
+					item: {
+						id: "powah:energizing_rod_basic"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03D0000000000080"
+			title: "&58. Itens de Evolucao por Troca (Metallurgic Infuser)"
+			subtitle: "Metal Coat, Dragon Scale, King's Rock, Electirizer..."
+			icon: {
+				id: "cobblemon:metal_coat"
+			}
+			description: [
+				"Fabrique os itens de evolucao por troca no &5Metallurgic Infuser&r do Mekanism:"
+				"• &7Metal Coat:&r Lingote de Aco + Redstone | &6King's Rock:&r Ouro + Diamante"
+				"• &9Dragon Scale:&r Fragmento de Prismarinho + Diamante | &bPrism Scale:&r Cristal de Prismarinho + Diamante"
+				"• &8Razor Claw:&r Silex + Diamante | &7Protector:&r Bloco de Ferro + Obsidiana Refinada"
+				"• &eElectirizer:&r Liga Infundida + Redstone | &cMagmarizer:&r Creme de Magma + Carbono"
+				"• &5Reaper Cloth:&r Membrana de Phantom + Fungos"
+			]
+			dependencies: ["03D0000000000060"]
+			x: 5.0d
+			y: 5.0d
+			shape: "hexagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "03D0000000000081"
+					type: "item"
+					item: {
+						id: "cobblemon:metal_coat"
+					}
+				}
+				{
+					id: "03D0000000000082"
+					type: "item"
+					item: {
+						id: "cobblemon:dragon_scale"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03D0000000000094"
+					type: "item"
+					item: {
+						id: "cobblemon:link_cable"
+						count: 2
+					}
+				}
+			]
+		}
+	]
+}

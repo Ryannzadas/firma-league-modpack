@@ -1,0 +1,26 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "ironhands-1",
+            "pokemon": "ironhands",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "rare",
+            "level": "45-60",
+            "weight": 3.5,
+            "condition": {
+                "canSeeSky": true,
+                "biomes": [
+                    "minecraft:desert"
+                ],
+                "timeRange": "night"
+            }
+      	  }
+		  ]
+}

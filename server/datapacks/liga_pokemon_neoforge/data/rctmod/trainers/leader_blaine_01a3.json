@@ -1,0 +1,103 @@
+{
+  "name": "Líder Blaine",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "moveBias": 0.92,
+      "statMoveBias": 0.45,
+      "switchBias": 0.45,
+      "itemBias": 0.85,
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleFormat": "GEN_9_SINGLES",
+  "battleRules": {
+    "maxItemUses": 1
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:torkoal",
+      "gender": "MALE",
+      "level": 72,
+      "nature": "bold",
+      "ability": "drought",
+      "heldItem": "cobblemon:heat_rock",
+      "moveset": [
+        "lavaplume",
+        "earthpower",
+        "solarbeam",
+        "stealthrock"
+      ],
+      "ivs": { "hp": 28, "attack": 28, "defence": 28, "special_attack": 28, "special_defence": 28, "speed": 28 },
+      "evs": { "hp": 100, "attack": 0, "defence": 100, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:rapidash",
+      "gender": "FEMALE",
+      "level": 73,
+      "nature": "jolly",
+      "ability": "flashfire",
+      "moveset": [
+        "flareblitz",
+        "highhorsepower",
+        "wildcharge",
+        "morning_sun"
+      ],
+      "ivs": { "hp": 28, "attack": 28, "defence": 28, "special_attack": 28, "special_defence": 28, "speed": 28 },
+      "evs": { "hp": 0, "attack": 100, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 100 }
+    },
+    {
+      "species": "cobblemon:magmortar",
+      "gender": "MALE",
+      "level": 74,
+      "nature": "timid",
+      "ability": "flamebody",
+      "heldItem": "cobblemon:charcoal_stick",
+      "moveset": [
+        "flamethrower",
+        "thunderbolt",
+        "scorchingsands",
+        "psychic"
+      ],
+      "ivs": { "hp": 28, "attack": 28, "defence": 28, "special_attack": 28, "special_defence": 28, "speed": 28 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 100, "special_defence": 0, "speed": 100 }
+    },
+    {
+      "species": "cobblemon:ceruledge",
+      "gender": "MALE",
+      "level": 75,
+      "nature": "jolly",
+      "ability": "flashfire",
+      "moveset": [
+        "bitterblade",
+        "shadowclaw",
+        "shadowsneak",
+        "swordsdance"
+      ],
+      "ivs": { "hp": 28, "attack": 28, "defence": 28, "special_attack": 28, "special_defence": 28, "speed": 28 },
+      "evs": { "hp": 0, "attack": 100, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 100 }
+    },
+    {
+      "species": "cobblemon:arcanine",
+      "gender": "MALE",
+      "level": 76,
+      "nature": "jolly",
+      "ability": "intimidate",
+      "heldItem": "cobblemon:sitrus_berry",
+      "moveset": [
+        "flareblitz",
+        "extremespeed",
+        "closecombat",
+        "wildcharge"
+      ],
+      "ivs": { "hp": 30, "attack": 30, "defence": 30, "special_attack": 30, "special_defence": 30, "speed": 30 },
+      "evs": { "hp": 0, "attack": 120, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 120 }
+    }
+  ]
+}

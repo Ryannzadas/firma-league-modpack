@@ -1,0 +1,25 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+      {
+          "id": "volcanion-1",
+          "pokemon": "volcanion",
+          "presets": [
+              "natural"
+          ],
+          "type": "pokemon",
+          "spawnablePositionType": "grounded",
+          "bucket": "ultra-rare",
+          "canSeeSky":"true",
+          "level": "70",
+          "weight": 0.55,
+          "condition": {
+              "biomes": [
+                  "#cobblemon:is_mountain"
+              ]
+          }
+      }
+  ]
+}

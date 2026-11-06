@@ -1,0 +1,41 @@
+{
+      "enabled": true,
+      "neededInstalledMods": [],
+      "neededUninstalledMods": [],
+      "spawns": [
+            {
+                  "id": "aromatisse-1",
+                  "pokemon": "aromatisse",
+                  "presets": [
+                        "natural"
+                  ],
+                  "type": "pokemon",
+                  "spawnablePositionType": "grounded",
+                  "bucket": "uncommon",
+                  "level": "35-47",
+                  "weight": 8.2,
+                  "condition": {
+                        "biomes": [
+                              "#cobblemon:is_floral"
+                        ]
+                  }
+            },
+            {
+                  "id": "aromatisse-2",
+                  "pokemon": "aromatisse",
+                  "presets": [
+                        "natural"
+                  ],
+                  "type": "pokemon",
+                  "spawnablePositionType": "grounded",
+                  "bucket": "uncommon",
+                  "level": "36-48",
+                  "weight": 3.4,
+                  "condition": {
+                        "biomes": [
+                              "#cobblemon:is_forest"
+                        ]
+                  }
+            }
+      ]
+}

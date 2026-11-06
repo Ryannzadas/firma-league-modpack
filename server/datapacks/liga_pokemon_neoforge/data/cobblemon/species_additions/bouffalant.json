@@ -1,0 +1,53 @@
+{
+  "target": "cobblemon:bouffalant",
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "35-65",
+          "JUMP": "15-20",
+          "SKILL": "35-55",
+          "SPEED": "60-70",
+          "STAMINA": "55-70"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "poseTypes": [ "STAND", "FLOAT" ],
+            "offset": {
+              "x": -0.009967118,
+              "y": -2.338432,
+              "z": -0.07881425
+            }
+          },
+          {
+            "poseTypes": [ "WALK", "SWIM" ],
+            "offset": {
+              "x": -0.041514486,
+              "y": -2.3466194,
+              "z": -0.05977893
+            }
+          },
+          {
+            "poseTypes": [ "HOVER", "FLY", "GLIDE" ],
+            "offset": {
+              "x": 0.029709913,
+              "y": -2.0745296,
+              "z": -0.13198271
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "nova_structures:chests/creeping_crypt/vault_creeping"
+    }
+  ],
+  "table": "liga:exploration/tier2"
+}

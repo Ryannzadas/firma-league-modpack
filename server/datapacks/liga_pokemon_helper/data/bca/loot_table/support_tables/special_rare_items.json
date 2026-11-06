@@ -1,0 +1,20 @@
+﻿{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "loot_table", "value": "bca:item_groups/special_items",    "weight": 1 },
+        { "type": "loot_table", "value": "bca:item_groups/ability_items",    "weight": 1 },
+        { "type": "loot_table", "value": "bca:item_groups/candies",          "weight": 20 },
+        { "type": "loot_table", "value": "bca:item_groups/gems",             "weight": 10 },
+        { "type": "loot_table", "value": "bca:item_groups/fossils",          "weight": 3 },
+        { "type": "loot_table", "value": "bca:item_groups/discs",            "weight": 5 },
+        { "type": "loot_table", "value": "bca:item_groups/dragon_items",     "weight": 1 },
+        { "type": "loot_table", "value": "bca:item_groups/water_items",      "weight": 10 },
+        { "type": "loot_table", "value": "bca:item_groups/buckets",          "weight": 3 },
+        { "type": "item",       "name": "minecraft:air",                            "weight": 10 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "loot_table", "value": "bca:item_groups/wool",         "weight": 2 },
+        { "type": "loot_table", "value": "bca:item_groups/scrolls",      "weight": 1 },
+        { "type": "loot_table", "value": "bca:item_groups/paper_goods",  "weight": 2 },
+        { "type": "item",       "name": "minecraft:air",                        "weight": 2 }
+      ]
+    }
+  ]
+}

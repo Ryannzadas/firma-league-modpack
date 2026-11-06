@@ -1,0 +1,207 @@
+{
+	id: "0500000000000001"
+	group: "1000000000000003"
+	order_index: 12
+	filename: "05_liga_dos_amigos"
+	title: "&c5. A Firma League (Torneios PvP)"
+	icon: {
+		id: "cobblemon:luxury_ball"
+	}
+	default_quest_shape: "pentagon"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "0500000000000010"
+			title: "&eRegras Oficiais da Firma League (Times Livres!)"
+			subtitle: "Multitype 6v6 Singles | Mega e Terastal Liberados!"
+			icon: {
+				id: "cobblemon:luxury_ball"
+			}
+			description: [
+				"Bem-vindo ao painel oficial da &6Firma League&r!"
+				""
+				"• &aComposicao Livre (Sem Monotype):&r Monte o time mais equilibrado e criativo combinando qualquer tipo!"
+				"• &dGimmicks Liberadas:&r 1 Mega Evolucao e/ou 1 Terastal por partida desde a 1a Temporada!"
+				"• &eClausulas Showdown:&r Species Clause (sem repetir especie), Sleep Clause (max 1 dormindo), OHKO Clause, Evasion Clause e proibido usar pocoes da mochila na luta (apenas Held Items!)."
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "pentagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "0500000000000011"
+					type: "checkmark"
+					title: "Li e concordo com as Regras da Firma League!"
+				}
+			]
+			rewards: [
+				{
+					id: "0500000000000024"
+					type: "item"
+					item: {
+						id: "cobblemon:luxury_ball"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "0500000000000030"
+			title: "&61o Torneio Oficial: Copa Kanto"
+			subtitle: "BLOQUEADO ate vencer o Campeao de Kanto na Historia!"
+			icon: {
+				id: "cobblemonpokemonbadges:earth_badge"
+			}
+			description: [
+				"Quando voce derrota o &6Campeao de Kanto&r no Capitulo 2, sua vaga na &6Copa Kanto da Firma&r e liberada!"
+				""
+				"Dispute a chave com seus amigos na Arena da Liga para coroar o 1o Campeao Regional da Firma!"
+			]
+			dependencies: ["0500000000000010", "0200000000000100"]
+			x: 2.5d
+			y: -1.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0500000000000031"
+					type: "checkmark"
+					title: "Disputei a Copa Kanto da Firma League!"
+				}
+			]
+			rewards: [
+				{
+					id: "0500000000000044"
+					type: "item"
+					item: {
+						id: "cobblemon:choice_band"
+						count: 1
+					}
+				}
+				{
+					id: "0500000000000045"
+					type: "item"
+					item: {
+						id: "cobblemon:choice_specs"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "0500000000000050"
+			title: "&e2o Torneio Oficial: Copa Johto"
+			subtitle: "BLOQUEADO ate concluir a Temporada 2 (Johto)!"
+			icon: {
+				id: "cobblemonpokemonbadges:rising_badge"
+			}
+			description: [
+				"Apos vencer Lance e Red em Johto, dispute a &eCopa Johto da Firma&r com seus novos Pokemon!"
+			]
+			dependencies: ["0500000000000010", "02200000000000B0"]
+			x: 2.5d
+			y: 1.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0500000000000051"
+					type: "checkmark"
+					title: "Disputei a Copa Johto da Firma League!"
+				}
+			]
+			rewards: [
+				{
+					id: "0500000000000064"
+					type: "item"
+					item: {
+						id: "cobblemon:focus_sash"
+						count: 2
+					}
+				}
+				{
+					id: "0500000000000065"
+					type: "item"
+					item: {
+						id: "cobblemon:heavy_duty_boots"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "0500000000000070"
+			title: "&a3o Torneio Oficial: Copa Hoenn"
+			subtitle: "BLOQUEADO ate derrotar o Campeao Steven em Hoenn!"
+			icon: {
+				id: "cobblemonpokemonbadges:rain_badge"
+			}
+			description: [
+				"Apos derrotar Steven Stone em Hoenn, entre na Arena para a &aCopa Hoenn da Firma&r!"
+			]
+			dependencies: ["0500000000000030", "0500000000000050", "02300000000000C0"]
+			x: 5.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0500000000000071"
+					type: "checkmark"
+					title: "Disputei a Copa Hoenn da Firma League!"
+				}
+			]
+			rewards: [
+				{
+					id: "0500000000000084"
+					type: "item"
+					item: {
+						id: "cobblemon_utility:goldencap"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "0500000000000090"
+			title: "&6&lA GRANDE LIGA MUNDIAL E COPA UBERS!"
+			subtitle: "BLOQUEADO ate derrotar a Campea Cynthia em Sinnoh!"
+			icon: {
+				id: "cobblemon:master_ball"
+			}
+			description: [
+				"O torneio supremo do servidor apos todos zerarem as 4 Regioes!"
+				"• &6Chave Principal:&r 6v6 OU/National Dex (Sem Lendarios Restritos)."
+				"• &5Copa Ubers:&r Vale-tudo liberando Mewtwo, Rayquaza, Groudon, Kyogre, Dialga, Palkia, Giratina e Arceus!"
+			]
+			dependencies: ["0500000000000070", "02400000000000C0"]
+			x: 7.5d
+			y: 0.0d
+			shape: "gear"
+			size: 2.00d
+			tasks: [
+				{
+					id: "0500000000000091"
+					type: "checkmark"
+					title: "Disputei a Grande Final Mundial da Firma League!"
+				}
+			]
+			rewards: [
+				{
+					id: "05000000000000A4"
+					type: "item"
+					item: {
+						id: "cobblemon:master_ball"
+						count: 1
+					}
+				}
+				{
+					id: "05000000000000A5"
+					type: "item"
+					item: {
+						id: "cobblemon_utility:shinycard"
+						count: 1
+					}
+				}
+			]
+		}
+	]
+}

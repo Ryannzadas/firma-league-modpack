@@ -1,0 +1,42 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "slitherwing-1",
+            "pokemon": "slitherwing",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "47-62",
+            "weight": 1.8,
+            "condition": {
+                "canSeeSky": true,
+                "biomes": [
+		            "#cobblemon:is_jungle"
+                ]
+            }
+        },
+	    {
+            "id": "slitherwing-2",
+            "pokemon": "slitherwing",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "rare",
+            "level": "66-76",
+            "weight": 1.4,
+            "condition": {
+                "biomes": [
+		            "minecraft:crimson_forest"
+                ]
+            }
+        }
+    ]
+}

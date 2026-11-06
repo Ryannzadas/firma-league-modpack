@@ -1,0 +1,21 @@
+{
+  "target": "cobblemon:vikavolt",
+  "implemented": true,
+  "baseScale": 0.75,
+  "hitbox": {
+    "width": 2.0,
+    "height": 2.5,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.31
+      },
+      "fly": {
+        "canFly": true,
+        "flySpeedHorizontal": 0.7
+      }
+    }
+  }
+}

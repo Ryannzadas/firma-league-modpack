@@ -1,0 +1,17 @@
+{
+  "target": "cobblemon:grubbin",
+  "implemented": true,
+  "baseScale": 0.5,
+  "hitbox": {
+    "width": 0.7,
+    "height": 0.9,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.22
+      }
+    }
+  }
+}

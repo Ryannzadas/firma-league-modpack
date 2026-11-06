@@ -1,0 +1,772 @@
+{
+	id: "0200000000000001"
+	group: "1000000000000001"
+	order_index: 3
+	filename: "02_ginasios_historia"
+	title: "&6Temp. 1: Liga Kanto (Historia)"
+	icon: {
+		id: "cobblemonpokemonbadges:boulder_badge"
+	}
+	default_quest_shape: "octagon"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "0200000000000010"
+			title: "&71o Ginasio: Brock (Pewter Gym)"
+			subtitle: "Tipo Pedra | Level Cap para desafiar: Nv. 15"
+			icon: {
+				id: "cobblemonpokemonbadges:boulder_badge"
+			}
+			description: [
+				"Localize o &7Pewter Gym&r com a Explorer's Compass e derrote o Lider &7Brock&r!"
+				""
+				"• &cLevel Cap atual:&r Nv. 15 (Libera ate Nv. 27 ao vencer!)"
+				"• &eTime do Brock (Balanceado):&r Geodude (Nv. 12), Vulpix (Nv. 12), Onix (Nv. 14)."
+				"• &aRequisito Real:&r Esta quest so destrava ao derrotar o Brock de verdade no mundo!"
+			]
+			dependencies: ["0100000000000010"]
+			x: 0.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0200000000000011"
+					type: "advancement"
+					title: "Derrote o Lider Brock!"
+					advancement: "rctmod:trainers/defeat_leader_brock"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0200000000000024"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:boulder_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000025"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+				{
+					id: "0200000000000026"
+					type: "item"
+					item: {
+						id: "cobblemon:great_ball"
+						count: 15
+					}
+				}
+			]
+		}
+		{
+			id: "0200000000000020"
+			title: "&b2o Ginasio: Misty (Cerulean Gym)"
+			subtitle: "Tipo Agua | Level Cap: Nv. 27"
+			icon: {
+				id: "cobblemonpokemonbadges:cascade_badge"
+			}
+			description: [
+				"Localize o &bCerulean Gym&r e venca a Lider &bMisty&r!"
+				""
+				"• &cLevel Cap para desafiar:&r Nv. 27 (Libera ate Nv. 36 ao vencer!)"
+				"• &eTime da Misty:&r Psyduck (Nv. 24), Goldeen (Nv. 25), Starmie (Nv. 27)."
+				"• &aDica:&r Leve ataques Eletricos ou de Planta e cuidado com o Scald e Ice Beam da Starmie!"
+			]
+			dependencies: ["0200000000000010"]
+			x: 2.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0200000000000021"
+					type: "advancement"
+					title: "Derrote a Lider Misty!"
+					advancement: "rctmod:trainers/defeat_leader_misty"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0200000000000034"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:cascade_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000035"
+					type: "item"
+					item: {
+						id: "cobblemon:water_stone"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000036"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0200000000000030"
+			title: "&e3o Ginasio: Lt. Surge (Vermilion Gym)"
+			subtitle: "Tipo Eletrico | Level Cap: Nv. 36"
+			icon: {
+				id: "cobblemonpokemonbadges:thunder_badge"
+			}
+			description: [
+				"Enfrente o Comandante Eletrico &eLt. Surge&r no &eVermilion Gym&r!"
+				""
+				"• &cLevel Cap para desafiar:&r Nv. 36 (Libera ate Nv. 44 ao vencer!)"
+				"• &eTime do Surge:&r Voltorb (Nv. 32), Magnemite (Nv. 32), Electabuzz (Nv. 34), Raichu (Nv. 35)."
+			]
+			dependencies: ["0200000000000020"]
+			x: 5.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0200000000000031"
+					type: "advancement"
+					title: "Derrote o Lider Lt. Surge!"
+					advancement: "rctmod:trainers/defeat_leader_lt_surge"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0200000000000044"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:thunder_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000045"
+					type: "item"
+					item: {
+						id: "cobblemon:thunder_stone"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000046"
+					type: "item"
+					item: {
+						id: "cobblemon:ultra_ball"
+						count: 15
+					}
+				}
+			]
+		}
+		{
+			id: "0200000000000040"
+			title: "&a4o Ginasio: Erika (Celadon Gym)"
+			subtitle: "Tipo Planta | Level Cap: Nv. 44"
+			icon: {
+				id: "cobblemonpokemonbadges:rainbow_badge"
+			}
+			description: [
+				"Desafie a Lider &aErika&r no &aCeladon Gym&r!"
+				""
+				"• &cLevel Cap para desafiar:&r Nv. 44"
+				"• &eTime da Erika:&r Tangela (Nv. 40), Weepinbell (Nv. 41), Vileplume (Nv. 43), Bellossom (Nv. 43)."
+			]
+			dependencies: ["0200000000000030"]
+			x: 7.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0200000000000041"
+					type: "advancement"
+					title: "Derrote a Lider Erika!"
+					advancement: "rctmod:trainers/defeat_leader_erika"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0200000000000054"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:rainbow_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000055"
+					type: "item"
+					item: {
+						id: "cobblemon:leaf_stone"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000056"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 6
+					}
+				}
+			]
+		}
+		{
+			id: "0200000000000050"
+			title: "&c[Opcional] Invasao Rocket I: Giovanni (Game Corner)"
+			subtitle: "Cacada Bonus Opcional (Savana ou Badlands)"
+			icon: {
+				id: "cobblemon:luxury_ball"
+			}
+			description: [
+				"&a[MISSAO OPCIONAL]:&r Voce NAO precisa encontrar o Giovanni para avancar nos Ginasios! Mas se quiser recompensas extras, procure-o após vencer a Erika!"
+				""
+				"• &bOnde encontrar:&r Biomas de &6Savana (Savanna)&r ou &cMesa (Badlands)&r, ou colocando um &eUpgrade&r em um bloco Trainer Spawner."
+				"• &eTime do Giovanni I:&r Onix (Nv. 43), Rhyhorn (Nv. 44), Nidorino (Nv. 44), Kangaskhan (Nv. 46)."
+			]
+			dependencies: ["0200000000000040"]
+			optional: true
+			x: 7.5d
+			y: -2.5d
+			shape: "hexagon"
+			size: 1.20d
+			tasks: [
+				{
+					id: "0200000000000051"
+					type: "advancement"
+					title: "Derrote Giovanni (1o Encontro - Opcional)!"
+					advancement: "rctmod:trainers/defeat_boss_giovanni_1"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0200000000000064"
+					type: "item"
+					item: {
+						id: "cobblemon:black_glasses"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000065"
+					type: "item"
+					item: {
+						id: "cobblemon:ultra_ball"
+						count: 15
+					}
+				}
+			]
+		}
+		{
+			id: "0200000000000060"
+			title: "&55o Ginasio: Koga (Fuchsia Gym)"
+			subtitle: "Tipo Venenoso | Destrava direto apos a Erika!"
+			icon: {
+				id: "cobblemonpokemonbadges:soul_badge"
+			}
+			description: [
+				"Use sua &6Explorer's Compass&r para localizar a estrutura do &5Fuchsia Gym&r (`rgs:fuchsia_gym`) e desafie o mestre ninja &5Koga&r!"
+				""
+				"• &cLevel Cap para desafiar:&r Nv. 56"
+				"• &eTime do Koga:&r Golbat (Nv. 51), Muk (Nv. 52), Venomoth (Nv. 53), Weezing (Nv. 54)."
+			]
+			dependencies: ["0200000000000040"]
+			x: 10.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0200000000000061"
+					type: "advancement"
+					title: "Derrote o Lider Koga!"
+					advancement: "rctmod:trainers/defeat_leader_koga"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0200000000000074"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:soul_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000075"
+					type: "item"
+					item: {
+						id: "cobblemon:black_sludge"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000076"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 6
+					}
+				}
+			]
+		}
+		{
+			id: "0200000000000070"
+			title: "&c[Opcional] Invasao Rocket II: Silph Co. (Giovanni II)"
+			subtitle: "Cacada Bonus Opcional (Savana, Badlands ou Nether)"
+			icon: {
+				id: "cobblemon:dubious_disc"
+			}
+			description: [
+				"&a[MISSAO OPCIONAL]:&r Missao bonus para quem quiser cacar o &4Giovanni II&r!"
+				""
+				"• &bOnde encontrar:&r Biomas de &6Savana&r, &cBadlands&r ou &4Nether&r, ou colocando um &eDubious Disc&r em um Trainer Spawner."
+				"• &eTime do Giovanni II:&r Nidoqueen (Nv. 53), Machamp (Nv. 53), Rhydon (Nv. 54), Nidoking (Nv. 55), Honchkrow (Nv. 56)."
+			]
+			dependencies: ["0200000000000060"]
+			optional: true
+			x: 10.0d
+			y: -2.5d
+			shape: "hexagon"
+			size: 1.20d
+			tasks: [
+				{
+					id: "0200000000000071"
+					type: "advancement"
+					title: "Derrote Giovanni (2o Encontro - Opcional)!"
+					advancement: "rctmod:trainers/defeat_boss_giovanni_2"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0200000000000084"
+					type: "item"
+					item: {
+						id: "cobblemon:upgrade"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000085"
+					type: "item"
+					item: {
+						id: "cobblemon:life_orb"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "0200000000000080"
+			title: "&d6o Ginasio: Sabrina (Saffron Gym)"
+			subtitle: "Tipo Psiquico | Destrava direto apos o Koga!"
+			icon: {
+				id: "cobblemonpokemonbadges:marsh_badge"
+			}
+			description: [
+				"Localize o &dSaffron Gym&r (`rgs:saffron_gym`) com sua Explorer's Compass e enfrente a prodígio psiquica &dSabrina&r!"
+				""
+				"• &cLevel Cap para desafiar:&r Nv. 59"
+				"• &eTime da Sabrina:&r Mr. Mime (Nv. 55), Espeon (Nv. 56), Slowbro (Nv. 57), Alakazam (Nv. 59)."
+			]
+			dependencies: ["0200000000000060"]
+			x: 10.0d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0200000000000081"
+					type: "advancement"
+					title: "Derrote a Lider Sabrina!"
+					advancement: "rctmod:trainers/defeat_leader_sabrina"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0200000000000094"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:marsh_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000095"
+					type: "item"
+					item: {
+						id: "cobblemon:twisted_spoon"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000096"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 6
+					}
+				}
+			]
+		}
+		{
+			id: "0200000000000090"
+			title: "&c7o Ginasio: Blaine (Cinnabar Gym)"
+			subtitle: "Tipo Fogo | Destrava direto apos a Sabrina!"
+			icon: {
+				id: "cobblemonpokemonbadges:volcano_badge"
+			}
+			description: [
+				"Viaje ate o &cCinnabar Gym&r (`rgs:cinnabar_gym`) e supere o poder vulcanico de &cBlaine&r!"
+				""
+				"• &cLevel Cap para desafiar:&r Nv. 64"
+				"• &eTime do Blaine:&r Rapidash (Nv. 60), Ninetales (Nv. 61), Flareon (Nv. 62), Arcanine (Nv. 63), Magmortar (Nv. 64)."
+			]
+			dependencies: ["0200000000000080"]
+			x: 5.0d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0200000000000091"
+					type: "advancement"
+					title: "Derrote o Lider Blaine!"
+					advancement: "rctmod:trainers/defeat_leader_blaine"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "02000000000000A4"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:volcano_badge"
+						count: 1
+					}
+				}
+				{
+					id: "02000000000000A5"
+					type: "item"
+					item: {
+						id: "cobblemon:fire_stone"
+						count: 1
+					}
+				}
+				{
+					id: "02000000000000A6"
+					type: "item"
+					item: {
+						id: "cobblemon:charcoal_stick"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "02000000000000A0"
+			title: "&98o Ginasio: Clair (Blackthorn / Viridian Gym)"
+			subtitle: "8a Insignia | Destrava direto apos o Blaine!"
+			icon: {
+				id: "cobblemonpokemonbadges:earth_badge"
+			}
+			description: [
+				"Use sua &6Explorer's Compass&r para encontrar o 8o Ginasio (`rgs:blackthorn_gym`) e conquiste a 8a Insignia derrotando &9Clair&r! (Nao precisa procurar o Giovanni para lutar com ela!)"
+				""
+				"• &eTime da Clair:&r Gyarados (Nv. 64), Dragonair (Nv. 65), Altaria (Nv. 65), Ampharos (Nv. 66), Kingdra (Nv. 68)."
+			]
+			dependencies: ["0200000000000090"]
+			x: 0.0d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "02000000000000A1"
+					type: "advancement"
+					title: "Derrote a 8a Lider Clair!"
+					advancement: "rctmod:trainers/defeat_leader_clair"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "02000000000000B4"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:earth_badge"
+						count: 1
+					}
+				}
+				{
+					id: "02000000000000B5"
+					type: "item"
+					item: {
+						id: "cobblemon:leftovers"
+						count: 1
+					}
+				}
+				{
+					id: "02000000000000B6"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 8
+					}
+				}
+			]
+		}
+		{
+			id: "02000000000000B0"
+			title: "&4[Boss Opcional] Giovanni Final e Mewtwo (Nv. 80)!"
+			subtitle: "Super-Chefe Opcional (Savana, Badlands ou Nether)"
+			icon: {
+				id: "cobblemon:cherish_ball"
+			}
+			description: [
+				"&a[SUPER-BOSS OPCIONAL]:&r Voce NAO precisa encontrar o Giovanni para enfrentar a Clair ou a Elite Four! Mas para os cacadores corajosos, ele guarda uma luta epica usando &5Mewtwo (Nv. 80)&r!"
+				""
+				"• &bOnde encontrar:&r Biomas de &6Savana&r, &cBadlands (Mesa)&r ou &4Nether&r, ou colocando um &dDestiny Knot&r num Trainer Spawner."
+				"• &eTime Final do Giovanni:&r Dugtrio (Nv. 75), Nidoqueen (Nv. 76), Nidoking (Nv. 76), Garchomp (Nv. 77), Rhyperior (Nv. 78) e &5Mewtwo (Nv. 80)&r!"
+			]
+			dependencies: ["0200000000000090"]
+			optional: true
+			x: 5.0d
+			y: 0.5d
+			shape: "hexagon"
+			size: 1.30d
+			tasks: [
+				{
+					id: "02000000000000B1"
+					type: "advancement"
+					title: "Derrote Giovanni e seu Mewtwo Nv. 80 (Opcional)!"
+					advancement: "rctmod:trainers/defeat_boss_giovanni_3"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "02000000000000C4"
+					type: "item"
+					item: {
+						id: "cobblemon:focus_sash"
+						count: 2
+					}
+				}
+				{
+					id: "02000000000000C5"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_capsule"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "02000000000000C0"
+			title: "&bElite Four 1: Lorelei (Gelo)"
+			subtitle: "Indigo Plateau — Destrava direto apos a 8a Insignia (Clair)!"
+			icon: {
+				id: "cobblemon:never_melt_ice"
+			}
+			description: [
+				"Com as 8 Insignias em maos, use sua &6Explorer's Compass&r para encontrar o predio da &6Kanto League&r (`rgs:kanto_league`) e comece derrotando &bLorelei&r!"
+			]
+			dependencies: ["02000000000000A0"]
+			x: 0.0d
+			y: 5.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "02000000000000C1"
+					type: "advancement"
+					title: "Derrote Lorelei da Elite Four!"
+					advancement: "rctmod:trainers/defeat_elite_four_lorelei"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "02000000000000D4"
+					type: "item"
+					item: {
+						id: "cobblemon:max_revive"
+						count: 3
+					}
+				}
+			]
+		}
+		{
+			id: "02000000000000D0"
+			title: "&cElite Four 2: Bruno (Lutador)"
+			subtitle: "Indigo Plateau — 2a Batalha da Liga"
+			icon: {
+				id: "cobblemon:black_belt"
+			}
+			description: [
+				"Avance para a 2a sala e derrote o mestre das artes marciais e Rocha, &cBruno&r!"
+			]
+			dependencies: ["02000000000000C0"]
+			x: 5.0d
+			y: 5.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "02000000000000D1"
+					type: "advancement"
+					title: "Derrote Bruno da Elite Four!"
+					advancement: "rctmod:trainers/defeat_elite_four_bruno"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "02000000000000E4"
+					type: "item"
+					item: {
+						id: "cobblemon:max_revive"
+						count: 3
+					}
+				}
+			]
+		}
+		{
+			id: "02000000000000E0"
+			title: "&5Elite Four 3: Agatha (Fantasma)"
+			subtitle: "Indigo Plateau — 3a Batalha da Liga"
+			icon: {
+				id: "cobblemon:spell_tag"
+			}
+			description: [
+				"Superando Bruno, enfrente os Gengars e espectros de &5Agatha&r na 3a sala!"
+			]
+			dependencies: ["02000000000000D0"]
+			x: 7.5d
+			y: 5.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "02000000000000E1"
+					type: "advancement"
+					title: "Derrote Agatha da Elite Four!"
+					advancement: "rctmod:trainers/defeat_elite_four_agatha"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "02000000000000F4"
+					type: "item"
+					item: {
+						id: "cobblemon:max_revive"
+						count: 3
+					}
+				}
+			]
+		}
+		{
+			id: "02000000000000F0"
+			title: "&9Elite Four 4: Lance (Dragao)"
+			subtitle: "Indigo Plateau — O Guardiao Final da Elite Four"
+			icon: {
+				id: "cobblemon:dragon_fang"
+			}
+			description: [
+				"Enfrente o lider da Elite Four, &9Lance&r, e sua esquadra de Dragoes!"
+			]
+			dependencies: ["02000000000000E0"]
+			x: 10.0d
+			y: 5.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "02000000000000F1"
+					type: "advancement"
+					title: "Derrote Lance da Elite Four!"
+					advancement: "rctmod:trainers/defeat_elite_four_lance"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0200000000000104"
+					type: "item"
+					item: {
+						id: "cobblemon:max_potion"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0200000000000100"
+			title: "&6&lGRANDE CAMPEAO DE KANTO!"
+			subtitle: "Destrava a Temporada 2 (Johto) e a 1a Copa da Firma!"
+			icon: {
+				id: "cobblemon:master_ball"
+			}
+			description: [
+				"Derrote o &6Campeao de Kanto&r no salao principal da Liga!"
+				""
+				"&aO QUE ESTA CONQUISTA DESTRAVA:&r"
+				"1. Libera oficialmente todo o capitulo da &eTemporada 2: Liga Johto&r!"
+				"2. Classifica voce para disputar a &61a Liga da Firma (Copa Kanto PvP)&r!"
+				"3. Premia voce com sua primeira &5Master Ball&r e &dAbility Patch&r!"
+			]
+			dependencies: ["02000000000000F0"]
+			x: 10.0d
+			y: 7.5d
+			shape: "gear"
+			size: 2.00d
+			tasks: [
+				{
+					id: "0200000000000101"
+					type: "advancement"
+					title: "Zere a Liga Kanto derrotando o Campeao!"
+					advancement: "rctmod:trainers/defeat_elite_four_kanto"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0200000000000114"
+					type: "item"
+					item: {
+						id: "cobblemon:master_ball"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000115"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_patch"
+						count: 1
+					}
+				}
+				{
+					id: "0200000000000116"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 15
+					}
+				}
+			]
+		}
+	]
+}

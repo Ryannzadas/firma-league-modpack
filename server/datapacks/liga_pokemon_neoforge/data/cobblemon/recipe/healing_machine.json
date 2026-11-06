@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CPC",
+    "IEI",
+    "IDI"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "P": {
+      "item": "cobblemon:pink_apricorn"
+    },
+    "I": {
+      "item": "create:iron_sheet"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "id": "cobblemon:healing_machine",
+    "count": 1
+  }
+}

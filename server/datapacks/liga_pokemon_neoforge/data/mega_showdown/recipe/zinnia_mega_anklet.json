@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "K": {
+      "item": "mega_showdown:keystone"
+    },
+    "T": {
+      "item": "cobblemon:sky_tumblestone"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "pattern": [
+    "CTC",
+    "CKC",
+    "CEC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:zinnia_mega_anklet"
+  }
+}

@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "loot_table", "value": "bca:item_groups/plant_items", "weight": 20 },
+        { "type": "loot_table", "value": "bca:item_groups/saplings",    "weight": 10 },
+        { "type": "loot_table", "value": "bca:item_groups/mulch",       "weight": 10 },
+        { "type": "loot_table", "value": "bca:item_groups/bones",       "weight": 10 },
+        { "type": "loot_table", "value": "bca:item_groups/honey",       "weight": 7 },
+        { "type": "loot_table", "value": "bca:item_groups/inc_sacs",    "weight": 10 },
+        { "type": "loot_table", "value": "bca:item_groups/sugar",       "weight": 10 },
+        { "type": "item",       "name": "minecraft:air",                       "weight": 10 }
+      ]
+    }
+  ]
+}

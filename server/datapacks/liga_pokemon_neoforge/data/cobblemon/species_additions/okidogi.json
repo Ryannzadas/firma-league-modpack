@@ -1,0 +1,55 @@
+{
+  "target": "cobblemon:okidogi",
+  "implemented": true,
+  "baseScale": 0.54,
+  "hitbox": {
+    "width": 1.3,
+    "height": 3.2,
+    "fixed": false
+  },
+  "behaviour": {
+    "herd": {
+      "maxSize": "1"
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "combat": {
+      "willDefendSelf": true,
+      "willDefendOwner": true,
+      "willFlee": false
+    },
+    "resting": {
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    }
+  },
+	"drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "cobblemon:rare_candy",
+        "quantityRange": "2-3",
+        "percentage": 25.0
+      },
+      {
+        "item": "cobblemon:poison_gem",
+        "percentage": 50.0
+      },
+      {
+        "item": "minecraft:nether_star",
+        "percentage": 5.0
+      },
+      {
+        "item": "cobblemon:ability_capsule",
+        "percentage": 15.0
+      },
+      {
+        "item": "cobblemon:ability_patch",
+        "percentage": 10.0
+      }
+    ]
+  }
+}

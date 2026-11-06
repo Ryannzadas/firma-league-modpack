@@ -1,0 +1,19 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "cobblemon:psychic_gem"
+    },
+    {
+      "item": "cobblemon:psychic_gem"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    }
+  ],
+  "energy": 30000,
+  "result": {
+    "id": "cobblemon:dawn_stone",
+    "count": 1
+  }
+}

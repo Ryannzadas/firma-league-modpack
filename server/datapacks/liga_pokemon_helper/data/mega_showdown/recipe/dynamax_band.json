@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "IWI",
+    "BEB"
+  ],
+  "key": {
+    "P": {
+      "item": "cobblemon:pink_apricorn"
+    },
+    "I": {
+      "item": "powah:steel_energized"
+    },
+    "W": {
+      "item": "mega_showdown:wishing_star"
+    },
+    "B": {
+      "item": "cobblemon:blue_apricorn"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "result": {
+    "id": "mega_showdown:dynamax_band",
+    "count": 1
+  }
+}

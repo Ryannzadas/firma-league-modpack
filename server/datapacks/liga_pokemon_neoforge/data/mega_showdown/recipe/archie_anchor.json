@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "powah:steel_energized"
+    },
+    "K": {
+      "item": "mega_showdown:keystone"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "pattern": [
+    "GCG",
+    "GKG",
+    "DED"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:archie_anchor"
+  }
+}

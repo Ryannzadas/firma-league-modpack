@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "powah:steel_energized"
+    },
+    "K": {
+      "item": "mega_showdown:keystone"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "pattern": [
+    "L L",
+    "IKI",
+    "LEL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:lisia_mega_tiara"
+  }
+}

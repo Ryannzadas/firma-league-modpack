@@ -1,0 +1,30 @@
+{
+  "target": "cobblemon:victini",
+  "implemented": true,
+  "shoulderMountable": true,
+  "baseScale": 0.6,
+  "hitbox": {
+	"width": 0.6,
+	"height": 1.0,
+	"fixed": false
+  },
+  "behaviour": {
+    "herd": {
+      "maxSize": "1"
+    },
+    "moving": {
+      "canLook": true,
+      "walk": {
+      "walkSpeed": 0.3,
+      "canWalk": true,
+      "avoidsLand": false
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "depth": "normal",
+      "light": "0-4"
+    }
+  }
+}

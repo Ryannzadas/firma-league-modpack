@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "cobblemon:ancient_azure_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_azure_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_citrine_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_citrine_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_feather_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_feather_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_gigaton_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_gigaton_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_great_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_great_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_heavy_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_heavy_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_ivory_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_ivory_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_jet_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_jet_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_leaden_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_leaden_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_origin_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_origin_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_poke_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_poke_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_roseate_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_roseate_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_slate_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_slate_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_ultra_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_ultra_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_verdant_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_verdant_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] },
+        { "type": "item", "name": "cobblemon:ancient_wing_rod", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } } ] },
+        { "type": "item", "name": "cobblemon:ancient_wing_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0, "max": 100 } }, { "function": "enchant_randomly" } ] }
+      ]
+    }
+  ]
+}

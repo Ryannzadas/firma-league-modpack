@@ -1,0 +1,14 @@
+{
+  "replace": true,
+  "values": [
+    "minecraft:dark_forest",
+    "minecraft:mushroom_fields",
+    "minecraft:swamp",
+    "minecraft:mangrove_swamp",
+    { "id": "terralith:haunted_hills", "required": false },
+    { "id": "terralith:graveyard", "required": false },
+    { "id": "terralith:bayou", "required": false },
+    { "id": "terralith:amethyst_rainforest", "required": false },
+    { "id": "terralith:stardust_valley", "required": false }
+  ]
+}

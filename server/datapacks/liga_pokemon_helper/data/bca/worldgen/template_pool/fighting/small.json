@@ -1,0 +1,25 @@
+{
+  "fallback": "minecraft:village/plains/town_centers",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:fighting/centers/center_village_road_fighting",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "terrain_matching",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:fighting/centers/center_small_village_fighting",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    }
+  ]
+}

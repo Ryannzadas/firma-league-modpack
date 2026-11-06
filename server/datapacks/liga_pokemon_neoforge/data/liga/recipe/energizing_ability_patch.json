@@ -1,0 +1,22 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "mekanism:advanced_control_circuit"
+    },
+    {
+      "item": "powah:crystal_niotic"
+    },
+    {
+      "item": "cobblemon:ability_capsule"
+    },
+    {
+      "item": "minecraft:amethyst_block"
+    }
+  ],
+  "energy": 150000,
+  "result": {
+    "id": "cobblemon:ability_patch",
+    "count": 1
+  }
+}

@@ -1,0 +1,42 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "zapdos",
+            "pokemon": "zapdos",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "50-60",
+            "weight": 0,
+            "condition": {
+                "biomes": [
+                    "cobbleverse:custom_spawn/zapdos_tower"
+                ]
+            }
+        },
+        {
+            "id": "zapdos-2",
+            "pokemon": "zapdos galarian",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "60",
+            "weight": 4.0,
+            "condition": {
+                "structures": [
+                    "cobbleverse:dyna_tree"
+                ],
+                "isThundering": true
+            }
+        }
+    ]
+}

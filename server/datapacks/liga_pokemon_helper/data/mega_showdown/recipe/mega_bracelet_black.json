@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "cobblemon:black_apricorn"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "I": {
+      "item": "powah:steel_energized"
+    },
+    "K": {
+      "item": "mega_showdown:keystone"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "pattern": [
+    "IDI",
+    "AKA",
+    "IEI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:mega_bracelet_black"
+  }
+}

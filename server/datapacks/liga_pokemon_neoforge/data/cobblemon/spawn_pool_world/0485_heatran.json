@@ -1,0 +1,22 @@
+{
+    "enabled": "true",
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "heatran-1",
+            "pokemon": "heatran",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "50-65",
+            "weight": 0,
+            "condition": {
+                "canSeeSky": false,
+                "biomes": [
+                   "cobbleverse:custom_spawn"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+  "name": "Líder Lt. Surge",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "moveBias": 0.9,
+      "statMoveBias": 0.4,
+      "switchBias": 0.4,
+      "itemBias": 0.8,
+      "maxSelectMargin": 0.22
+    }
+  },
+  "battleFormat": "GEN_9_SINGLES",
+  "battleRules": {
+    "maxItemUses": 1
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:vikavolt",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "modest",
+      "ability": "levitate",
+      "moveset": [
+        "bugbuzz",
+        "voltswitch",
+        "energyball",
+        "thunderwave"
+      ],
+      "ivs": { "hp": 24, "attack": 24, "defence": 24, "special_attack": 24, "special_defence": 24, "speed": 24 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:magnezone",
+      "gender": "GENDERLESS",
+      "level": 32,
+      "nature": "modest",
+      "ability": "sturdy",
+      "moveset": [
+        "thunderbolt",
+        "flashcannon",
+        "triattack",
+        "thunderwave"
+      ],
+      "ivs": { "hp": 24, "attack": 24, "defence": 24, "special_attack": 24, "special_defence": 24, "speed": 24 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:pawmot",
+      "gender": "FEMALE",
+      "level": 32,
+      "nature": "jolly",
+      "ability": "ironfist",
+      "moveset": [
+        "thunderpunch",
+        "closecombat",
+        "icepunch",
+        "machpunch"
+      ],
+      "ivs": { "hp": 24, "attack": 24, "defence": 24, "special_attack": 24, "special_defence": 24, "speed": 24 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    },
+    {
+      "species": "cobblemon:raichu_alolan",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "timid",
+      "ability": "surgesurfer",
+      "heldItem": "cobblemon:sitrus_berry",
+      "moveset": [
+        "thunderbolt",
+        "psychic",
+        "surf",
+        "nastyplot"
+      ],
+      "ivs": { "hp": 28, "attack": 28, "defence": 28, "special_attack": 28, "special_defence": 28, "speed": 28 },
+      "evs": { "hp": 0, "attack": 0, "defence": 0, "special_attack": 0, "special_defence": 0, "speed": 0 }
+    }
+  ]
+}

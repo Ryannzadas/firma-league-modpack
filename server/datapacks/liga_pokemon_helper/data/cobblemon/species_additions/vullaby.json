@@ -1,0 +1,10 @@
+{
+  "target": "cobblemon:vullaby",
+  "implemented": true,
+  "baseScale": 0.8,
+  "hitbox": {
+    "width": 0.8,
+    "height": 1,
+    "fixed": false
+  }
+}

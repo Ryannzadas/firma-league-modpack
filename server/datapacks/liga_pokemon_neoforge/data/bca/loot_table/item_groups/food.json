@@ -1,0 +1,158 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "minecraft:apple", "weight": 20 },
+        { "type": "item", "name": "minecraft:enchanted_golden_apple", "weight": 1 },
+        { "type": "item", "name": "minecraft:golden_apple", "weight": 5 },
+        { "type": "item", "name": "minecraft:poisonous_potato", "weight": 10 },
+        { "type": "item", "name": "minecraft:potato", "weight": 50,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:carrot", "weight": 50,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:carrot_on_a_stick", "weight": 1 },
+        { "type": "item", "name": "minecraft:golden_carrot", "weight": 5 },
+        { "type": "item", "name": "minecraft:beetroot", "weight": 50,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:melon", "weight": 10 },
+        { "type": "item", "name": "minecraft:glistering_melon_slice", "weight": 2 },
+        { "type": "item", "name": "minecraft:melon_slice", "weight": 50,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:carved_pumpkin", "weight": 2 },
+        { "type": "item", "name": "minecraft:pumpkin", "weight": 10 },
+        { "type": "item", "name": "minecraft:pumpkin_pie", "weight": 20,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:wheat", "weight": 80,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:bread", "weight": 80,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:cookie", "weight": 40,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:cake", "weight": 10 },
+        { "type": "item", "name": "minecraft:glow_berries", "weight": 10 },
+        { "type": "item", "name": "minecraft:chorus_fruit", "weight": 10 },
+        { "type": "item", "name": "minecraft:dried_kelp", "weight": 40,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "cobblemon:vivichoke", "weight": 20 },
+        { "type": "item", "name": "cobblemon:berry_juice", "weight": 30 },
+        { "type": "item", "name": "cobblemon:roasted_leek", "weight": 30,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:cooked_beef", "weight": 10,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:cooked_chicken", "weight": 30,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:cooked_cod", "weight": 20,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:cooked_mutton", "weight": 20,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:cooked_porkchop", "weight": 20,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:cooked_rabbit", "weight": 40,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:cooked_salmon", "weight": 50,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "cobblemon:vivichoke_dip", "weight": 10 },
+        { "type": "item", "name": "cobblemon:leek_and_potato_stew", "weight": 10 },
+        { "type": "item", "name": "minecraft:mushroom_stew", "weight": 10 },
+        { "type": "item", "name": "minecraft:rabbit_stew", "weight": 10 },
+        { "type": "item", "name": "minecraft:suspicious_stew", "weight": 5,
+          "functions":  [
+          {
+            "function":  "set_stew_effect",
+            "effects":  [
+              {
+                "type":  "minecraft:fire_resistance",
+                "duration":  60
+              },
+              {
+                "type":  "minecraft:blindness",
+                "duration":  220
+              },
+              {
+                "type":  "minecraft:saturation",
+                "duration":  7
+              },
+              {
+                "type":  "minecraft:nausea",
+                "duration":  140
+              },
+              {
+                "type":  "minecraft:jump_boost",
+                "duration":  100
+              },
+              {
+                "type":  "minecraft:poison",
+                "duration":  220
+              },
+              {
+                "type":  "minecraft:regeneration",
+                "duration":  140
+              },
+              {
+                "type":  "minecraft:night_vision",
+                "duration":  100
+              },
+              {
+                "type":  "minecraft:weakness",
+                "duration":  140
+              },
+              {
+                "type":  "minecraft:wither",
+                "duration":  140
+              }
+            ]
+          }
+        ]
+        },
+        { "type": "item", "name": "minecraft:beetroot_soup", "weight": 10 },
+        { "type": "item", "name": "minecraft:baked_potato", "weight": 70 },
+        { "type": "item", "name": "minecraft:popped_chorus_fruit", "weight": 1 },
+        { "type": "item", "name": "minecraft:rotten_flesh", "weight": 40,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:bowl", "weight": 5 },
+        { "type": "item", "name": "minecraft:water_bucket", "weight": 5 },
+        { "type": "item", "name": "minecraft:milk_bucket", "weight": 10 }
+      ]
+    }
+  ]
+}
+
+

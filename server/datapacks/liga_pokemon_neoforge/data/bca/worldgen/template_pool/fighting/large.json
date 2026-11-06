@@ -1,0 +1,15 @@
+{
+  "fallback": "minecraft:village/plains/town_centers",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:fighting/centers/center-wyrms-rest",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    }
+  ]
+}

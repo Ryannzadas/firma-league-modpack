@@ -1,0 +1,9 @@
+{
+  "replace": true,
+  "values": [
+    "create:iron_sheet",
+    "create:andesite_alloy",
+    "mekanism:ingot_osmium",
+    "mekanism:ingot_steel"
+  ]
+}

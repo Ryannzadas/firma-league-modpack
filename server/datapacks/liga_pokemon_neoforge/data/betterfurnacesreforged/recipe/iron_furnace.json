@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IRI",
+    "IFI",
+    "CAC"
+  ],
+  "key": {
+    "I": {
+      "item": "create:iron_sheet"
+    },
+    "R": {
+      "item": "betterfurnacesreforged:iron_conductor_block"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "A": {
+      "item": "cobblemon:red_apricorn"
+    }
+  },
+  "result": {
+    "id": "betterfurnacesreforged:iron_furnace",
+    "count": 1
+  }
+}

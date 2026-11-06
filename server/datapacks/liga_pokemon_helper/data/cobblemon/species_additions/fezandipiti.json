@@ -1,0 +1,32 @@
+{
+  "target": "cobblemon:fezandipiti",
+  "implemented": true,
+  "baseScale": 0.5,
+  "hitbox": {
+    "width": 0.85,
+    "height": 2.0,
+    "fixed": false
+  },
+  "behaviour": {
+    "herd": {
+      "maxSize": "1"
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      },
+      "fly": {
+        "canFly": true
+      }
+    },
+    "combat": {
+      "willDefendSelf": true,
+      "willDefendOwner": true,
+      "willFlee": false
+    },
+    "resting": {
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    }
+  }
+}

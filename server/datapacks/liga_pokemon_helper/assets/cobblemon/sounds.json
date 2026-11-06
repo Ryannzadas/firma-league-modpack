@@ -1,0 +1,81 @@
+{
+  "battle.pvn.default": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "cobblemon:battle/champion_battle",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/gym_battle_johto",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/gym_battle_sinnoh",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/team_rocket_admin_battle",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/team_rocket_battle",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/trainer_battle_kanto",
+        "volume": 0.7
+      }
+    ]
+  },
+  "battle.pvp.default": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "cobblemon:battle/champion_battle",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/gym_battle_johto",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/gym_battle_sinnoh",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/team_rocket_admin_battle",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/team_rocket_battle",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/trainer_battle_kanto",
+        "volume": 0.7
+      }
+    ]
+  },
+  "battle.pvw.default": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "cobblemon:battle/wild_battle_hoenn",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/wild_battle_johto",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/wild_battle_kanto",
+        "volume": 0.7
+      },
+      {
+        "name": "cobblemon:battle/wild_battle_sinnoh",
+        "volume": 0.7
+      }
+    ]
+  }
+}

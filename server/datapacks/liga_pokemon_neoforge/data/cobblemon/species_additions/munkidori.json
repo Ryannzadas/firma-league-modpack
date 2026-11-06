@@ -1,0 +1,29 @@
+{
+  "target": "cobblemon:munkidori",
+  "implemented": true,
+  "baseScale": 0.55,
+  "hitbox": {
+      "width": 0.8,
+      "height": 1.85,
+      "fixed": false
+  },
+  "behaviour": {
+    "herd": {
+      "maxSize": "1"
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "combat": {
+      "willDefendSelf": true,
+      "willDefendOwner": true,
+      "willFlee": false
+    },
+    "resting": {
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    }
+  }
+}

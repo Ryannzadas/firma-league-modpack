@@ -1,0 +1,442 @@
+{
+	id: "03C0000000000001"
+	group: "1000000000000002"
+	order_index: 8
+	filename: "03c_armazenamento_e_mochilas"
+	title: "&a2B. Armazenamento (Tom's, AE2) e Mochilas"
+	icon: {
+		id: "ae2:controller"
+	}
+	default_quest_shape: "rsquare"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "03C0000000000010"
+			title: "&e1. Sua Primeira Mochila (Sophisticated Backpacks)"
+			subtitle: "Mais espaco para Pokebolas, Berries e Minerios!"
+			icon: {
+				id: "sophisticatedbackpacks:backpack"
+			}
+			description: [
+				"Construa sua &eMochila Basica&r com Couro, Linha e 1 Bau!"
+				""
+				"• Coloque ela no slot de costas (ou abra apertando a tecla &e[B]&r — configure facilmente no menu de controles com a busca do &bControlling&r!)."
+				"• Importante: Quando for evoluir a mochila para Cobre/Ferro/Ouro/Diamante na bancada, ela mantem todos os itens e upgrades la dentro!"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03C0000000000011"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:backpack"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03C0000000000024"
+					type: "item"
+					item: {
+						id: "minecraft:leather"
+						count: 8
+					}
+				}
+			]
+		}
+		{
+			id: "03C0000000000030"
+			title: "&f2. Mochilas de Ferro e Ouro"
+			subtitle: "Evoluindo com Chapas de Ferro (Create) e Circuito Basico (Mekanism)"
+			icon: {
+				id: "sophisticatedbackpacks:gold_backpack"
+			}
+			description: [
+				"Seguindo a arvore tecnologica da Firma:"
+				"• &fMochila de Ferro:&r Mochila Basica + Chapas de Ferro (Create) + 1 Apricorn."
+				"• &6Mochila de Ouro:&r Mochila de Ferro + Ouro + 1 Circuito de Controle Basico (Mekanism)."
+			]
+			dependencies: ["03C0000000000010"]
+			x: 2.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03C0000000000031"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:iron_backpack"
+					}
+				}
+				{
+					id: "03C0000000000032"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:gold_backpack"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03C0000000000044"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:pickup_upgrade"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03C0000000000050"
+			title: "&b3. Mochilas de Diamante e Netherite + Upgrades"
+			subtitle: "Ima automatico, Auto-Feeding e Bancada portatil!"
+			icon: {
+				id: "sophisticatedbackpacks:diamond_backpack"
+			}
+			description: [
+				"• &bMochila de Diamante:&r Usa Diamantes + &6Aco Energizado (Powah)&r!"
+				"• &8Mochila de Netherite:&r Feita na Mesa de Ferraria (Smithing Table) com Barra de Netherite."
+				"• &aUpgrades de Mochila:&r Coloque &eMagnet Upgrade&r (puxa drops de longe), &eFeeding Upgrade&r (alimenta voce sozinho) e &eCrafting Upgrade&r!"
+			]
+			dependencies: ["03C0000000000030"]
+			x: 5.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03C0000000000051"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:diamond_backpack"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03C0000000000064"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:magnet_upgrade"
+						count: 1
+					}
+				}
+				{
+					id: "03C0000000000065"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:feeding_upgrade"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03C0000000000070"
+			title: "&64. Baus por Nivel de Minerio (Sophisticated Storage)"
+			subtitle: "Evolua seus baus sem precisar quebrar!"
+			icon: {
+				id: "sophisticatedstorage:basic_to_iron_tier_upgrade"
+			}
+			description: [
+				"Com os &eTier Upgrades&r do &6Sophisticated Storage&r, basta segurar o Upgrade na mao e clicar com o botao direito em um Bau ou Barril comum para transforma-lo em &fBau de Ferro&r, &6Ouro&r, &bDiamante&r ou &8Netherite&r!"
+				""
+				"• &fUpgrade Ferro:&r Chapa de Ferro (Create) + Tocha de Redstone + Apricorn."
+				"• &6Upgrade Ouro:&r Ouro + Tocha de Redstone + Circuito Basico (Mekanism)."
+				"• &bUpgrade Diamante:&r Diamante + Circuito Basico + Aco Energizado."
+			]
+			x: 0.0d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03C0000000000071"
+					type: "item"
+					item: {
+						id: "sophisticatedstorage:basic_to_iron_tier_upgrade"
+					}
+				}
+				{
+					id: "03C0000000000072"
+					type: "item"
+					item: {
+						id: "sophisticatedstorage:iron_to_gold_tier_upgrade"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03C0000000000084"
+					type: "item"
+					item: {
+						id: "sophisticatedstorage:gold_to_diamond_tier_upgrade"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03C0000000000090"
+			title: "&a5. Rede Inicial: Tom's Simple Storage"
+			subtitle: "Todos os seus baus conectados sem gastar energia!"
+			icon: {
+				id: "toms_storage:storage_terminal"
+			}
+			description: [
+				"Monte sua primeira central unificada no inicio do jogo:"
+				"1. Coloque varios baus (do Sophisticated Storage) encostados uns nos outros."
+				"2. Coloque 1 &bInventory Connector&r encostado em qualquer um desses baus (ele le todos os baus adjacentes automaticamente!)."
+				"3. Coloque o &eStorage Terminal&r em cima ou ao lado do Inventory Connector."
+				"4. Clique no Terminal para ver e pesquisar todos os itens de todos os baus de uma so vez!"
+			]
+			dependencies: ["03C0000000000070"]
+			x: 2.5d
+			y: 2.5d
+			shape: "hexagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "03C0000000000091"
+					type: "item"
+					item: {
+						id: "toms_storage:inventory_connector"
+					}
+				}
+				{
+					id: "03C0000000000092"
+					type: "item"
+					item: {
+						id: "toms_storage:storage_terminal"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03C00000000000A4"
+					type: "item"
+					item: {
+						id: "toms_storage:inventory_cable"
+						count: 16
+					}
+				}
+				{
+					id: "03C00000000000A5"
+					type: "item"
+					item: {
+						id: "toms_storage:inventory_cable_connector"
+						count: 2
+					}
+				}
+			]
+		}
+		{
+			id: "03C00000000000B0"
+			title: "&b6. Crafting Terminal e Acesso Wireless (Tom's)"
+			subtitle: "Crie itens direto da rede de baus!"
+			icon: {
+				id: "toms_storage:crafting_terminal"
+			}
+			description: [
+				"• &bCrafting Terminal:&r Evolua o seu Storage Terminal com Bancadas, Diamante, Circuito Basico e &6Aco Energizado&r para ter uma grade de Crafting 3x3 integrada ao EMI (clique no `[+]` do EMI para puxar os itens direto dos baus!)."
+				"• &dWireless Terminal e Adv. Wireless Terminal:&r Acesse seu sistema de baus sem fio!"
+			]
+			dependencies: ["03C0000000000090"]
+			x: 5.0d
+			y: 2.5d
+			shape: "octagon"
+			size: 1.50d
+			tasks: [
+				{
+					id: "03C00000000000B1"
+					type: "item"
+					item: {
+						id: "toms_storage:crafting_terminal"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03C00000000000C4"
+					type: "item"
+					item: {
+						id: "toms_storage:wireless_terminal"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03C00000000000D0"
+			title: "&97. Applied Energistics 2 (AE2): Inscriber e Processadores"
+			subtitle: "O Computador Quantico de HDs Digitais!"
+			icon: {
+				id: "ae2:inscriber"
+			}
+			description: [
+				"Quer transformar milhares de itens em dados dentro de disquetes digitais? Entre no &9Applied Energistics 2 (AE2)&r:"
+				"1. Encontre um &8Meteorito do AE2&r pelo mapa (use a bussola ou o mapa) para coletar as 4 &bInscriber Presses (Prensas de Silicio, Logica, Calculo e Engenharia)&r e Certus Quartz."
+				"2. Construa um &eCharger&r e um &9Inscriber&r para prensar Processadores Logicos, de Calculo e de Engenharia!"
+				"• &bGuia Interativo AE2:&r Segure &e[G]&r em cima de qualquer item do AE2 para abrir o guia visual oficial dentro do jogo!"
+			]
+			dependencies: ["03C0000000000090"]
+			x: 2.5d
+			y: 5.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "03C00000000000D1"
+					type: "item"
+					item: {
+						id: "ae2:charger"
+					}
+				}
+				{
+					id: "03C00000000000D2"
+					type: "item"
+					item: {
+						id: "ae2:inscriber"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03C00000000000E4"
+					type: "item"
+					item: {
+						id: "ae2:logic_processor"
+						count: 4
+					}
+				}
+				{
+					id: "03C00000000000E5"
+					type: "item"
+					item: {
+						id: "ae2:calculation_processor"
+						count: 4
+					}
+				}
+				{
+					id: "03C00000000000E6"
+					type: "item"
+					item: {
+						id: "ae2:engineering_processor"
+						count: 4
+					}
+				}
+			]
+		}
+		{
+			id: "03C00000000000F0"
+			title: "&d8. Supercomputador ME: Controller, ME Drive e Celula 16k!"
+			subtitle: "Armazenamento Digital e Autocrafting Ilimitado (AE2)"
+			icon: {
+				id: "ae2:controller"
+			}
+			description: [
+				"Monte o seu Supercomputador ME:"
+				"• Conecte um &dME Controller&r (alimentado com energia do Mekanism/Powah), um &bME Drive&r e um &aME Crafting Terminal&r usando &9Fluix Glass Cables&r."
+				"• Insira &bME Item Storage Cells (1k, 4k, 16k, 64k)&r dentro do ME Drive para guardar centenas de milhares de itens em um unico bloco!"
+			]
+			dependencies: ["03C00000000000D0"]
+			x: 5.0d
+			y: 5.0d
+			shape: "hexagon"
+			size: 1.50d
+			tasks: [
+				{
+					id: "03C00000000000F1"
+					type: "item"
+					item: {
+						id: "ae2:controller"
+					}
+				}
+				{
+					id: "03C00000000000F2"
+					type: "item"
+					item: {
+						id: "ae2:drive"
+					}
+				}
+				{
+					id: "03C00000000000F3"
+					type: "item"
+					item: {
+						id: "ae2:crafting_terminal"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03C0000000000104"
+					type: "item"
+					item: {
+						id: "ae2:item_storage_cell_16k"
+						count: 1
+					}
+				}
+				{
+					id: "03C0000000000105"
+					type: "item"
+					item: {
+						id: "ae2:fluix_glass_cable"
+						count: 16
+					}
+				}
+			]
+		}
+		{
+			id: "03C0000000000110"
+			title: "&29. Fazendas Industriais: Industrial Foregoing!"
+			subtitle: "Colheita Automatica de Apricorns, Berries e Mints!"
+			icon: {
+				id: "industrialforegoing:plant_gatherer"
+			}
+			description: [
+				"Com o &2Industrial Foregoing&r, voce automatiza a agricultura e a pecuaria da base:"
+				"1. Extraia Latex de troncos de madeira usando o &eFluid Extractor&r e processe no &bLatex Processing Unit&r para fazer &fPlastic (Plastico)&r."
+				"2. Construa o &aPlant Sower (Plantador)&r e o &2Plant Gatherer (Colhedor)&r para colher plantacoes inteiras de &eApricorns, Berries e Mints&r automaticamente!"
+			]
+			dependencies: ["03C00000000000B0"]
+			x: 7.5d
+			y: 2.5d
+			shape: "hexagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "03C0000000000111"
+					type: "item"
+					item: {
+						id: "industrialforegoing:machine_frame_pity"
+					}
+				}
+				{
+					id: "03C0000000000112"
+					type: "item"
+					item: {
+						id: "industrialforegoing:plant_gatherer"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03C0000000000124"
+					type: "item"
+					item: {
+						id: "industrialforegoing:plastic"
+						count: 16
+					}
+				}
+				{
+					id: "03C0000000000125"
+					type: "item"
+					item: {
+						id: "industrialforegoing:plant_sower"
+						count: 1
+					}
+				}
+			]
+		}
+	]
+}

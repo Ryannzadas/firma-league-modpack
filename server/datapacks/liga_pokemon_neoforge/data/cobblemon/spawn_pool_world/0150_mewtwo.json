@@ -1,0 +1,21 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "id": "mewtwo-1",
+      "pokemon": "mewtwo",
+      "type": "pokemon",
+      "spawnablePositionType": "grounded",
+      "bucket": "ultra-rare",
+      "level": "1-10",
+      "weight": 0,
+      "condition": {
+        "biomes": [ 
+        "cobbleverse:custom_spawn/team_rocket_radio"
+        ]
+      }
+    }
+  ]
+}

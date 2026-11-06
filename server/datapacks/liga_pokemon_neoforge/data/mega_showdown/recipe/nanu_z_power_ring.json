@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "cobblemon:black_apricorn"
+    },
+    "G": {
+      "item": "powah:steel_energized"
+    },
+    "I": {
+      "item": "powah:steel_energized"
+    },
+    "S": {
+      "item": "mega_showdown:sparkling_stone_dark"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    }
+  },
+  "pattern": [
+    "GSG",
+    "AIA",
+    "IEI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:nanu_z_power_ring"
+  }
+}

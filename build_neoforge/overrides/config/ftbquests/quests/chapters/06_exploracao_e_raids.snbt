@@ -1,0 +1,737 @@
+{
+	id: "0600000000000001"
+	group: "1000000000000001"
+	order_index: 13
+	filename: "06_exploracao_e_raids"
+	title: "&2Exploracao e Raids"
+	icon: {
+		id: "explorerscompass:explorerscompass"
+	}
+	default_quest_shape: "rsquare"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "0600000000000010"
+			title: "&2O Mapa da Convergencia"
+			subtitle: "Explorar tem recompensa de verdade"
+			icon: {
+				id: "explorerscompass:explorerscompass"
+			}
+			description: [
+				"Nem tudo se resolve na fabrica! Estruturas, tocas de raid e ruinas lendarias escondem itens que as maquinas NAO produzem:"
+				"• &dKeystones&r, &6Wishing Stars&r e &eSparkling Stones&r (Megas, Z-Moves, Dynamax)"
+				"• &bTera Shards&r, &aRare Candies&r, vitaminas, pedras de evolucao e itens de batalha"
+				"• Com sorte, &dMega Stones&r e &eZ-Crystals&r prontos e ate uma &5Master Ball&r!"
+				""
+				"&eComo achar:&r use a &6Explorer's Compass&r para estruturas e a &aNature's Compass&r para biomas."
+				""
+				"&7Sem pressa: uma sessao curta de 30 a 40 minutos ja costuma render algo bom. As quests abaixo sao independentes, faca na ordem que der!&r"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			size: 1.50d
+			tasks: [
+				{
+					id: "0600000000000011"
+					type: "checkmark"
+					title: "Entendi: explorar rende itens exclusivos!"
+				}
+			]
+			rewards: [
+				{
+					id: "0600000000000024"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_m"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0600000000000020"
+			title: "&bMarque seu Territorio (Waystones)"
+			subtitle: "Viagem rapida para voltar a base"
+			icon: {
+				id: "waystones:waystone"
+			}
+			description: [
+				"Coloque uma &bWaystone&r na sua base e outra em cada lugar importante que descobrir (ginasios, vilas, tocas de raid)."
+				"Assim voce explora longe e volta em segundos, o que ajuda muito quando o tempo de jogo e curto!"
+			]
+			dependencies: ["0600000000000010"]
+			x: 2.5d
+			y: -1.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0600000000000021"
+					type: "item"
+					item: {
+						id: "waystones:waystone"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0600000000000034"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 2
+					}
+				}
+				{
+					id: "0600000000000035"
+					type: "item"
+					item: {
+						id: "cobblemon:great_ball"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "0600000000000030"
+			title: "&6Baus So Seus (Lootr)"
+			subtitle: "Cada jogador abre o proprio loot"
+			icon: {
+				id: "minecraft:chest"
+			}
+			description: [
+				"Nos baus de estruturas, o &6Lootr&r da a cada jogador o seu proprio conteudo: ninguem esvazia o bau dos amigos!"
+				""
+				"Abra baus de masmorras, templos, minas e navios naufragados. Cerca de &a1 em cada 3 baus&r traz um item extra de Pokemon, e estruturas mais dificeis dao chances maiores."
+			]
+			dependencies: ["0600000000000010"]
+			x: 2.5d
+			y: 1.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0600000000000031"
+					type: "checkmark"
+					title: "Abri baus de estruturas e peguei meu loot!"
+				}
+			]
+			rewards: [
+				{
+					id: "0600000000000044"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_l"
+						count: 3
+					}
+				}
+			]
+		}
+		{
+			id: "0600000000000040"
+			title: "&dCacador de Keystone"
+			subtitle: "A pedra-chave das Megas"
+			icon: {
+				id: "mega_showdown:keystone"
+			}
+			description: [
+				"A &dKeystone&r e a base da Mega Bracelet e de varios aneis. Ela pode aparecer em &dbaus de estruturas medias e dificeis&r e tambem em minerios nos meteoritos do Mega Showdown."
+				""
+				"Traga uma Keystone para sua base!"
+			]
+			dependencies: ["0600000000000030"]
+			x: 5.0d
+			y: 1.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0600000000000041"
+					type: "item"
+					item: {
+						id: "mega_showdown:keystone"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0600000000000054"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_xl"
+						count: 2
+					}
+				}
+				{
+					id: "0600000000000055"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 3
+					}
+				}
+			]
+		}
+		{
+			id: "0600000000000050"
+			title: "&9Meteorito do AE2"
+			subtitle: "Sky Stone e Certus Quartz"
+			icon: {
+				id: "ae2:sky_stone_block"
+			}
+			description: [
+				"Procure um &9Meteorito do AE2&r pelo mapa (a Explorer's Compass ajuda). Dentro dele ha &8Sky Stone&r e &bCertus Quartz&r, a base de todo o sistema de armazenamento digital!"
+			]
+			dependencies: ["0600000000000020"]
+			x: 5.0d
+			y: -1.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0600000000000051"
+					type: "item"
+					item: {
+						id: "ae2:sky_stone_block"
+					}
+					count: 4L
+				}
+				{
+					id: "0600000000000052"
+					type: "item"
+					item: {
+						id: "ae2:certus_quartz_crystal"
+					}
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "0600000000000064"
+					type: "item"
+					item: {
+						id: "ae2:charged_certus_quartz_crystal"
+						count: 2
+					}
+				}
+			]
+		}
+		{
+			id: "0600000000000060"
+			title: "&cSua Primeira Raid Den"
+			subtitle: "Hora de enfrentar um Pokemon gigante em grupo"
+			icon: {
+				id: "cobblemonraiddens:raid_pouch"
+			}
+			description: [
+				"Encontre uma &cRaid Den&r e participe de uma raid. Voce pode ir sozinho, mas com amigos fica bem mais facil!"
+				""
+				"Quem completa raids ganha &6Raid Shards&r e recompensas extras."
+			]
+			dependencies: ["0600000000000010"]
+			x: 7.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0600000000000061"
+					type: "advancement"
+					title: "Participe de uma Raid!"
+					advancement: "cobblemonraiddens:join_raid"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0600000000000074"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 3
+					}
+				}
+				{
+					id: "0600000000000075"
+					type: "item"
+					item: {
+						id: "cobblemon:ultra_ball"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "0600000000000070"
+			title: "&6Raid Tier 3"
+			subtitle: "Chame os amigos"
+			icon: {
+				id: "cobblemonraiddens:cheer_attack"
+			}
+			description: [
+				"Derrote uma raid de &6Tier 3&r. Monte um time equilibrado e use os &bCheers&r (apoio) durante a batalha!"
+			]
+			dependencies: ["0600000000000060"]
+			x: 10.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0600000000000071"
+					type: "advancement"
+					title: "Conclua uma Raid de Tier 3!"
+					advancement: "cobblemonraiddens:tier_three"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0600000000000084"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+				{
+					id: "0600000000000085"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_capsule"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "0600000000000080"
+			title: "&dRaid Tier 5"
+			subtitle: "Desafio serio"
+			icon: {
+				id: "cobblemonraiddens:cheer_defense"
+			}
+			description: [
+				"Uma raid de &dTier 5&r pede estrategia: tipos certos, itens de batalha e cura em dia!"
+			]
+			dependencies: ["0600000000000070"]
+			x: 12.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0600000000000081"
+					type: "advancement"
+					title: "Conclua uma Raid de Tier 5!"
+					advancement: "cobblemonraiddens:tier_five"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0600000000000094"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_patch"
+						count: 1
+					}
+				}
+				{
+					id: "0600000000000095"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_xl"
+						count: 3
+					}
+				}
+			]
+		}
+		{
+			id: "0600000000000090"
+			title: "&5&lRaid Mestre: Tier 7"
+			subtitle: "O maior desafio das Raid Dens"
+			icon: {
+				id: "cobblemonraiddens:raid_crystal_block"
+			}
+			description: [
+				"Reuna o grupo todo da Firma e derrote uma raid de &5Tier 7&r!"
+				""
+				"As melhores recompensas do pack caem aqui."
+			]
+			dependencies: ["0600000000000080"]
+			x: 15.0d
+			y: 0.0d
+			shape: "gear"
+			size: 1.70d
+			tasks: [
+				{
+					id: "0600000000000091"
+					type: "advancement"
+					title: "Conclua uma Raid de Tier 7!"
+					advancement: "cobblemonraiddens:tier_seven"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "06000000000000A4"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_patch"
+						count: 2
+					}
+				}
+				{
+					id: "06000000000000A5"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_xl"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "06000000000000A0"
+			title: "&eRuinas Lendarias"
+			subtitle: "Estruturas com Pokemon miticos"
+			icon: {
+				id: "cobblemon:ultra_ball"
+			}
+			description: [
+				"Visite uma estrutura lendaria e descubra o seu segredo. Use a Explorer's Compass e leve Pokebolas fortes e bastante cura!"
+			]
+			dependencies: ["0600000000000040"]
+			x: 7.5d
+			y: 3.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "06000000000000A1"
+					type: "advancement"
+					title: "Encontre um Pokemon lendario!"
+					advancement: "legends_untold:find_legendary"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "06000000000000B4"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+				{
+					id: "06000000000000B5"
+					type: "item"
+					item: {
+						id: "cobblemon:max_revive"
+						count: 3
+					}
+				}
+			]
+		}
+		{
+			id: "06000000000000B0"
+			title: "&bTera Dens"
+			subtitle: "Cavernas de cristal Tera"
+			icon: {
+				id: "mega_showdown:fire_tera_shard"
+			}
+			description: [
+				"As &bTera Dens&r guardam baus com itens raros e cristais Tera. Encontre uma e abra o seu bau!"
+			]
+			dependencies: ["06000000000000A0"]
+			x: 10.0d
+			y: 3.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "06000000000000B1"
+					type: "advancement"
+					title: "Descubra uma Tera Den!"
+					advancement: "legends_untold:tera_dens"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "06000000000000C4"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_xl"
+						count: 3
+					}
+				}
+			]
+		}
+		{
+			id: "06000000000000C0"
+			title: "&3Pilar do Ceu"
+			subtitle: "Onde Rayquaza descansa"
+			icon: {
+				id: "cobblemon:dragon_gem"
+			}
+			description: [
+				"No alto do &3Pilar do Ceu&r mora o dragao do ceu. Prepare uma equipe forte antes de subir!"
+			]
+			dependencies: ["06000000000000B0"]
+			x: 12.5d
+			y: 3.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "06000000000000C1"
+					type: "advancement"
+					title: "Chegue ao Pilar do Ceu!"
+					advancement: "legends_untold:sky_pillar"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "06000000000000D4"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_patch"
+						count: 1
+					}
+				}
+				{
+					id: "06000000000000D5"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "06000000000000E0"
+			title: "&eO Boneco de Treino (Dummy)"
+			subtitle: "Teste o dano da sua equipe e armas"
+			icon: {
+				id: "dummmmmmy:target_dummy"
+			}
+			description: [
+				"Para montar a melhor estrategia na Liga ou vencer os lideres de ginasio mais dificeis, voce precisa entender o dano real dos seus ataques!"
+				""
+				"O &eBoneco de Treino (Target Dummy)&r pode ser equipado com armaduras completas para simular oponentes reais. Quando atacado, ele exibe numeros flutuantes de dano e mede o seu DPS (dano por segundo)!"
+				""
+				"&7Dica:&r Coloque um Dummy na sua base ou arena de treino. Ele e facil de criar usando apenas 1 Fardo de Feno e 1 Suporte de Armaduras."
+			]
+			dependencies: ["0600000000000010"]
+			x: 2.5d
+			y: -3.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "06000000000000E1"
+					type: "item"
+					item: {
+						id: "dummmmmmy:target_dummy"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "06000000000000F4"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_m"
+						count: 5
+					}
+				}
+				{
+					id: "06000000000000F5"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 2
+					}
+				}
+			]
+		}
+		{
+			id: "06000000000000F0"
+			title: "&cMasmorras e Tavernas"
+			subtitle: "Ruinas e fortalezas da Convergencia"
+			icon: {
+				id: "minecraft:chiseled_stone_bricks"
+			}
+			description: [
+				"Grandes masmorras, criptas, fortalezas abandonadas e tavernas surgiram pelo relevo."
+				""
+				"Essas estruturas guardam salas secretas e baus valiosos contendo itens raros de Pokemon (Tera Shards, Vitaminas, Mega Stones e Z-Crystals)!"
+				""
+				"&aProtecao Estrutural:&r O pack usa o mod &bSparse Structures&r para garantir que nenhuma dungeon sobreponha ou quebre as vilas pacificas do Cobblemon e seus Poke Centers."
+			]
+			dependencies: ["0600000000000010"]
+			x: 5.0d
+			y: -3.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "06000000000000F1"
+					type: "checkmark"
+					title: "Explorei uma Masmorra ou Taverna!"
+				}
+			]
+			rewards: [
+				{
+					id: "0600000000000104"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_l"
+						count: 3
+					}
+				}
+				{
+					id: "0600000000000105"
+					type: "item"
+					item: {
+						id: "cobblemon:great_ball"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0600000000000100"
+			title: "&6Reliquias Esquecidas (Artifacts)"
+			subtitle: "Poderes passivos para exploradores"
+			icon: {
+				id: "artifacts:everlasting_beef"
+			}
+			description: [
+				"Em acampamentos subterraneos abandonados e baus de estruturas repousam as &6Reliquias Ancestrais&r (Artifacts)."
+				""
+				"Itens como &eEverlasting Beef&r (comida infinita), &bBunny Hoppers&r (salto duplo e imunidade a queda), &fCloud in a Bottle&r e &cPower Glove&r concedem efeitos passivos incriveis para sua jornada!"
+				""
+				"Encontre ou resgate qualquer reliquia para completar este desafio."
+			]
+			dependencies: ["06000000000000F0"]
+			x: 7.5d
+			y: -3.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0600000000000101"
+					type: "checkmark"
+					title: "Encontrei uma Reliquia Ancestral!"
+				}
+			]
+			rewards: [
+				{
+					id: "0600000000000114"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 3
+					}
+				}
+				{
+					id: "0600000000000115"
+					type: "item"
+					item: {
+						id: "cobblemon:ultra_ball"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0600000000000110"
+			title: "&5Arsenal da Convergencia (Simply Swords)"
+			subtitle: "Armas lendarias e tecnicas unicas"
+			icon: {
+				id: "simplyswords:runic_tablet"
+			}
+			description: [
+				"Para se defender dos perigos das masmorras e testar golpes no Dummy, forje armas especializadas do &5Simply Swords&r: Claymores, Twinblades, Chakrams, Rapieiras e Foices!"
+				""
+				"Nos baus de masmorras medias e avancadas, voce pode encontrar a cobicada &dTabua Runica (Runic Tablet)&r, usada na Forja Runica para despertar habilidades especiais em combate."
+			]
+			dependencies: ["0600000000000100"]
+			x: 10.0d
+			y: -3.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0600000000000111"
+					type: "item"
+					item: {
+						id: "simplyswords:runic_tablet"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0600000000000124"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_capsule"
+						count: 1
+					}
+				}
+				{
+					id: "0600000000000125"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_xl"
+						count: 2
+					}
+				}
+			]
+		}
+		{
+			id: "06000000000000D0"
+			title: "&6&lExplorador da Firma"
+			subtitle: "Voce dominou as terras da Convergencia!"
+			icon: {
+				id: "cobblemon:master_ball"
+			}
+			description: [
+				"Raids vencidas, masmorras exploradas e ruinas lendarias visitadas: voce e um verdadeiro explorador!"
+				""
+				"A Firma reconhece o seu esforco."
+			]
+			dependencies: ["0600000000000090", "06000000000000C0", "0600000000000110"]
+			x: 17.5d
+			y: 1.5d
+			shape: "gear"
+			size: 2.00d
+			tasks: [
+				{
+					id: "06000000000000D1"
+					type: "checkmark"
+					title: "Sou um Explorador da Firma!"
+				}
+			]
+			rewards: [
+				{
+					id: "06000000000000E4"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 10
+					}
+				}
+				{
+					id: "06000000000000E5"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_patch"
+						count: 1
+					}
+				}
+				{
+					id: "06000000000000E6"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_xl"
+						count: 5
+					}
+				}
+			]
+		}
+	]
+}

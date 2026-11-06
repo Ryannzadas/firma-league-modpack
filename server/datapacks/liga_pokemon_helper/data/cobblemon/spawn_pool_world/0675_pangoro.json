@@ -1,0 +1,41 @@
+{
+      "enabled": true,
+      "neededInstalledMods": [],
+      "neededUninstalledMods": [],
+      "spawns": [
+            {
+                  "id": "pangoro-1",
+                  "pokemon": "pangoro",
+                  "presets": [
+                        "natural"
+                  ],
+                  "type": "pokemon",
+                  "spawnablePositionType": "grounded",
+                  "bucket": "uncommon",
+                  "level": "32-68",
+                  "weight": 4.7,
+                  "condition": {
+                        "biomes": [
+                              "#cobblemon:is_jungle"
+                        ]
+                  }
+            },
+            {
+                  "id": "pangoro-2",
+                  "pokemon": "pangoro",
+                  "presets": [
+                        "natural"
+                  ],
+                  "type": "pokemon",
+                  "spawnablePositionType": "grounded",
+                  "bucket": "rare",
+                  "level": "38-56",
+                  "weight": 1.2,
+                  "condition": {
+                        "biomes": [
+                              "#cobblemon:is_forest"
+                        ]
+                  }
+            }
+      ]
+}

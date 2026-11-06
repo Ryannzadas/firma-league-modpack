@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PAP",
+    "PCP",
+    "EHE"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "A": {
+      "item": "cobblemon:green_apricorn"
+    },
+    "C": {
+      "item": "cobblemon:pc"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "result": {
+    "id": "cobblemon:pasture",
+    "count": 1
+  }
+}

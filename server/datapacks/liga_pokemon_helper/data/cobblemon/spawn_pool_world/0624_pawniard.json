@@ -1,0 +1,32 @@
+{
+   "enabled": true,
+   "neededInstalledMods": [],
+   "neededUninstalledMods": [],
+   "spawns": [
+       {
+           "id": "pawniard-1",
+           "pokemon": "pawniard",
+           "presets": [
+               "natural"
+           ],
+           "type": "pokemon",
+           "spawnablePositionType": "grounded",
+           "bucket": "uncommon",
+           "level": "10-38",
+           "weight": 4.4,
+           "condition": {
+               "biomes": [
+                   "minecraft:bamboo_jungle"
+               ]
+           },
+           "weightMultipliers": [
+                {
+                    "multiplier": 2.5,
+                    "condition": {
+                        "timeRange": "night"
+                    }
+                }
+            ]
+        }
+    ]
+}

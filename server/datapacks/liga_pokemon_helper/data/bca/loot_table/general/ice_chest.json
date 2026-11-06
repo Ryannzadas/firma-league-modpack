@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": { "min": 10, "max":16 },
+      "entries": [
+        { "type": "loot_table", "value": "bca:support_tables/freezer", "weight": 1 },
+        { "type": "item",       "name": "minecraft:air",                      "weight": 2 }
+      ]
+    }
+  ]
+}

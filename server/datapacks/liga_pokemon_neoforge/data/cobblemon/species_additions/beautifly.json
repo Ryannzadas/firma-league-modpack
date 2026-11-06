@@ -1,0 +1,24 @@
+{
+    "implemented": true,
+    "target": "cobblemon:beautifly",
+	"shoulderMountable": false,
+	"baseScale": 0.7,
+    "hitbox": {
+        "width": 0.8,
+        "height": 1.2,
+        "fixed": false
+    },
+    "behaviour": {
+        "moving": {
+            "canLook": true,
+            "walk": {
+                "canWalk": true,
+                "walkSpeed": 0.5
+            },
+            "fly": {
+                "canFly": true,
+                "flySpeedHorizontal": 0.6
+            }
+        }
+    }
+}

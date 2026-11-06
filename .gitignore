@@ -1,0 +1,36 @@
+# Minecraft / Forge / NeoForge Binary files
+*.jar
+*.zip
+*.gz
+*.tar
+*.tmp
+*.bak
+*.exe
+*.dll
+
+# Build & update export directories
+build_temp/
+Firma-League-NeoForge-Atualizacao/
+build_neoforge/overrides/mods/
+server/mods/
+mods/
+
+# Logs & Runtime
+logs/
+crash-reports/
+saves/
+world/
+serverconfig/
+.fabric/
+.gradle/
+build/
+run/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python cache
+__pycache__/
+*.py[cod]

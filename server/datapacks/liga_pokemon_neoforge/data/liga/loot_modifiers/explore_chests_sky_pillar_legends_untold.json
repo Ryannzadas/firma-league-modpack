@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "legends_untold:chests/sky_pillar"
+    }
+  ],
+  "table": "liga:exploration/tier3"
+}

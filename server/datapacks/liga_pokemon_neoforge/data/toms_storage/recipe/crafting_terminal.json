@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CDC",
+    "ETE",
+    "CSC"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:crafting_table"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "mekanism:basic_control_circuit"
+    },
+    "T": {
+      "item": "toms_storage:storage_terminal"
+    },
+    "S": {
+      "item": "powah:steel_energized"
+    }
+  },
+  "result": {
+    "id": "toms_storage:crafting_terminal",
+    "count": 1
+  }
+}

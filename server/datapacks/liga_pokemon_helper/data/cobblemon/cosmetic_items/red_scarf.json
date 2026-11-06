@@ -1,0 +1,12 @@
+{
+  "pokemon": [
+    "riolu",
+    "lucario"
+  ],
+  "cosmeticItems": [
+    {
+      "consumedItem": "atmxmsd:red_scarf",
+      "aspects": ["cosmetic_item-red_scarf"]
+    }
+  ]
+}

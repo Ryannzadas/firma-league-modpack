@@ -1,0 +1,86 @@
+{
+  "target": "cobblemon:bastiodon",
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "30-50",
+          "JUMP": "15-30",
+          "SKILL": "20-40",
+          "SPEED": "65-85",
+          "STAMINA": "50-90"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "poseTypes": [ "STAND" ],
+            "offset": {
+              "x": 0.0,
+              "y": -1.3025863,
+              "z": -0.1542604
+            }
+          },
+          {
+            "poseTypes": [ "WALK" ],
+            "offset": {
+              "x": -0.02595697,
+              "y": -1.282828,
+              "z": -0.16504669
+            }
+          },
+          {
+            "poseTypes": [ "HOVER", "FLY", "FLOAT", "SWIM", "GLIDE" ],
+            "offset": {
+              "x": -0.03984697,
+              "y": -1.3177792,
+              "z": -0.18566585
+            }
+          }
+        ]
+      },
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "poseTypes": [ "STAND" ],
+            "offset": {
+              "x": 0.0,
+              "y": -1.2831491,
+              "z": 0.36128467
+            }
+          },
+          {
+            "poseTypes": [ "WALK" ],
+            "offset": {
+              "x": -0.008630978,
+              "y": -1.2763681,
+              "z": 0.3505332
+            }
+          },
+          {
+            "poseTypes": [ "HOVER", "FLY", "FLOAT", "SWIM", "GLIDE" ],
+            "offset": {
+              "x": -0.013196847,
+              "y": -1.3370697,
+              "z": 0.32919547
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

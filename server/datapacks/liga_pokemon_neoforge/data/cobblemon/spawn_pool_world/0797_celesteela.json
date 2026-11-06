@@ -1,0 +1,21 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "celesteela-1",
+            "pokemon": "celesteela",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "65-80",
+            "weight": 0.4,
+            "condition": {
+                "biomes": [
+			        "#cobblemon:is_end"
+                 ]
+            }
+        }
+    ]
+}

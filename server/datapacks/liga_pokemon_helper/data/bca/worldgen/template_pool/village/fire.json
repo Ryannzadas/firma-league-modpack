@@ -1,0 +1,56 @@
+{
+  "fallback": "minecraft:village/plains/town_centers",
+  "elements": [
+    {
+      "weight": 22,
+      "element": {
+        "location": "bca:centers/center_battlepad",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 11,
+      "element": {
+        "location": "bca:centers/center_the_lodge_path",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "terrain_matching",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 11,
+      "element": {
+        "location": "bca:centers/center_the_academy",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 8,
+      "element": {
+        "location": "bca:centers/center_department_store",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 64,
+      "element": {
+        "location": "bca:centers/center_small_battlepad_road",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "terrain_matching",
+        "terrain_adaptation": "beard_thin"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "mekanism:basic_universal_cable"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    }
+  ],
+  "energy": 15000,
+  "result": {
+    "id": "cobblemon:link_cable",
+    "count": 1
+  }
+}

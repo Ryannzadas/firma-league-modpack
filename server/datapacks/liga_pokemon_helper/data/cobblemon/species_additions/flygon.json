@@ -1,0 +1,143 @@
+{
+  "target": "cobblemon:flygon",
+  "riding": {
+    "behaviours": {
+      "AIR": {
+        "key": "cobblemon:air/bird",
+        "rideSounds": [
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": false,
+            "playForPassengers": true,
+            "soundLocation": "cobblemon:ride.loop.wind.stereo",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          },
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": true,
+            "playForPassengers": false,
+            "soundLocation": "cobblemon:ride.loop.wind.mono",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          },
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": false,
+            "playForPassengers": true,
+            "soundLocation": "cobblemon:ride.loop.leather.stereo",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          },
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": true,
+            "playForPassengers": false,
+            "soundLocation": "cobblemon:ride.loop.leather.mono",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          }
+        ],
+        "stats": {
+          "SPEED": "70-95",
+          "ACCELERATION": "50-70",
+          "SKILL": "90-115",
+          "JUMP": "45-60",
+          "STAMINA": "45-65"
+        }
+      },
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "SPEED": "45-60",
+          "ACCELERATION": "40-60",
+          "SKILL": "50-70",
+          "JUMP": "30-45",
+          "STAMINA": "25-40"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "poseTypes": [
+              "STAND"
+            ],
+            "offset": {
+              "x": 0.003290192,
+              "y": -1.2900676,
+              "z": 0.17198098
+            }
+          },
+          {
+            "poseTypes": [
+              "WALK"
+            ],
+            "offset": {
+              "x": 0.04098769,
+              "y": -1.3037425,
+              "z": 0.18836051
+            }
+          },
+          {
+            "poseTypes": [
+              "HOVER"
+            ],
+            "offset": {
+              "x": -0.0043290886,
+              "y": -1.275032,
+              "z": 0.22027032
+            }
+          },
+          {
+            "poseTypes": [
+              "FLY"
+            ],
+            "offset": {
+              "x": 0.0026096958,
+              "y": -1.3030001,
+              "z": 0.2927451
+            }
+          },
+          {
+            "poseTypes": [
+              "FLOAT"
+            ],
+            "offset": {
+              "x": 0.003290192,
+              "y": -1.2900676,
+              "z": 0.17198098
+            }
+          },
+          {
+            "poseTypes": [
+              "SWIM"
+            ],
+            "offset": {
+              "x": 0.04098769,
+              "y": -1.3037425,
+              "z": 0.18836051
+            }
+          },
+          {
+            "poseTypes": [
+              "GLIDE"
+            ],
+            "offset": {
+              "x": -0.00024577955,
+              "y": -1.4635844,
+              "z": -0.041512404
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

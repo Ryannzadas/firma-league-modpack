@@ -1,0 +1,25 @@
+{
+  "fallback": "minecraft:village/plains/town_centers",
+  "elements": [
+    {
+      "weight": 22,
+      "element": {
+        "location": "bca:dark/centers/center_the_farmers_market_dark",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 11,
+      "element": {
+        "location": "bca:dark/centers/center_the_marshlight_tavern",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    }
+  ]
+}

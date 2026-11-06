@@ -1,0 +1,21 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "id": "jirachi-1",
+      "pokemon": "jirachi",
+      "type": "pokemon",
+      "spawnablePositionType": "grounded",
+      "bucket": "ultra-rare",
+      "level": "75-80",
+      "weight": 0,
+      "condition": {
+      "biomes": [
+          "cobbleverse:custom_spawn/jirachi_structure"
+        ]
+      }
+    }
+  ]
+}

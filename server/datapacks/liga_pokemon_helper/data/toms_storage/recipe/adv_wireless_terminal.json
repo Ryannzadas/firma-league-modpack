@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EAE",
+    "NWN",
+    "ECE"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "A": {
+      "item": "mekanism:advanced_control_circuit"
+    },
+    "N": {
+      "item": "powah:crystal_niotic"
+    },
+    "W": {
+      "item": "toms_storage:wireless_terminal"
+    },
+    "C": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "id": "toms_storage:adv_wireless_terminal",
+    "count": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "NIN",
+    "DSD",
+    "NUN"
+  ],
+  "key": {
+    "N": {
+      "item": "powah:crystal_nitro"
+    },
+    "I": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    },
+    "U": {
+      "item": "cobblemon:ultra_ball"
+    }
+  },
+  "result": {
+    "id": "cobblemon_utility:shinycard",
+    "count": 1
+  }
+}

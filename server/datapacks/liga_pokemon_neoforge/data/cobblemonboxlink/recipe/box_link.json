@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "EAE",
+    "SPS",
+    "ELE"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "A": {
+      "item": "mekanism:advanced_control_circuit"
+    },
+    "S": {
+      "item": "powah:steel_energized"
+    },
+    "P": {
+      "item": "cobblemon:pc"
+    },
+    "L": {
+      "item": "cobblemon:link_cable"
+    }
+  },
+  "result": {
+    "id": "cobblemonboxlink:box_link",
+    "count": 1
+  }
+}

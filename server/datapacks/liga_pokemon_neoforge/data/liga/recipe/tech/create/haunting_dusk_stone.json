@@ -1,0 +1,13 @@
+{
+  "type": "create:haunting",
+  "ingredients": [
+    {
+      "item": "cobblemon:moon_stone"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblemon:dusk_stone"
+    }
+  ]
+}

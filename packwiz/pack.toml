@@ -1,0 +1,12 @@
+name = "Cobblemon: Liga & História"
+author = "Liga dos Amigos"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+
+[versions]
+fabric = "0.16.9"
+minecraft = "1.21.1"

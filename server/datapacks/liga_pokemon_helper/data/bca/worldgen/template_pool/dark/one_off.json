@@ -1,0 +1,35 @@
+{
+  "fallback": "minecraft:village/plains/town_centers",
+  "elements": [
+    {
+      "weight": 22,
+      "element": {
+        "location": "bca:dark/one_off/one_off_haunted_church",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 11,
+      "element": {
+        "location": "bca:dark/one_off/one_off_small_battlepad_dark",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 11,
+      "element": {
+        "location": "bca:dark/one_off/one_off_the_crypt",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    }
+  ]
+}

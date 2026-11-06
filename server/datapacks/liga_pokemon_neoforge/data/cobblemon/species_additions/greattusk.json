@@ -1,0 +1,22 @@
+{
+    "target": "cobblemon:greattusk",
+    "implemented": true,
+    "baseScale": 0.75,
+    "hitbox": {
+        "width": 3.0,
+        "height": 3.0,
+        "fixed": false
+    },
+    "moving": {
+        "canLook": false,
+        "walk": {
+            "canWalk": true,
+            "avoidsLand": false
+        },
+        "swim": {
+            "swimSpeed": 0.1,
+            "canSwimInWater": false,
+            "canBreatheUnderwater": false
+        }
+    }
+}

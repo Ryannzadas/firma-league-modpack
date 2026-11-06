@@ -1,0 +1,16 @@
+{
+  "type": "mekanism:metallurgic_infusing",
+  "chemical_input": {
+    "amount": 80,
+    "tag": "mekanism:redstone"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism:alloy_infused"
+  },
+  "output": {
+    "count": 1,
+    "id": "cobblemon:electirizer"
+  },
+  "per_tick_usage": false
+}

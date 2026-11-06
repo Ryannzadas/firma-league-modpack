@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PMP",
+    "CNC",
+    "ASA"
+  ],
+  "key": {
+    "P": {
+      "item": "cobblemon:pink_apricorn"
+    },
+    "M": {
+      "item": "powah:crystal_nitro"
+    },
+    "C": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "A": {
+      "item": "mekanism:alloy_atomic"
+    },
+    "S": {
+      "item": "minecraft:shulker_shell"
+    }
+  },
+  "result": {
+    "id": "cobblemon:master_ball",
+    "count": 1
+  }
+}

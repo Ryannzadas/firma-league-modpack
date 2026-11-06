@@ -1,0 +1,22 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "chienpao-1",
+            "pokemon": "chienpao",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "75-80",
+            "weight": 0,
+            "condition": {
+                "canSeeSky": true,
+                "biomes": [
+                    "cobbleverse:custom_spawn/icerend_shrine"
+                ]
+            }
+        }
+    ]
+}

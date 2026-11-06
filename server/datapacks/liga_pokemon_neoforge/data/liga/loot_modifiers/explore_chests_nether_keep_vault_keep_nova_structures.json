@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "nova_structures:chests/nether_keep/vault_keep"
+    }
+  ],
+  "table": "liga:exploration/tier2"
+}

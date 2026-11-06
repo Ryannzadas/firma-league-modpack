@@ -1,0 +1,28 @@
+{
+	version: 13
+	title: "&6&lFirma League: Cobblemon & História"
+	icon: {
+		id: "cobblemon:master_ball"
+	}
+	default_reward_team: false
+	default_consume_items: false
+	default_autoclaim_rewards: "disabled"
+	default_quest_shape: "circle"
+	default_quest_disable_jei: false
+	emergency_items: [
+		{ id: "cobblemon:poke_ball", count: 10 }
+		{ id: "cobblemon:potion", count: 5 }
+	]
+	emergency_items_cooldown: 3600
+	drop_loot_crates: false
+	loot_crate_no_drop: {
+		passive: 4000
+		monster: 600
+		boss: 0
+	}
+	disable_gui: false
+	grid_scale: 0.5d
+	pause_game: false
+	lock_message: "Complete a missão anterior da História para desbloquear!"
+	progression_mode: "linear"
+}

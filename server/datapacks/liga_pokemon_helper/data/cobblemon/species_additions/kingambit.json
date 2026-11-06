@@ -1,0 +1,28 @@
+{
+  "target": "cobblemon:kingambit",
+  "implemented": true,
+  "baseScale": 0.8,
+  "hitbox": {
+    "width": 1.8,
+    "height": 2.7,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "canLook": true,
+      "walk": {
+        "walkSpeed": 0.3,
+        "canWalk": true,
+        "avoidsLand": false
+      },
+      "fly": {
+        "canFly": false
+      },
+      "swim": {
+        "swimSpeed": 0.2,
+        "canSwimInWater": false,
+        "canBreatheUnderwater": false
+      }
+    }
+  }
+}

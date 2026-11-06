@@ -1,0 +1,10 @@
+{
+    "target": "cobblemon:slurpuff",   
+    "implemented": true,
+	"baseScale": 0.8,
+    "hitbox": {
+        "width": 0.7,
+        "height": 1.0,
+        "fixed": false
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "implemented": true,
+    "target": "cobblemon:wurmple",
+	"shoulderMountable": false,
+	"baseScale": 0.4,
+    "hitbox": {
+        "width": 0.75,
+        "height": 0.5,
+        "fixed": false
+    }
+}

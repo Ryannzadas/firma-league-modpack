@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "cobblemon:ability_capsule", "weight": 10 },
+        { "type": "item", "name": "cobblemon:ability_patch", "weight": 1 }
+      ]
+    }
+  ]
+}

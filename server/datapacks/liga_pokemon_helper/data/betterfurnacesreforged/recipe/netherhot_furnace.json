@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ACA",
+    "NBN",
+    "MFM"
+  ],
+  "key": {
+    "A": {
+      "item": "mekanism:advanced_control_circuit"
+    },
+    "C": {
+      "item": "powah:crystal_niotic"
+    },
+    "N": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "betterfurnacesreforged:netherhot_conductor_block"
+    },
+    "M": {
+      "item": "minecraft:magma_cream"
+    },
+    "F": {
+      "item": "betterfurnacesreforged:diamond_furnace"
+    }
+  },
+  "result": {
+    "id": "betterfurnacesreforged:netherhot_furnace",
+    "count": 1
+  }
+}

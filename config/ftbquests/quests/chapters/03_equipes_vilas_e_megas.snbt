@@ -1,0 +1,300 @@
+{
+	id: "0300000000000001"
+	group: "1000000000000003"
+	order_index: 10
+	filename: "03_equipes_vilas_e_megas"
+	title: "&d3A. Megas, Terastal e Treino IV/EV"
+	icon: {
+		id: "mega_showdown:mega_bracelet"
+	}
+	default_quest_shape: "rsquare"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "0300000000000010"
+			title: "&d1. Forjando a Mega Bracelet!"
+			subtitle: "Liberada em todas as temporadas!"
+			icon: {
+				id: "mega_showdown:mega_bracelet"
+			}
+			description: [
+				"Com &6Aco Energizado (Powah)&r, &bDiamante&r, &fWhite Apricorn&r, &aCircuito de Controle Basico (Mekanism)&r e uma &dKeystone&r (minerada ou sintetizada no Energizing Orb), construa a sua &dMega Bracelet&r!"
+				""
+				"• Equipe a Mega Stone correspondente no seu Pokemon (ex.: Charizardite X/Y, Gengarite, Lucarionite) e clique no botao de &dMega Evolucao&r durante a batalha!"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "0300000000000011"
+					type: "item"
+					item: {
+						id: "mega_showdown:mega_bracelet"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0300000000000024"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0300000000000030"
+			title: "&b2. O Orbe Terastal (Tera Orb)"
+			subtitle: "Mude a tipagem defensiva ou ofensiva do seu Pokemon!"
+			icon: {
+				id: "mega_showdown:tera_orb"
+			}
+			description: [
+				"Construa seu &bTera Orb&r usando Ametista, Ender Pearl, Diamante, Circuito de Controle Basico (Mekanism) e &6Blazing Crystal&r!"
+				""
+				"• Na &6Firma League&r, voce pode usar &e1 Mega Evolucao e/ou 1 Terastal&r por partida! Use Tera Shards para mudar o Tera Type do seu Pokemon."
+			]
+			dependencies: ["0300000000000010"]
+			x: 2.5d
+			y: 0.0d
+			shape: "hexagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "0300000000000031"
+					type: "item"
+					item: {
+						id: "mega_showdown:tera_orb"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0300000000000044"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0300000000000050"
+			title: "&e3. Z-Power Ring e Dynamax Band (PvE / Extras)"
+			subtitle: "Colecione os artefatos de Z-Move e Dynamax"
+			icon: {
+				id: "mega_showdown:dynamax_band"
+			}
+			description: [
+				"Com Aco Energizado e Circuito de Controle Basico, construa o &eZ-Power Ring&r e a &cDynamax Band&r para usar contra Bosses e preparar a fusao do Omni Ring!"
+			]
+			dependencies: ["0300000000000030"]
+			x: 5.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0300000000000051"
+					type: "item"
+					item: {
+						id: "mega_showdown:z_power_ring"
+					}
+				}
+				{
+					id: "0300000000000052"
+					type: "item"
+					item: {
+						id: "mega_showdown:dynamax_band"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0300000000000064"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_l"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0300000000000060"
+			title: "&6&l4. O Artefato Supremo: Omni Ring (4 em 1)!"
+			subtitle: "Mega Evolucao + Terastal + Z-Move + Dynamax em um unico anel!"
+			icon: {
+				id: "mega_showdown:omni_ring"
+			}
+			description: [
+				"Funda os 4 artefatos do &dMega Showdown&r em uma unica reliquia definitiva!"
+				""
+				"&eReceita Exclusiva da Firma (Mesa de Trabalho):&r"
+				"• &d1x Mega Bracelet&r + &e1x Z-Power Ring&r + &c1x Dynamax Band&r + &b1x Tera Orb&r"
+				"• &81x Barra de Netherite&r no nucleo"
+				"• &b2x Elite Control Circuits (Mekanism)&r + &b2x Niotic Crystals (Powah!)&r"
+				""
+				"Com o &6Omni Ring&r equipado no slot de acessorio, voce nunca mais precisara trocar de pulseira!"
+			]
+			dependencies: ["0300000000000010", "0300000000000030", "0300000000000050"]
+			x: 7.5d
+			y: 0.0d
+			shape: "gear"
+			size: 1.60d
+			tasks: [
+				{
+					id: "0300000000000061"
+					type: "item"
+					item: {
+						id: "mega_showdown:omni_ring"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0300000000000074"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 10
+					}
+				}
+				{
+					id: "0300000000000075"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_patch"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "0300000000000070"
+			title: "&a5. Natures Perfeitas: Plantando Mints!"
+			subtitle: "Adamant, Jolly, Modest, Timid..."
+			icon: {
+				id: "cobblemon:adamant_mint"
+			}
+			description: [
+				"A &aNature&r aumenta um atributo do seu Pokemon em &a+10%&r e reduz outro em &c-10%&r:"
+				"• &cAdamant&r (+Atk, -SpA) | &eJolly&r (+Spe, -SpA) para atacantes fisicos."
+				"• &9Modest&r (+SpA, -Atk) | &bTimid&r (+Spe, -Atk) para atacantes especiais."
+				"• Colha folhas de Mint (Red, Blue, Cyan, Pink, Green, White) e use uma &aMint&r no seu Pokemon!"
+			]
+			x: 0.0d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0300000000000071"
+					type: "advancement"
+					title: "Use uma Mint para ajustar a Nature de um Pokemon!"
+					advancement: "cobblemon:agriculture/use_mint"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0300000000000084"
+					type: "item"
+					item: {
+						id: "cobblemon:jolly_mint"
+						count: 1
+					}
+				}
+				{
+					id: "0300000000000085"
+					type: "item"
+					item: {
+						id: "cobblemon:timid_mint"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "0300000000000090"
+			title: "&b6. Habilidades e Hidden Ability (Capsule e Patch)"
+			subtitle: "Libere o potencial oculto da sua equipe"
+			icon: {
+				id: "cobblemon:ability_patch"
+			}
+			description: [
+				"• &bAbility Capsule:&r Troca entre a Habilidade 1 e Habilidade 2 normal do Pokemon (pode ser feita no Energizing Orb com 50.000 FE!)."
+				"• &dAbility Patch:&r Libera a &6Hidden Ability (Habilidade Oculta)&r rara do Pokemon (feita no Energizing Orb com 150.000 FE!)."
+			]
+			dependencies: ["0300000000000070"]
+			x: 2.5d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0300000000000091"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_capsule"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03000000000000A4"
+					type: "item"
+					item: {
+						id: "cobblemon:choice_scarf"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "03000000000000B0"
+			title: "&67. Perfeicao de IVs: Silver e Golden Bottle Caps!"
+			subtitle: "Engenharia Genetica da Firma (IVs 31)"
+			icon: {
+				id: "cobblemon_utility:goldencap"
+			}
+			description: [
+				"Com Chapa de Ferro (Create), Aco Energizado (Powah), Circuito Basico (Mekanism), Diamante e Mint Leaf, forje &7Silver Bottle Caps&r (maximiza 1 IV para 31) ou a suprema &6Golden Bottle Cap&r (maximiza todos os 6 IVs para 31 de uma vez!)!"
+			]
+			dependencies: ["0300000000000090"]
+			x: 5.0d
+			y: 2.5d
+			shape: "octagon"
+			size: 1.50d
+			tasks: [
+				{
+					id: "03000000000000B1"
+					type: "item"
+					item: {
+						id: "cobblemon_utility:goldencap"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "03000000000000C4"
+					type: "item"
+					item: {
+						id: "cobblemon:assault_vest"
+						count: 1
+					}
+				}
+				{
+					id: "03000000000000C5"
+					type: "item"
+					item: {
+						id: "cobblemon:life_orb"
+						count: 1
+					}
+				}
+			]
+		}
+	]
+}

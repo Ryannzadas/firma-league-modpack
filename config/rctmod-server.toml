@@ -1,0 +1,39 @@
+# ==============================================================================
+# Radical Cobblemon Trainers (rctmod) - Server Configuration (1.21.1)
+# Configurado para: Modo História Cooperativo + Progressão de Liga Pokémon
+# ==============================================================================
+
+[Spawning]
+	# Intervalo em ticks entre tentativas de spawn de treinadores perto dos jogadores (20 ticks = 1s)
+	spawnIntervalTicks = 240
+	# Chance global de spawn a cada tentativa (0.0 a 1.0)
+	globalSpawnChance = 0.85
+	# Distância mínima e máxima (em blocos) do jogador para spawnar treinadores
+	minHorizontalDistanceToPlayers = 24
+	maxHorizontalDistanceToPlayers = 64
+	maxVerticalDistanceToPlayers = 24
+	# Máximo de treinadores por jogador e total global no mundo
+	maxTrainersPerPlayer = 6
+	maxTrainersTotal = 45
+	# Impede que treinadores aleatórios dêem spawn dentro da sua base/vila iluminada se desejar
+	spawningRequiresSkyLight = false
+
+[Players]
+	# Level Cap inicial original (Nv. 15 para o Brock)
+	initialLevelCap = 15
+	# Dá uma leve folga de +2 níveis em relação aos ases dos chefes para equilibrar
+	# os treinadores que não foram editados individualmente (ex.: Equipe Rocket e Elite 4)
+	additiveLevelCapRequirement = 2
+	# Impede que você passe do Level Cap atual antes de vencer o Líder correspondente (igual ao Cobbleverse)
+	allowOverLeveling = false
+	# Margem de tolerância (0 = respeita estritamente o Level Cap atual da sua insígnia)
+	maxOverLevelCap = 0
+	# Permite compartilhar progresso de história se estiverem no mesmo time (FTB Teams / Party)
+	shareProgressInTeams = true
+
+[Trainers]
+	# Permite que treinadores mostrem balões de fala acima da cabeça
+	enableSpeechBubbles = true
+	# Quantidade máxima de vitórias de um treinador antes de despawnar (0 = infinito para Líderes de Ginásio fixos)
+	defaultMaxTrainerWins = 0
+	defaultMaxTrainerDefeats = 1

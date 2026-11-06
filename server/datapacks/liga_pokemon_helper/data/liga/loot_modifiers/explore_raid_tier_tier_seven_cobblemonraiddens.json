@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "cobblemonraiddens:raid/tier/tier_seven"
+    }
+  ],
+  "table": "liga:exploration/tier3"
+}

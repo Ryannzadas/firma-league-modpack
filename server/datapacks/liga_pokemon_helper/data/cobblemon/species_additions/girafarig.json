@@ -1,0 +1,99 @@
+{
+  "target": "cobblemon:girafarig",
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "60-80",
+          "JUMP": "30-45",
+          "SKILL": "50-70",
+          "SPEED": "70-85",
+          "STAMINA": "30-50"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "poseTypes": [
+              "STAND"
+            ],
+            "offset": {
+              "x": 0.0,
+              "y": -1.0998156,
+              "z": 0.22897746
+            }
+          },
+          {
+            "poseTypes": [
+              "WALK"
+            ],
+            "offset": {
+              "x": 0.0,
+              "y": -1.060447,
+              "z": 0.23613866
+            }
+          },
+          {
+            "poseTypes": [
+              "HOVER"
+            ],
+            "offset": {
+              "x": 0.0,
+              "y": -1.0998156,
+              "z": 0.22897746
+            }
+          },
+          {
+            "poseTypes": [
+              "FLY"
+            ],
+            "offset": {
+              "x": 0.0,
+              "y": -1.060447,
+              "z": 0.23613866
+            }
+          },
+          {
+            "poseTypes": [
+              "FLOAT"
+            ],
+            "offset": {
+              "x": 0.0,
+              "y": -1.0998156,
+              "z": 0.22897746
+            }
+          },
+          {
+            "poseTypes": [
+              "SWIM"
+            ],
+            "offset": {
+              "x": 0.0,
+              "y": -1.060447,
+              "z": 0.23613866
+            }
+          },
+          {
+            "poseTypes": [
+              "GLIDE"
+            ],
+            "offset": {
+              "x": 0.0,
+              "y": -1.0998156,
+              "z": 0.22897746
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

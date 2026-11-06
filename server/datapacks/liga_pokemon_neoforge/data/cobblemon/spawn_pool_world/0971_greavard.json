@@ -1,0 +1,47 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "greavard-1",
+            "pokemon": "greavard",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "rare",
+            "level": "3-29",
+            "weight": 9.0,
+            "condition": {
+                "canSeeSky": true,
+                "biomes": [
+                    "#cobblemon:is_spooky"
+                ],
+                "timeRange": "night"
+            }
+      	},
+        {
+            "id": "greavard-2",
+            "pokemon": "greavard",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "rare",
+            "level": "3-29",
+            "weight": 12.0,
+            "condition": {
+                "biomes": [
+                    "minecraft:dark_forest"
+                ],
+                "structures": [
+                    "cobbleverse:crown_cemetery"
+				],
+                "timeRange": "night"
+            }
+      	}
+	]
+}

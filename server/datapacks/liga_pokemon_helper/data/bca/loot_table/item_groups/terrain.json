@@ -1,0 +1,89 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "minecraft:andesite", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:diorite", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:granite", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "cobblemon:black_tumblestone", "weight": 1 },
+        { "type": "item", "name": "cobblemon:sky_tumblestone", "weight": 1 },
+        { "type": "item", "name": "cobblemon:tumblestone", "weight": 1 },
+        { "type": "item", "name": "minecraft:blackstone", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:cobblestone", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:end_stone", "weight": 1 },
+        { "type": "item", "name": "minecraft:gilded_blackstone", "weight": 1 },
+        { "type": "item", "name": "minecraft:glowstone", "weight": 1 },
+        { "type": "item", "name": "minecraft:glowstone_dust", "weight": 1 },
+        { "type": "item", "name": "minecraft:mossy_cobblestone", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:pointed_dripstone", "weight": 1 },
+        { "type": "item", "name": "minecraft:red_sandstone", "weight": 1 },
+        { "type": "item", "name": "minecraft:sandstone", "weight": 1 },
+        { "type": "item", "name": "minecraft:stone", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:red_sand", "weight": 1 },
+        { "type": "item", "name": "minecraft:sand", "weight": 1 },
+        { "type": "item", "name": "minecraft:soul_sand", "weight": 1 },
+        { "type": "item", "name": "minecraft:coarse_dirt", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:dirt", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:rooted_dirt", "weight": 1 },
+        { "type": "item", "name": "minecraft:podzol", "weight": 1 },
+        { "type": "item", "name": "minecraft:mycelium", "weight": 1 },
+        { "type": "item", "name": "minecraft:cobbled_deepslate", "weight": 1 },
+        { "type": "item", "name": "minecraft:deepslate", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:tuff", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:basalt", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:calcite", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:crying_obsidian", "weight": 1 },
+        { "type": "item", "name": "minecraft:obsidian", "weight": 1 },
+        { "type": "item", "name": "minecraft:clay", "weight": 1 },
+        { "type": "item", "name": "minecraft:clay_ball", "weight": 1,
+          "functions": [
+            {"function": "minecraft:set_count","count": { "min": 1, "max": 7 }}
+          ]},
+        { "type": "item", "name": "minecraft:mud", "weight": 1 },
+        { "type": "item", "name": "minecraft:packed_mud", "weight": 1 },
+        { "type": "item", "name": "minecraft:gravel", "weight": 1 }
+      ]
+    }
+  ]
+}

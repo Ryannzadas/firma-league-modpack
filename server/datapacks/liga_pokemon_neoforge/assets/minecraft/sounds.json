@@ -1,0 +1,49 @@
+{
+  "music.menu": {
+    "category": "music",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/menu/welcome_back",
+        "volume": 0.85,
+        "stream": true
+      },
+      {
+        "name": "music/game/comforting_memories",
+        "volume": 0.85,
+        "stream": true
+      },
+      {
+        "name": "music/game/one_more_day",
+        "volume": 0.85,
+        "stream": true
+      },
+      {
+        "name": "music/game/stand_tall",
+        "volume": 0.8,
+        "stream": true
+      }
+    ]
+  },
+  "music.end": {
+    "category": "music",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "minecraft:music/game/end/the_end",
+        "volume": 0.8,
+        "stream": true
+      },
+      {
+        "name": "minecraft:music/game/end/future",
+        "volume": 0.8,
+        "stream": true
+      },
+      {
+        "name": "minecraft:music/game/end/alpha",
+        "volume": 0.8,
+        "stream": true
+      }
+    ]
+  }
+}

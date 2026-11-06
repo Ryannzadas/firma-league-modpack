@@ -1,0 +1,416 @@
+{
+	id: "0100000000000001"
+	group: "1000000000000001"
+	order_index: 2
+	filename: "01_inicio_jornada"
+	title: "&a1. O Inicio da Jornada"
+	icon: {
+		id: "cobblemon:pokedex_red"
+	}
+	default_quest_shape: "circle"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "0100000000000010"
+			title: "&6PROLOGO: A Grande Convergencia"
+			subtitle: "A Lore Oficial da Firma League (Edicao NeoForge)"
+			icon: {
+				id: "rctmod:trainer_card"
+			}
+			description: [
+				"Um fenomeno catastrofico chamado &eA Grande Convergencia&r fundiu terras, Ginasios e Santuarios Lendarios de &cKanto&r, &eJohto&r, &aHoenn&r e &dSinnoh&r em um unico mundo!"
+				""
+				"O pulso eletromagnetico da fenda colapsou a tecnologia antiga da Silph Co. e espalhou cristais de &dMega Evolucao&r e &bTerastal&r pelo subsolo. A &cEquipe Rocket&r de Giovanni ja comecou a saquear os templos antigos."
+				""
+				"A Associacao Pokemon convocou voces — &6A FIRMA&r — para erguer as fabricas do &eCreate&r, as usinas do &bMekanism&r e do &9Powah!&r, derrotar os Lideres das 4 Regioes e disputar os torneios da &6Firma League&r!"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			size: 1.60d
+			tasks: [
+				{
+					id: "0100000000000011"
+					type: "checkmark"
+					title: "Recebi meu Trainer Card e meu Kit Inicial!"
+				}
+			]
+			rewards: [
+				{
+					id: "0100000000000024"
+					type: "item"
+					item: {
+						id: "rctmod:trainer_card"
+						count: 1
+					}
+				}
+				{
+					id: "0100000000000025"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_s"
+						count: 10
+					}
+				}
+				{
+					id: "0100000000000026"
+					type: "item"
+					item: {
+						id: "cobblemon:poke_ball"
+						count: 15
+					}
+				}
+			]
+		}
+		{
+			id: "0100000000000040"
+			title: "&eColhendo Apricorns pelo Mundo"
+			subtitle: "A bio-energia das Pokebolas e Circuitos"
+			icon: {
+				id: "cobblemon:red_apricorn"
+			}
+			description: [
+				"Encontre arvores de &eApricorn&r pelo mapa e clique com o botao direito nas frutas maduras para colhe-las (elas crescem de novo sozinhas!)."
+				""
+				"Na &6Engenharia da Convergencia&r, as Apricorns nao servem so para Pokebolas: a bio-energia delas tambem alimenta os &aCircuitos de Controle Basicos&r da Silph Co.!"
+			]
+			dependencies: ["0100000000000010"]
+			x: 2.5d
+			y: -2.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0100000000000041"
+					type: "item"
+					item: {
+						id: "cobblemon:red_apricorn"
+					}
+					count: 8L
+				}
+				{
+					id: "0100000000000042"
+					type: "item"
+					item: {
+						id: "cobblemon:yellow_apricorn"
+					}
+					count: 4L
+				}
+				{
+					id: "0100000000000043"
+					type: "item"
+					item: {
+						id: "cobblemon:blue_apricorn"
+					}
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "0100000000000054"
+					type: "item"
+					item: {
+						id: "cobblemon:great_ball"
+						count: 10
+					}
+				}
+				{
+					id: "0100000000000055"
+					type: "item"
+					item: {
+						id: "cobblemon:sitrus_berry"
+						count: 8
+					}
+				}
+			]
+		}
+		{
+			id: "0100000000000070"
+			title: "&bConstruindo sua Pokedex"
+			subtitle: "Registre todas as especies e drops"
+			icon: {
+				id: "cobblemon:pokedex_red"
+			}
+			description: [
+				"Com &fChapas de Ferro (Create)&r, Cobre, Red Apricorn e o seu primeiro &aCircuito de Controle Basico (Mekanism)&r, construa a sua &cPokedex&r!"
+				""
+				"Segure o botao direito com a Pokedex apontando para um Pokemon para escanea-lo e registrar todas as informacoes dele!"
+			]
+			dependencies: ["0100000000000010"]
+			x: 2.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0100000000000071"
+					type: "item"
+					item: {
+						id: "cobblemon:pokedex_red"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0100000000000084"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_s"
+						count: 12
+					}
+				}
+			]
+		}
+		{
+			id: "01000000000000A0"
+			title: "&aSeu Proprio Centro Pokemon (PC e Healer)"
+			subtitle: "Cura e organizacao com Chapas do Create e Circuitos do Mekanism"
+			icon: {
+				id: "cobblemon:healing_machine"
+			}
+			description: [
+				"Construa uma &aHealing Machine&r e um &bPC&r na sua base!"
+				""
+				"• &eReceita da Firma:&r Diferente do Cobblemon comum (que pedia Max Revive raro de achar), a nossa Healing Machine usa &fChapas de Ferro (Create) + Cobre + Pink Apricorn + Circuito Basico (Mekanism) + Diamante&r!"
+				"• O &bPC&r usa &fChapas de Ferro + Vidro + Red e Blue Apricorn + Circuito Basico&r."
+			]
+			dependencies: ["0100000000000070"]
+			x: 5.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "01000000000000A1"
+					type: "item"
+					item: {
+						id: "cobblemon:healing_machine"
+					}
+				}
+				{
+					id: "01000000000000A2"
+					type: "item"
+					item: {
+						id: "cobblemon:pc"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "01000000000000B4"
+					type: "item"
+					item: {
+						id: "cobblemon:revive"
+						count: 5
+					}
+				}
+				{
+					id: "01000000000000B5"
+					type: "item"
+					item: {
+						id: "cobblemon:hyper_potion"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "01000000000000D0"
+			title: "&eCapacete Neural: Exp. Share"
+			subtitle: "Divida experiencia com seu time"
+			icon: {
+				id: "cobblemon:exp_share"
+			}
+			description: [
+				"Construa um &eExp. Share&r usando Capacete de Ferro, Ouro, Lapis Lazuli, Ametista e &a1 Circuito de Controle Basico&r!"
+				""
+				"Equipando o Exp. Share como Held Item em um Pokemon da sua equipe, ele ganha XP em todas as batalhas mesmo sem entrar em campo!"
+			]
+			dependencies: ["0100000000000040", "0100000000000070"]
+			x: 5.0d
+			y: -2.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "01000000000000D1"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_share"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "01000000000000E4"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_m"
+						count: 8
+					}
+				}
+			]
+		}
+		{
+			id: "0100000000000100"
+			title: "&dPasture Block: Workers e Breeding"
+			subtitle: "Coloque seus Pokemon para trabalhar na base!"
+			icon: {
+				id: "cobblemon:pasture"
+			}
+			description: [
+				"O &dPasture Block&r (feito com PC + Circuito Basico + Green Apricorn + Funil) libera duas mecanicas essenciais:"
+				"1. &eCobbleworkers:&r Seus Pokemon soltos no Pasture colhem plantacoes de Apricorns, Berries e lavouras automaticamente e guardam nos baus ao lado!"
+				"2. &dCobbreeding:&r Coloque dois Pokemon compativeis para cruzar e gerar Ovos com heranca de IVs e Nature!"
+			]
+			dependencies: ["01000000000000A0"]
+			x: 7.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0100000000000101"
+					type: "item"
+					item: {
+						id: "cobblemon:pasture"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0100000000000114"
+					type: "item"
+					item: {
+						id: "cobblemon:destiny_knot"
+						count: 1
+					}
+				}
+				{
+					id: "0100000000000115"
+					type: "item"
+					item: {
+						id: "cobblemon:everstone"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "0100000000000130"
+			title: "&6Bussolas de Ginasios e Biomas"
+			subtitle: "Explorer's Compass e Nature's Compass"
+			icon: {
+				id: "explorerscompass:explorerscompass"
+			}
+			description: [
+				"Para localizar os predios dos &cGinasios (Pewter, Cerulean, Vermilion...)&r, as &5Estruturas Lendarias&r e os biomas onde cada Pokemon da spawn:"
+				"• Receba seu kit de exploracao inicial aqui (e voce pode fabricar novas bussolas com Circuito Basico e Apricorns!)."
+				"• Clique com o botao direito com a &6Explorer's Compass&r e pesquise por &eGym&r!"
+			]
+			dependencies: ["0100000000000010"]
+			x: 2.5d
+			y: 2.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0100000000000131"
+					type: "item"
+					item: {
+						id: "minecraft:compass"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0100000000000144"
+					type: "item"
+					item: {
+						id: "explorerscompass:explorerscompass"
+						count: 1
+					}
+				}
+				{
+					id: "0100000000000145"
+					type: "item"
+					item: {
+						id: "naturescompass:naturescompass"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "0100000000000160"
+			title: "&5Rede de Teleporte: Waystones"
+			subtitle: "Viaje entre Ginasios, Vilas e a Arena da Liga"
+			icon: {
+				id: "waystones:waystone"
+			}
+			description: [
+				"Forje uma &5Warp Stone&r (Ender Pearl + Ametista + Esmeralda + Circuito Basico) e construa &bWaystones&r para marcar os Ginasios encontrados e teleportar instantaneamente entre as bases dos amigos!"
+			]
+			dependencies: ["0100000000000130"]
+			x: 5.0d
+			y: 2.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0100000000000161"
+					type: "item"
+					item: {
+						id: "waystones:warp_stone"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "0100000000000174"
+					type: "item"
+					item: {
+						id: "waystones:waystone"
+						count: 2
+					}
+				}
+			]
+		}
+		{
+			id: "0100000000000190"
+			title: "&9Radar PokeNav e Camera Fotografica (RP)"
+			subtitle: "Rastreie spawns e registre a historia da Firma"
+			icon: {
+				id: "exposure:camera"
+			}
+			description: [
+				"• &bPokeNav:&r Mostra todos os Pokemon que dao spawn no bioma onde voce esta e a chance de cada um!"
+				"• &eCamera (Exposure):&r Tire fotos reais dos seus Pokemon, das construcoes e do podio dos torneios da Firma League para revelar quadros!"
+			]
+			dependencies: ["0100000000000160"]
+			x: 7.5d
+			y: 2.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0100000000000191"
+					type: "item"
+					item: {
+						id: "exposure:camera"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "01000000000001A4"
+					type: "item"
+					item: {
+						id: "exposure:color_film"
+						count: 3
+					}
+				}
+				{
+					id: "01000000000001A5"
+					type: "item"
+					item: {
+						id: "cobblemon:quick_ball"
+						count: 10
+					}
+				}
+			]
+		}
+	]
+}

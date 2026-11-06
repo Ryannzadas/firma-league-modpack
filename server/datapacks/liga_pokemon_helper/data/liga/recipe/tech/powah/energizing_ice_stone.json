@@ -1,0 +1,19 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "cobblemon:ice_gem"
+    },
+    {
+      "item": "cobblemon:ice_gem"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    }
+  ],
+  "energy": 30000,
+  "result": {
+    "id": "cobblemon:ice_stone",
+    "count": 1
+  }
+}

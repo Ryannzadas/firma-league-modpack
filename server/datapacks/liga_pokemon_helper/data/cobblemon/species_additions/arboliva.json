@@ -1,0 +1,16 @@
+{
+  "target": "cobblemon:arboliva",
+  "baseScale": 0.5,
+  "hitbox": {
+    "width": 0.8,
+    "height": 3.2,
+    "fixed": false
+  },
+  "behaviour": {	
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.175
+      }
+    }
+  }
+}

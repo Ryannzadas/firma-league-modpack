@@ -1,0 +1,10 @@
+{
+  "target": "cobblemon:indeedee",   
+  "implemented": true,
+  "baseScale": 0.5,
+  "hitbox": {
+    "width": 0.8,
+    "height": 1.8,
+    "fixed": false
+  }
+}

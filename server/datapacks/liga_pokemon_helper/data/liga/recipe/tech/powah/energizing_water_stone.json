@@ -1,0 +1,19 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "cobblemon:water_gem"
+    },
+    {
+      "item": "cobblemon:water_gem"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    }
+  ],
+  "energy": 30000,
+  "result": {
+    "id": "cobblemon:water_stone",
+    "count": 1
+  }
+}

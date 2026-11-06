@@ -1,0 +1,7 @@
+{
+	chapter_groups: [
+		{ id: "1000000000000001", title: "&eModo Historia e Regioes" }
+		{ id: "1000000000000002", title: "&bEngenharia Tech e Armazenamento" }
+		{ id: "1000000000000003", title: "&cCompetitivo e Firma League" }
+	]
+}

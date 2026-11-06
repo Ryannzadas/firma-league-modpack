@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABC",
+    "SPS",
+    "DEF"
+  ],
+  "key": {
+    "A": {
+      "item": "cobblemon_utility:atksilvercap"
+    },
+    "B": {
+      "item": "cobblemon_utility:spatksilvercap"
+    },
+    "C": {
+      "item": "cobblemon_utility:defsilvercap"
+    },
+    "D": {
+      "item": "cobblemon_utility:spdefsilvercap"
+    },
+    "E": {
+      "item": "cobblemon_utility:speedsilvercap"
+    },
+    "F": {
+      "item": "cobblemon_utility:hpsilvercap"
+    },
+    "S": {
+      "item": "powah:crystal_spirited"
+    },
+    "P": {
+      "item": "mekanism:advanced_control_circuit"
+    }
+  },
+  "result": {
+    "id": "cobblemon_utility:goldencap",
+    "count": 2
+  }
+}

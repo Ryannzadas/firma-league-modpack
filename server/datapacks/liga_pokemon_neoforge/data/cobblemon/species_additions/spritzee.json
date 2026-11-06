@@ -1,0 +1,30 @@
+{
+  "implemented": true,
+  "target": "cobblemon:spritzee",   
+  "shoulderMountable": true,
+  "baseScale": 0.5,
+  "hitbox": {
+    "width": 0.55,
+    "height": 0.5,
+    "fixed": false
+  },
+  "drops": {
+  "amount": "1",
+    "entries": [
+      {
+        "item": "minecraft:kebia_berry",
+        "quantityRange": "0-3"
+      }
+    ]
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "walkSpeed": 0.3,   
+      "runSpeed": 0.4,   
+      "depth": "normal",
+      "light": "0-4"
+    }
+  }
+}

@@ -1,0 +1,561 @@
+{
+	id: "0230000000000001"
+	group: "1000000000000001"
+	order_index: 5
+	filename: "02c_temporada_3_hoenn"
+	title: "&aTemp. 3: Liga Hoenn (Historia)"
+	icon: {
+		id: "cobblemonpokemonbadges:rain_badge"
+	}
+	default_quest_shape: "octagon"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "0230000000000010"
+			title: "&aAto III: A Expedicao para Hoenn!"
+			subtitle: "BLOQUEADO ate concluir a Temporada 2 (Johto)!"
+			icon: {
+				id: "cobblemon:premier_ball"
+			}
+			description: [
+				"&6[LORE - ATO III]:&r As fendas de Mega Evolucao despertaram os titas primordiais em &aHoenn&r: &cGroudon&r e &9Kyogre&r! Enquanto a &cTeam Magma (Maxie)&r e a &9Team Aqua (Archie)&r guerreiam, conquiste os 8 Ginasios de Hoenn, suba ao &2Sky Pillar&r e enfrente o Campeao &bSteven Stone&r!"
+			]
+			dependencies: ["02200000000000B0"]
+			x: 0.0d
+			y: 0.0d
+			shape: "pentagon"
+			size: 1.50d
+			tasks: [
+				{
+					id: "0230000000000011"
+					type: "checkmark"
+					title: "Iniciei a Temporada 3 em Hoenn!"
+				}
+			]
+			rewards: [
+				{
+					id: "0230000000000024"
+					type: "item"
+					item: {
+						id: "cobblemon:dive_ball"
+						count: 20
+					}
+				}
+				{
+					id: "0230000000000025"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_l"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "0230000000000020"
+			title: "&71o Ginasio Hoenn: Roxanne (Rustboro Gym)"
+			subtitle: "Tipo Pedra | Stone Badge"
+			icon: {
+				id: "cobblemonpokemonbadges:stone_badge"
+			}
+			description: [
+				"Derrote a Lider &7Roxanne&r no Rustboro Gym!"
+			]
+			dependencies: ["0230000000000010"]
+			x: 2.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0230000000000021"
+					type: "advancement"
+					title: "Derrote a Lider Roxanne!"
+					advancement: "rctmod:trainers/defeat_hoennleader_roxanne"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0230000000000034"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:stone_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0230000000000035"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0230000000000030"
+			title: "&c2o Ginasio Hoenn: Brawly (Dewford Gym)"
+			subtitle: "Tipo Lutador | Knuckle Badge"
+			icon: {
+				id: "cobblemonpokemonbadges:knuckle_badge"
+			}
+			description: [
+				"Derrote o surfista marcial &cBrawly&r no Dewford Gym!"
+			]
+			dependencies: ["0230000000000020"]
+			x: 5.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0230000000000031"
+					type: "advancement"
+					title: "Derrote o Lider Brawly!"
+					advancement: "rctmod:trainers/defeat_hoennleader_brawly"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0230000000000044"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:knuckle_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0230000000000045"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+			]
+		}
+		{
+			id: "0230000000000040"
+			title: "&e3o Ginasio Hoenn: Wattson (Mauville Gym)"
+			subtitle: "Tipo Eletrico | Dynamo Badge"
+			icon: {
+				id: "cobblemonpokemonbadges:dynamo_badge"
+			}
+			description: [
+				"Venca a alta voltagem de &eWattson&r no Mauville Gym!"
+			]
+			dependencies: ["0230000000000030"]
+			x: 7.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0230000000000041"
+					type: "advancement"
+					title: "Derrote o Lider Wattson!"
+					advancement: "rctmod:trainers/defeat_hoennleader_wattson"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0230000000000054"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:dynamo_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0230000000000055"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 6
+					}
+				}
+			]
+		}
+		{
+			id: "0230000000000050"
+			title: "&64o Ginasio Hoenn: Flannery (Lavaridge Gym)"
+			subtitle: "Tipo Fogo | Heat Badge"
+			icon: {
+				id: "cobblemonpokemonbadges:heat_badge"
+			}
+			description: [
+				"Supere o Torkoal e o Overheat de &6Flannery&r no Lavaridge Gym!"
+			]
+			dependencies: ["0230000000000040"]
+			x: 10.0d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0230000000000051"
+					type: "advancement"
+					title: "Derrote a Lider Flannery!"
+					advancement: "rctmod:trainers/defeat_hoennleader_flannery"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0230000000000064"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:heat_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0230000000000065"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 6
+					}
+				}
+			]
+		}
+		{
+			id: "0230000000000060"
+			title: "&f5o Ginasio Hoenn: Norman (Petalburg Gym)"
+			subtitle: "Tipo Normal | Balance Badge"
+			icon: {
+				id: "cobblemonpokemonbadges:balance_badge"
+			}
+			description: [
+				"Derrote &fNorman&r e seus poderosos Slakings no Petalburg Gym!"
+			]
+			dependencies: ["0230000000000050"]
+			x: 10.0d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0230000000000061"
+					type: "advancement"
+					title: "Derrote o Lider Norman!"
+					advancement: "rctmod:trainers/defeat_hoennleader_norman"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0230000000000074"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:balance_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0230000000000075"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 6
+					}
+				}
+			]
+		}
+		{
+			id: "0230000000000070"
+			title: "&c[Boss Opcional] Maxie (Magma) e Archie (Aqua)"
+			subtitle: "Cacada Opcional de Hoenn"
+			icon: {
+				id: "mega_showdown:archie_anchor"
+			}
+			description: [
+				"&a[MISSAO OPCIONAL]:&r Voce pode ir direto de Norman para Winona! Mas se encontrar os lideres &cMaxie (Team Magma)&r e &9Archie (Team Aqua)&r, derrote-os para ganhar recompensas extras!"
+			]
+			dependencies: ["0230000000000060"]
+			optional: true
+			x: 10.0d
+			y: 5.0d
+			shape: "hexagon"
+			size: 1.20d
+			tasks: [
+				{
+					id: "0230000000000071"
+					type: "advancement"
+					title: "Derrote Maxie da Team Magma (Opcional)!"
+					advancement: "rctmod:trainers/defeat_magma_leader_maxie"
+					criterion: ""
+				}
+				{
+					id: "0230000000000072"
+					type: "advancement"
+					title: "Derrote Archie da Team Aqua (Opcional)!"
+					advancement: "rctmod:trainers/defeat_aqua_leader_archie"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0230000000000084"
+					type: "item"
+					item: {
+						id: "cobblemon:timer_ball"
+						count: 20
+					}
+				}
+				{
+					id: "0230000000000085"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 8
+					}
+				}
+			]
+		}
+		{
+			id: "0230000000000080"
+			title: "&b6o Ginasio Hoenn: Winona (Fortree Gym)"
+			subtitle: "Tipo Voador | Feather Badge (Destrava direto apos Norman!)"
+			icon: {
+				id: "cobblemonpokemonbadges:feather_badge"
+			}
+			description: [
+				"Derrote a graciosa &bWinona&r e sua Altaria no Fortree Gym!"
+			]
+			dependencies: ["0230000000000060"]
+			x: 6.5d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0230000000000081"
+					type: "advancement"
+					title: "Derrote a Lider Winona!"
+					advancement: "rctmod:trainers/defeat_hoennleader_winona"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0230000000000094"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:feather_badge"
+						count: 1
+					}
+				}
+				{
+					id: "0230000000000095"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 6
+					}
+				}
+			]
+		}
+		{
+			id: "0230000000000090"
+			title: "&d7o Ginasio Hoenn: Tate e Liza (Mossdeep Gym)"
+			subtitle: "Tipo Psiquico | Mind Badge"
+			icon: {
+				id: "cobblemonpokemonbadges:mind_badge"
+			}
+			description: [
+				"Supere os gemeos psiquicos em &dMossdeep&r!"
+			]
+			dependencies: ["0230000000000080"]
+			x: 3.5d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0230000000000091"
+					type: "advancement"
+					title: "Derrote Tate e Liza!"
+					advancement: "rctmod:trainers/defeat_hoennleader_liza"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "02300000000000A4"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:mind_badge"
+						count: 1
+					}
+				}
+				{
+					id: "02300000000000A5"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 8
+					}
+				}
+			]
+		}
+		{
+			id: "02300000000000A0"
+			title: "&98o Ginasio Hoenn: Wallace (Sootopolis Gym)"
+			subtitle: "Tipo Agua | Rain Badge"
+			icon: {
+				id: "cobblemonpokemonbadges:rain_badge"
+			}
+			description: [
+				"Conquiste a 8a Insignia de Hoenn derrotando o mestre das aguas &9Wallace&r!"
+			]
+			dependencies: ["0230000000000090"]
+			x: 0.0d
+			y: 2.5d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "02300000000000A1"
+					type: "advancement"
+					title: "Derrote o Lider Wallace!"
+					advancement: "rctmod:trainers/defeat_hoennleader_wallace"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "02300000000000B4"
+					type: "item"
+					item: {
+						id: "cobblemonpokemonbadges:rain_badge"
+						count: 1
+					}
+				}
+				{
+					id: "02300000000000B5"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "02300000000000B0"
+			title: "&8Elite Four de Hoenn: Sidney, Phoebe, Glacia e Drake"
+			subtitle: "Ever Grande City — Os 4 Guardioes de Hoenn"
+			icon: {
+				id: "cobblemon:ultra_ball"
+			}
+			description: [
+				"Derrote os 4 membros da &aElite Four de Hoenn&r em sequencia para chegar ate o Campeao Steven!"
+			]
+			dependencies: ["02300000000000A0"]
+			x: 3.0d
+			y: 5.0d
+			shape: "hexagon"
+			size: 1.40d
+			tasks: [
+				{
+					id: "02300000000000B1"
+					type: "advancement"
+					title: "Derrote Sidney (Noturno)!"
+					advancement: "rctmod:trainers/defeat_hoennelitefour_sidney"
+					criterion: ""
+				}
+				{
+					id: "02300000000000B2"
+					type: "advancement"
+					title: "Derrote Phoebe (Fantasma)!"
+					advancement: "rctmod:trainers/defeat_hoennelitefour_phoebe"
+					criterion: ""
+				}
+				{
+					id: "02300000000000B3"
+					type: "advancement"
+					title: "Derrote Glacia (Gelo)!"
+					advancement: "rctmod:trainers/defeat_hoennelitefour_glacia"
+					criterion: ""
+				}
+				{
+					id: "02300000000000B4"
+					type: "advancement"
+					title: "Derrote Drake (Dragao)!"
+					advancement: "rctmod:trainers/defeat_hoennelitefour_drake"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "02300000000000C4"
+					type: "item"
+					item: {
+						id: "cobblemon:max_revive"
+						count: 5
+					}
+				}
+				{
+					id: "02300000000000C5"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 10
+					}
+				}
+			]
+		}
+		{
+			id: "02300000000000C0"
+			title: "&6&lCAMPEAO DE HOENN: STEVEN STONE!"
+			subtitle: "Destrava a Temporada 4 (Sinnoh) e a 3a Copa da Firma!"
+			icon: {
+				id: "cobblemon:master_ball"
+			}
+			description: [
+				"Venca o &bCampeao Steven Stone&r e seu Mega Metagross!"
+				""
+				"&aO QUE ESTA CONQUISTA DESTRAVA:&r"
+				"1. Abre o capitulo final da historia: &dTemporada 4: Liga Sinnoh&r!"
+				"2. Classifica voce para a &63a Liga da Firma (Copa Hoenn PvP)&r!"
+			]
+			dependencies: ["02300000000000B0"]
+			x: 7.5d
+			y: 5.0d
+			shape: "gear"
+			size: 2.00d
+			tasks: [
+				{
+					id: "02300000000000C1"
+					type: "advancement"
+					title: "Derrote o Campeao Steven Stone!"
+					advancement: "rctmod:trainers/defeat_hoennchampion_steven"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "02300000000000D4"
+					type: "item"
+					item: {
+						id: "cobblemon:master_ball"
+						count: 1
+					}
+				}
+				{
+					id: "02300000000000D5"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_patch"
+						count: 2
+					}
+				}
+				{
+					id: "02300000000000D6"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 15
+					}
+				}
+			]
+		}
+	]
+}

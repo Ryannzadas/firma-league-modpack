@@ -1,0 +1,37 @@
+{
+  "implemented": true,
+  "target": "cobblemon:orbeetle",   
+  "shoulderMountable": false,
+  "baseScale": 0.8,
+  "hitbox": {
+    "width": 0.78,
+    "height": 0.75,
+    "fixed": false
+  },
+  "drops": {
+  "amount": "2",
+    "entries": [
+      {
+        "item": "minecraft:string",
+        "quantityRange": "0-3"
+      },
+      {
+        "item": "cobblemon:apple",
+        "percentage": 35
+      },
+      {
+        "item": "minecraft:razz_berry",
+        "percentage": 100
+      }
+    ]
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "walkSpeed": 0.4,
+      "depth": "normal",
+      "light": "0-4"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+﻿{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "loot_table", "value": "bca:item_groups/food", "weight": 8 },
+        { "type": "loot_table", "value": "bca:item_groups/cobblefood", "weight": 3 },
+        { "type": "loot_table", "value": "bca:item_groups/pokefood", "weight": 1 },
+        { "type": "item",       "name": "minecraft:air",                "weight": 8 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "fallback": "bca:general/berries",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/bench_1",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/bench_2",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/bench_3",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/cart_1",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/cart_2",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/small_wagon",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/berry_stand_1",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/berrystand_2",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/berrystand_3",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/picnic_table_1",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/picnic_table_2",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/decor_1",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/berrystand_4",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/berrystand_5",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/decorations_well",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/decoration_well_2",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/decor_3",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/decor_2",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/market_stall_1",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/market_stall_2",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/cart_4",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/cart_5",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bca:general/general_decor/cart_6",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "terrain_adaptation": "beard_thin"
+      }
+    }
+  ]
+}

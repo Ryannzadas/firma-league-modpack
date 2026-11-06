@@ -1,0 +1,21 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "id": "dialga-1",
+      "pokemon": "dialga",
+      "type": "pokemon",
+      "spawnablePositionType": "grounded",
+      "bucket": "ultra-rare",
+      "level": "70",
+      "weight": 0,
+      "condition": {
+        "biomes": [ 
+          "cobbleverse:custom_spawn"
+        ]
+      }
+    }
+  ]
+}

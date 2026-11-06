@@ -1,0 +1,48 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "carkol-1",
+            "pokemon": "carkol",
+            "presets": [
+                "natural",
+                "wild"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "18-33",
+            "weight": 10.0,
+            "condition": {
+                "biomes": [
+                    "#cobblemon:is_cave",
+                    "#cobblemon:is_mountain"
+                ],
+                "neededNearbyBlocks": [
+                    "minecraft:coal_ore"
+                ]
+            }
+        },
+        {
+            "id": "carkol-2",
+            "pokemon": "carkol",
+            "presets": [
+                "natural",
+                "wild"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "uncommon",
+            "level": "19-33",
+            "weight": 7.5,
+            "condition": {
+                "biomes": [
+                    "#cobblemon:is_cave",
+                    "#cobblemon:is_mountain"
+                ]      
+            }
+        }
+    ]
+}

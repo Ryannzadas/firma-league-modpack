@@ -1,0 +1,21 @@
+{
+    "enabled": "true",
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "genesect-1",
+            "pokemon": "genesect",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "48-68",
+            "weight": 4.0,
+            "condition": {
+                "biomes": [
+                    "#cobblemon:is_dripstone"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "sophisticatedbackpacks:backpack_upgrade",
+  "category": "misc",
+  "pattern": [
+    "DDD",
+    "DBD",
+    "DSD"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "sophisticatedbackpacks:gold_backpack"
+    },
+    "S": {
+      "item": "powah:steel_energized"
+    }
+  },
+  "result": {
+    "id": "sophisticatedbackpacks:diamond_backpack",
+    "count": 1
+  }
+}

@@ -1,0 +1,44 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "nickit-1",
+            "pokemon": "nickit",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "1-25",
+            "weight": 1.8,
+            "condition": {
+                "biomes": [
+                    "#cobblemon:is_forest"
+                ],
+                "timeRange": "night"
+            }
+        },
+        {
+            "id": "nickit-2",
+            "pokemon": "nickit",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "uncommon",
+            "level": "1-25",
+            "weight": 8.4,
+            "condition": {
+                "biomes": [
+                    "#cobblemon:is_plains",
+                    "#cobblemon:is_taiga"
+                ],
+                "timeRange": "night"
+            }
+        }
+    ]
+}

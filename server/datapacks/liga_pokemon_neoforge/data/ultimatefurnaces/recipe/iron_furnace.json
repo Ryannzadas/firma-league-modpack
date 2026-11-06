@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IGI",
+    "GFG",
+    "IAI"
+  ],
+  "key": {
+    "I": {
+      "item": "create:iron_sheet"
+    },
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "F": {
+      "item": "betterfurnacesreforged:copper_furnace"
+    },
+    "A": {
+      "item": "cobblemon:red_apricorn"
+    }
+  },
+  "result": {
+    "id": "betterfurnacesreforged:iron_furnace",
+    "count": 1
+  }
+}

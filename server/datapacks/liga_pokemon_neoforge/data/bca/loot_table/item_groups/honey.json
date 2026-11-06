@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "minecraft:honeycomb", "weight": 1 },
+        { "type": "item", "name": "minecraft:honey_bottle", "weight": 1 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "runerigus-1",
+            "pokemon": "runerigus",
+            "presets": [
+                "wild"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "uncommon",
+            "level": "34-53",
+            "weight": 1.0,
+            "condition": {
+                "timeRange": "night",
+		        "biomes": [
+                "#cobblemon:is_spooky"
+                ],
+                "maxY": 60
+            }
+        },
+        {
+            "id": "runerigus-2",
+            "pokemon": "runerigus",
+            "presets": [
+                "ancient_city"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "rare",
+            "level": "34-63",
+            "weight": 0.4,
+            "condition": {
+                "timeRange": "night",
+		        "biomes": [
+                    "#cobblemon:is_overworld"
+                ]
+            }
+        }
+    ]
+}

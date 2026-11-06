@@ -1,0 +1,19 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "cobblemon:dragon_gem"
+    },
+    {
+      "item": "cobblemon:dragon_gem"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    }
+  ],
+  "energy": 30000,
+  "result": {
+    "id": "cobblemon:shiny_stone",
+    "count": 1
+  }
+}

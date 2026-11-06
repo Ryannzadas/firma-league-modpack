@@ -1,0 +1,45 @@
+{
+  "fallback": "bca:general/fallback",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "bca:fighting/paths/path_straight-curved_fighting",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "terrain_matching",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "bca:fighting/paths/path_t-joint_fighting",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "terrain_matching",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "bca:fighting/paths/path_90_degree_fighting",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "terrain_matching",
+        "terrain_adaptation": "beard_thin"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "bca:fighting/paths/path_cross_roads_fighting",
+        "element_type": "minecraft:single_pool_element",
+        "processors": "minecraft:empty",
+        "projection": "terrain_matching",
+        "terrain_adaptation": "beard_thin"
+      }
+    }
+  ]
+}

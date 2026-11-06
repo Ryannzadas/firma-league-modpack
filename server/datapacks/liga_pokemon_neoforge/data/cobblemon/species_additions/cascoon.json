@@ -1,0 +1,11 @@
+{
+    "implemented": true,
+    "target": "cobblemon:cascoon",
+	"shoulderMountable": false,
+	"baseScale": 0.8,
+    "hitbox": {
+        "width": 1.0,
+        "height": 1.0,
+        "fixed": false
+    }
+}

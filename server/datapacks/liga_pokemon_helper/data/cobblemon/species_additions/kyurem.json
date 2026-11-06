@@ -1,0 +1,32 @@
+{
+  "target": "cobblemon:kyurem",
+  "implemented": true,
+  "baseScale": 1.0,
+  "hitbox": {
+    "width": 3.8,
+    "height": 3.8,
+    "fixed": false
+  },
+  "behaviour": {
+    "herd": {
+    "maxSize": "1"
+  },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      },
+      "fly": {
+        "canFly": true
+      }
+    },
+    "combat": {
+      "willDefendSelf": true,
+      "willDefendOwner": true,
+      "willFlee": false
+    },
+    "resting": {
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    }
+  }
+}

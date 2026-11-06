@@ -1,0 +1,20 @@
+﻿{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "loot_table", "value": "bca:item_groups/smithing_templates", "weight": 3 },
+        { "type": "loot_table", "value": "bca:item_groups/planks",             "weight": 20 },
+        { "type": "loot_table", "value": "bca:item_groups/ladders",            "weight": 10 },
+        { "type": "loot_table", "value": "bca:item_groups/froglights",         "weight": 10 },
+        { "type": "loot_table", "value": "bca:item_groups/sponges",            "weight": 5 },
+        { "type": "loot_table", "value": "bca:item_groups/logs",               "weight": 20 },
+        { "type": "loot_table", "value": "bca:item_groups/shards",             "weight": 5 },
+        { "type": "loot_table", "value": "bca:item_groups/prismarine",         "weight": 10 },
+        { "type": "loot_table", "value": "bca:item_groups/other_workshop",     "weight": 10 },
+        { "type": "item",       "name": "minecraft:air",                              "weight": 10 }
+      ]
+    }
+  ]
+}

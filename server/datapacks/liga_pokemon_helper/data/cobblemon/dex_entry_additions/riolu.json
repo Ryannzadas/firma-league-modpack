@@ -1,0 +1,13 @@
+{
+  "entryId": "cobblemon:riolu",
+  "forms": [
+    {
+      "displayForm": "PMD-Scarf",
+      "unlockForms": ["pmd-scarf"]
+    },
+	{
+      "displayForm": "PSMD-Scarf",
+      "unlockForms": ["psmd-scarf"]
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+	id: "00A0000000000001"
+	group: "1000000000000001"
+	order_index: 0
+	filename: "00_lore_da_firma"
+	title: "&6📜 Cronicas da Firma: A Lore do Mundo"
+	icon: {
+		id: "minecraft:book"
+	}
+	default_quest_shape: "rsquare"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "00A0000000000010"
+			title: "&6Capitulo I: A Grande Convergencia"
+			subtitle: "O cataclismo que uniu os mundos"
+			icon: {
+				id: "rctmod:trainer_card"
+			}
+			description: [
+				"Ha eras incontaveis, os universos viviam em dimensoes separadas."
+				""
+				"Porem, um cataclismo de energia cosmica rasgou o tecido do espaco-tempo: em um piscar de olhos, as quatro regioes lendarias — &cKanto&r, &eJohto&r, &aHoenn&r e &dSinnoh&r — colidiram e se fundiram a imensidao de biomas, cavernas e minerios deste mundo!"
+				""
+				"Ginasios ancestrais se enraizaram pelo relevo, santuarios adormecidos emergiram nas montanhas e centenas de especies de Pokemon agora habitam cada canto da terra."
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			size: 1.50d
+			tasks: [
+				{
+					id: "00A0000000000011"
+					type: "checkmark"
+					title: "Testemunhei a Grande Convergencia!"
+				}
+			]
+			rewards: [
+				{
+					id: "00A0000000000024"
+					type: "item"
+					item: {
+						id: "cobblemon:exp_candy_s"
+						count: 10
+					}
+				}
+				{
+					id: "00A0000000000025"
+					type: "item"
+					item: {
+						id: "cobblemon:poke_ball"
+						count: 15
+					}
+				}
+			]
+		}
+		{
+			id: "00A0000000000020"
+			title: "&bCapitulo II: O Colapso da Silph Co. e a Era das Maquinas"
+			subtitle: "Por que a industria se tornou essencial"
+			icon: {
+				id: "create:cogwheel"
+			}
+			description: [
+				"O pulso eletromagnetico da Convergencia desintegrou as velhas linhas de producao da Silph Co. Nao existem mais lojas de conveniencia vendendo Pokebolas infinitas nem pedras de evolucao prontas."
+				""
+				"Para sobreviver e triunfar, os treinadores precisaram se tornar &bEngenheiros&r:"
+				"• &6Create:&r Monta esteiras automatizadas de Pokebolas e sintetiza doces de EXP no Mixer."
+				"• &bMekanism:&r Duplica minerios de evolucao, forja itens de troca e gera Bio Fuel das Apricorns."
+				"• &9Powah!:&r Energiza metais e funde pedras evolutivas em Orbes de laser."
+				""
+				"A tecnologia e o poder dos Pokemon agora andam de maos dadas!"
+			]
+			dependencies: ["00A0000000000010"]
+			x: 2.5d
+			y: 0.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "00A0000000000021"
+					type: "checkmark"
+					title: "Entendi a importancia da industria no mundo!"
+				}
+			]
+			rewards: [
+				{
+					id: "00A0000000000034"
+					type: "item"
+					item: {
+						id: "create:andesite_alloy"
+						count: 8
+					}
+				}
+				{
+					id: "00A0000000000035"
+					type: "item"
+					item: {
+						id: "minecraft:iron_ingot"
+						count: 8
+					}
+				}
+			]
+		}
+		{
+			id: "00A0000000000030"
+			title: "&dCapitulo III: Anomalias e os Quatro Fenomenos"
+			subtitle: "Megas, Z-Moves, Dynamax, Terastal e o Mito do Omni Ring"
+			icon: {
+				id: "mega_showdown:omni_ring"
+			}
+			description: [
+				"A fusao dimensional gerou uma anomalia energetica sem precedentes na historia: todos os quatro fenomenos de batalha se manifestaram no mesmo planeta!"
+				""
+				"• &dMega Evolucao:&r Keystones e Mega Stones cristalizaram no subsolo."
+				"• &eZ-Moves:&r A luz dos guardioes impregnou as Sparkling Stones."
+				"• &cDynamax:&r Wishing Stars e pontos de energia estao espalhados pelo relevo."
+				"• &bTerastal:&r Cristais Tera brotaram em geodos profundos."
+				""
+				"&6A Profecia do Omni Ring:&r As lendas dizem que o treinador capaz de sintetizar todos os quatro artefatos com Netherite e Circuitos de Elite do Mekanism forjara o &6Omni Ring&r — a joia definitiva que controla todas as transformacoes em uma so peca!"
+			]
+			dependencies: ["00A0000000000020"]
+			x: 5.0d
+			y: -1.2d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "00A0000000000031"
+					type: "checkmark"
+					title: "Estudarei os 4 Grandes Fenomenos!"
+				}
+			]
+			rewards: [
+				{
+					id: "00A0000000000044"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 3
+					}
+				}
+				{
+					id: "00A0000000000045"
+					type: "item"
+					item: {
+						id: "cobblemon:link_cable"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "00A0000000000040"
+			title: "&cCapitulo IV: As Quatro Sombras do Passado"
+			subtitle: "Equipes Rocket, Magma, Aqua e Galactic a espreita"
+			icon: {
+				id: "cobblemon:dusk_ball"
+			}
+			description: [
+				"Onde ha tanto poder concentrado, a ambicao dos viloes despertou."
+				""
+				"As grandes organizacoes do passado renasceram e espreitam nos biomas:"
+				"• &cEquipe Rocket:&r Giovanni, Archer e Ariana operam nas sombras de Kanto e Johto atras do clone supremo, Mewtwo."
+				"• &4Equipes Magma e Aqua:&r Maxie e Archie travam embates nos mares e vulcoes de Hoenn para acordar Kyogre e Groudon."
+				"• &5Equipe Galactic:&r Cyrus e seus comandantes estudam as fendas de Sinnoh para distorcer o proprio tempo com Dialga e Palkia."
+				""
+				"Eles estao soltos pelo mundo — prepare sua equipe para quando cruzar com eles!"
+			]
+			dependencies: ["00A0000000000020"]
+			x: 5.0d
+			y: 1.2d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "00A0000000000041"
+					type: "checkmark"
+					title: "Estou alerta contra os viloes das regioes!"
+				}
+			]
+			rewards: [
+				{
+					id: "00A0000000000054"
+					type: "item"
+					item: {
+						id: "cobblemon:hyper_potion"
+						count: 5
+					}
+				}
+				{
+					id: "00A0000000000055"
+					type: "item"
+					item: {
+						id: "cobblemon:revive"
+						count: 3
+					}
+				}
+			]
+		}
+		{
+			id: "00A0000000000050"
+			title: "&6&lCapitulo V: O Juramento da Firma"
+			subtitle: "As 4 Temporadas, a gloria dos Ginasios e a Copa da Firma"
+			icon: {
+				id: "cobblemon:luxury_ball"
+			}
+			description: [
+				"Diante da imensidao deste novo mundo, formou-se a guilda mais ambiciosa de todas: &6A FIRMA&r."
+				""
+				"O nosso caminho esta tracado em 4 Temporadas:"
+				"1. Conquistar sequencialmente os 32 Ginasios (8 de Kanto ➔ 8 de Johto ➔ 8 de Hoenn ➔ 8 de Sinnoh)."
+				"2. Derrotar a Elite Four e o Grande Campeao de cada regiao."
+				"3. Erguer usinas e fabricas para suprir a equipe com as melhores ferramentas e Pokebolas."
+				"4. Reunir todos os amigos na grande arena ao final para disputar &cA Copa da Firma (Torneio PvP)&r, onde so um sera coroado o Supremo Campeao!"
+				""
+				"Sua jornada comeca agora. Pegue seu kit, escolha seu parceiro e honre a Firma!"
+			]
+			dependencies: ["00A0000000000030", "00A0000000000040"]
+			x: 7.5d
+			y: 0.0d
+			shape: "gear"
+			size: 1.80d
+			tasks: [
+				{
+					id: "00A0000000000051"
+					type: "checkmark"
+					title: "Faco o Juramento da Firma League!"
+				}
+			]
+			rewards: [
+				{
+					id: "00A0000000000064"
+					type: "item"
+					item: {
+						id: "cobblemon:luxury_ball"
+						count: 10
+					}
+				}
+				{
+					id: "00A0000000000065"
+					type: "item"
+					item: {
+						id: "cobblemon:rare_candy"
+						count: 5
+					}
+				}
+				{
+					id: "00A0000000000066"
+					type: "item"
+					item: {
+						id: "cobblemon:ability_patch"
+						count: 1
+					}
+				}
+			]
+		}
+	]
+}

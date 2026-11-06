@@ -1,0 +1,26 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "zygarde-1",
+            "pokemon": "zygarde percent_cells=core",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "ultra-rare",
+            "level": "1-10",
+            "weight": 3.3,
+             "condition": {
+                "canSeeSky": false,
+                "biomes": [
+                    "minecraft:dripstone_caves",
+                    "minecraft:lush_caves"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "cobblemon:coarse_mulch", "weight": 1 },
+        { "type": "item", "name": "cobblemon:growth_mulch", "weight": 1 },
+        { "type": "item", "name": "cobblemon:humid_mulch", "weight": 1 },
+        { "type": "item", "name": "cobblemon:loamy_mulch", "weight": 1 },
+        { "type": "item", "name": "cobblemon:mulch_base", "weight": 1 },
+        { "type": "item", "name": "cobblemon:peat_mulch", "weight": 1 },
+        { "type": "item", "name": "cobblemon:rich_mulch", "weight": 1 },
+        { "type": "item", "name": "cobblemon:sandy_mulch", "weight": 1 },
+        { "type": "item", "name": "cobblemon:surprise_mulch", "weight": 1 }
+      ]
+    }
+  ]
+}

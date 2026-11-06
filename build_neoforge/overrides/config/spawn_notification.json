@@ -1,0 +1,20 @@
+{
+  "broadcastRange": -1,
+  "playerLimit": -1,
+  "broadcastAcrossDimensions": true,
+  "disabledSituations": [
+    "spawn_notification:ultra_rare/despawned",
+    "spawn_notification:ultra_rare/fainted",
+    "spawn_notification:ultra_rare/fished",
+    "spawn_notification:ultra_rare/snacked",
+    "spawn_notification:ultra_rare/died",
+    "spawn_notification:alpha/despawned",
+    "spawn_notification:legendary/despawned",
+    "spawn_notification:mythical/despawned",
+    "spawn_notification:paradox/despawned",
+    "spawn_notification:shiny/despawned",
+    "spawn_notification:ultra_beast/despawned"
+  ],
+  "disabledSegments": [],
+  "disabledSegmentsBySituation": []
+}

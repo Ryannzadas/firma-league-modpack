@@ -1,0 +1,19 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "mekanism:advanced_control_circuit"
+    },
+    {
+      "item": "cobblemon:upgrade"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    }
+  ],
+  "energy": 40000,
+  "result": {
+    "id": "cobblemon:dubious_disc",
+    "count": 1
+  }
+}
