@@ -19,6 +19,7 @@ flowchart TD
         API["Webhooks REST (/api/minecraft/...)"]
         AUTH["Firebase Authentication (Google)"]
         FS["Cloud Firestore (Realtime Database)"]
+        ADMIN["Painel Admin (Torneios & Chaveamento)"]
         UI["Interface Reativa (React / onSnapshot)"]
     end
 
@@ -29,6 +30,7 @@ flowchart TD
     API --> FS
     AUTH --> UI
     FS -->|"onSnapshot() [Tempo Real]"| UI
+    FS -->|"Lista de Treinadores Vinculados"| ADMIN
 ```
 
 ---
@@ -43,11 +45,11 @@ O backend web deve validar esse header antes de processar qualquer webhook.
 
 ---
 
-## 🎟️ 3. Fluxo de Vinculação de Conta (OTP Token)
+## 🎟️ 3. Fluxo de Vinculação de Conta (OTP Token) & Atribuição de Trainer ID
 
 ### Como funciona:
-1. Jogador entra no Minecraft e digita `/vincular`.
-2. Servidor gera um código alfanumérico curto (ex: `FIRMA-8K2P`), com validade de 15 minutos.
+1. O jogador entra no Minecraft e digita `/vincular`.
+2. O servidor gera um código alfanumérico curto (ex: `FIRMA-8K2P`), com validade de 15 minutos.
 3. O servidor envia uma requisição para a rota `POST /api/minecraft/link/create`:
    ```json
    {
@@ -59,9 +61,26 @@ O backend web deve validar esse header antes de processar qualquer webhook.
    ```
 4. O usuário entra no site, faz login com Google (Firebase Auth), vai até o perfil e digita o token `FIRMA-8K2P`.
 5. A aplicação web verifica se o token existe em `link_tokens/{token}` e não expirou:
-   * Associa `minecraft_uuid` e `minecraft_nick` no documento `users/{uid}`.
+   * **Gera um Trainer ID oficial único** para esse jogador (ex: formato incremental ou padronizado como `TR-001`, `TR-002`, `TR-1042`).
+   * Associa o `trainer_id`, `minecraft_uuid` e `minecraft_nick` no documento `users/{uid}`.
+   * Cria/atualiza o registro em `players/{minecraft_uuid}` com o `trainer_id` e o `user_uid`.
    * Remove o documento temporário `link_tokens/{token}`.
-6. A partir desse instante, a conta está vinculada.
+6. A partir desse instante, a conta está vinculada e o jogador já possui seu ID Oficial de Treinador no ecossistema da liga.
+
+#### Schema Firestore (`users/{uid}`):
+```json
+{
+  "uid": "google_user_uid",
+  "email": "treinador@gmail.com",
+  "display_name": "Ash Ketchum",
+  "minecraft": {
+    "trainer_id": "TR-001",
+    "uuid": "d94721b0-7454-4d13-a691-d76a9c40cf4c",
+    "nick": "AshKetchum",
+    "linked_at": "TIMESTAMP"
+  }
+}
+```
 
 ---
 
@@ -72,6 +91,7 @@ O servidor Minecraft envia periodicamente (ao conectar, desconectar, após captu
 ```json
 {
   "uuid": "d94721b0-7454-4d13-a691-d76a9c40cf4c",
+  "trainer_id": "TR-001",
   "nick": "AshKetchum",
   "level_cap": 20,
   "current_series": "kanto",
@@ -124,9 +144,18 @@ O servidor Minecraft envia periodicamente (ao conectar, desconectar, após captu
 
 ---
 
-## 🏆 5. Sistema de Torneios com Placar ao Vivo
+## 🏆 5. Sistema de Torneios & Painel Administrativo de Cadastro
 
-### Estrutura do Torneio (`tournaments/{tournament_id}`):
+### 5.1. Painel Admin - Seleção de Jogadores Cadastrados
+Na área de administração (`/admin/tournaments`):
+* O admin **não precisa digitar o nick manualmente** (evitando erros de digitação como maiúsculas/minúsculas).
+* O painel disponibiliza um componente **Select / Autocomplete de Treinadores Vinculados**, que busca diretamente da coleção `players`:
+  * Exemplo de exibição no seletor:
+    `[ 🔘 AshKetchum | ID: TR-001 (UUID: d947...) ]`
+    `[ 🔘 GaryOak    | ID: TR-002 (UUID: 8e12...) ]`
+* Ao selecionar os jogadores, o torneio associa o `trainer_id`, `uuid` e `nick` de cada participante.
+
+### 5.2. Estrutura do Torneio (`tournaments/{tournament_id}`):
 ```json
 {
   "id": "torneio-inauguracao-01",
@@ -138,8 +167,16 @@ O servidor Minecraft envia periodicamente (ao conectar, desconectar, após captu
     {
       "match_id": "r1_m1",
       "round": 1,
-      "player1": { "uuid": "uuid_1", "nick": "PlayerOne" },
-      "player2": { "uuid": "uuid_2", "nick": "PlayerTwo" },
+      "player1": {
+        "trainer_id": "TR-001",
+        "uuid": "d94721b0-7454-4d13-a691-d76a9c40cf4c",
+        "nick": "AshKetchum"
+      },
+      "player2": {
+        "trainer_id": "TR-002",
+        "uuid": "8e123456-7454-4d13-a691-d76a9c40cf4c",
+        "nick": "GaryOak"
+      },
       "winner_uuid": null,
       "score": null,
       "status": "in_progress" // pending | in_progress | completed
@@ -148,19 +185,20 @@ O servidor Minecraft envia periodicamente (ao conectar, desconectar, após captu
 }
 ```
 
-### Webhook de Resultado de Partida (`POST /api/minecraft/tournament/match-result`):
-Quando dois jogadores terminam uma batalha PvP de torneio dentro do Minecraft, o KubeJS detecta o vencedor e manda:
+### 5.3. Webhook de Resultado de Partida (`POST /api/minecraft/tournament/match-result`):
+Quando dois jogadores terminam uma batalha PvP de torneio dentro do Minecraft, o KubeJS detecta o vencedor pelo UUID e dispara:
 ```json
 {
   "tournament_id": "torneio-inauguracao-01",
   "match_id": "r1_m1",
-  "winner_uuid": "uuid_1",
-  "loser_uuid": "uuid_2",
+  "winner_uuid": "d94721b0-7454-4d13-a691-d76a9c40cf4c",
+  "loser_uuid": "8e123456-7454-4d13-a691-d76a9c40cf4c",
   "score": "6-4",
   "duration_seconds": 184
 }
 ```
-O backend atualiza a partida no Firestore. Como a página do torneio no frontend usa `onSnapshot`, a chave atualiza e move o vencedor para a próxima fase **instantaneamente**!
+* O backend compara o `winner_uuid` com os UUIDs da partida `r1_m1` e confirma a vitória com 100% de precisão.
+* Como o chaveamento no site usa `onSnapshot`, o vencedor avança de fase **ao vivo na tela**, e o perfil dele já ganha o registro da vitória!
 
 ---
 
@@ -203,7 +241,7 @@ service cloud.firestore {
       allow write: if request.auth != null && request.auth.uid == userId;
     }
     
-    // Dados sincronizados do Minecraft (apenas backend com admin SDK ou leitura pública)
+    // Dados sincronizados do Minecraft e Lista de Treinadores
     match /players/{playerId} {
       allow read: if true;
       allow write: if false; // Apenas a API com Admin SDK pode escrever
