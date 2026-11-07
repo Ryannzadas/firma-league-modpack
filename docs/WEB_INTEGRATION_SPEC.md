@@ -1,54 +1,59 @@
-# 🌐 Firma League - Especificação Técnica de Integração Web (`poke-firma.vercel.app` ⇄ Minecraft)
+# 🌐 Firma League - Especificação Técnica de Integração Web (`poke-firma.vercel.app` ⇄ Minecraft v2.8.0)
 
-Este documento mapeia a integração em tempo real entre o servidor de **Minecraft (Firma League / Cobblemon 1.21.1 NeoForge)** e a plataforma web oficial **[poke-firma.vercel.app](https://poke-firma.vercel.app/)** (Vite + React + Firebase Project `firma-league`).
+Este documento mapeia a integração em tempo real já **em produção** entre o servidor de **Minecraft (Firma League v2.8.0 / Cobblemon 1.8.4 NeoForge 1.21.1)** e a plataforma web oficial **[poke-firma.vercel.app](https://poke-firma.vercel.app/)** (Vite + React + Vercel Serverless Functions + Firebase Project `firma-league`).
 
 ---
 
-## 🏗️ 1. Arquitetura Atual do Site (`poke-firma.vercel.app`) & Como Integrar
+## 🏗️ 1. Arquitetura em Produção (`poke-firma.vercel.app`)
 
-O site atual é uma **SPA em Vite + React** hospedada na **Vercel**, conectada ao projeto Firebase **`firma-league`** e estruturada sobre as seguintes coleções do **Cloud Firestore**:
+A plataforma web é uma **SPA em Vite + React** hospedada na **Vercel**, conectada ao projeto Firebase **`firma-league`** e alimentada em tempo real por **4 Vercel Serverless Functions** autenticadas via header `X-Minecraft-Secret` (ou `POST /api/minecraft/link/redeem` autenticado via Firebase Auth ID Token):
 
-1. **`liga/dados`** *(Documento único escutado em tempo real via `onSnapshot` pelo `LigaProvider`)*:
-   - Guarda `jogadores` (ranking geral) e `torneios` (Copas Kanto, Johto, Hoenn e Grande Final, incluindo `inscritos`, `grupos` e `chave` de partidas).
-2. **`users/{uid}`** *(Documento do usuário logado via Google Auth)*:
-   - Guarda `{ nick, bio, favorito, capitulo, insignias, skin, timePrincipal, perfilPublico }` e a subcoleção `users/{uid}/teams/{teamId}`.
-3. **`publicProfiles/{nick_lowercase}`** *(Perfil público buscável em `/jogadores` e `/jogador/:nick`)*:
-   - Espelha os dados públicos do treinador para busca rápida e autocompletar.
-4. **`admins/{uid}`** *(Controle de acesso ao `/admin` — Painel da Liga)*.
-
-### Como adicionar os Webhooks na Vercel (Vite SPA):
-Como o projeto utiliza Vite na Vercel, crie uma pasta **`/api/minecraft/`** na raiz do repositório web utilizando **Vercel Serverless Functions** com `firebase-admin` para processar os webhooks vindos do KubeJS do servidor Minecraft.
+### Coleções do Cloud Firestore:
+1. **`liga/dados`** *(Documento global escutado em tempo real via `onSnapshot` pelo `LigaProvider`)*:
+   - Guarda `jogadores` (ranking geral com `nick`, `trainer_id`, `minecraft_uuid`, `pontos`, `vitorias`, `derrotas`, `titulos`) e `torneios` (Copas Kanto, Johto, Hoenn e Sinnoh, incluindo `formatoGrupos: "MD1" | "MD3"`, `formatoMataMata: "MD1" | "MD3"`, `inscritos`, `grupos` e `chave` de partidas).
+2. **`liga/meta`** *(Controle transacional de sequência)*:
+   - Mantém o contador atômico `next_trainer_seq` para emissão de `Trainer ID` único (`TR-001`, `TR-002`...).
+3. **`users/{uid}`** *(Documento privado do usuário logado via Google Auth, escutado via `onSnapshot`)*:
+   - Campos de vinculação (`verificado`, `trainer_id`, `minecraft_uuid`, `nick`, `capitulo`, `level_cap`, `insignias`) são protegidos pelas Security Rules (somente o Admin SDK via Vercel Functions pode alterá-los).
+4. **`publicProfiles/{nick_lowercase}`** *(Perfil público buscável em `/jogadores` e `/jogador/:nick`, escutado via `onSnapshot`)*:
+   - Espelha os dados públicos do treinador e seu `minecraft_uuid` para carregar a ficha ao vivo do servidor.
+5. **`treinadores/{minecraft_uuid}`** *(Documento exclusivo gravado pelo servidor Minecraft via `/api/minecraft/sync/player`, escutado via `onSnapshot`)*:
+   - Contém `uuid`, `nick`, `capitulo`, `level_cap`, `insignias`, `pokedex` (`vistos`, `capturados`, `total_vistos`, `total_capturados`), `party` (6 Pokémon ativos com ficha completa) e `pc` (todos os Pokémon guardados nas Boxes do PC).
+6. **`linkTokens/{token}`** *(Coleção privada acessível somente pelo Firebase Admin SDK)*:
+   - Guarda os códigos temporários gerados pelo comando `/vincular` no Minecraft (uso único, validade de 1 hora).
 
 ```mermaid
 flowchart TD
-    subgraph Minecraft["🎮 Servidor Minecraft (NeoForge 1.21.1)"]
-        KJS["KubeJS Server Scripts"]
-        CBL["Cobblemon 1.8.4 + RCTMod"]
+    subgraph Minecraft["🎮 Servidor Minecraft (NeoForge 1.21.1 - v2.8.0)"]
+        KJS["KubeJS (web_sync_bridge.js)"]
+        CBL["Cobblemon 1.8.4 + RCTMod 0.19.2"]
     end
 
-    subgraph Vercel["🌐 poke-firma.vercel.app (Vite + Vercel Functions)"]
-        API["Vercel Functions (/api/minecraft/*)"]
-        FS["Firestore (firma-league)"]
-        UI["React SPA (LigaProvider + StoreProvider)"]
+    subgraph Vercel["🌐 poke-firma.vercel.app (Vercel + Firebase)"]
+        API1["POST /api/minecraft/link/create"]
+        API2["POST /api/minecraft/link/redeem"]
+        API3["POST /api/minecraft/sync/player"]
+        API4["POST /api/minecraft/tournament/match-result"]
+        FS["Cloud Firestore (firma-league)"]
+        UI["React SPA (onSnapshot em tempo real)"]
     end
 
     CBL --> KJS
-    KJS -->|"POST JSON (X-Minecraft-Secret)"| API
-    API -->|"Admin SDK"| FS
-    FS -->|"onSnapshot(doc(db, 'liga', 'dados'))"| UI
-    FS -->|"onSnapshot(doc(db, 'users', uid))"| UI
-    FS -->|"onSnapshot(doc(db, 'publicProfiles', nick))"| UI
+    KJS -->|"X-Minecraft-Secret"| API1
+    KJS -->|"X-Minecraft-Secret"| API3
+    KJS -->|"X-Minecraft-Secret"| API4
+    UI -->|"Bearer <Firebase ID Token>"| API2
+    API1 & API2 & API3 & API4 -->|"Firebase Admin SDK"| FS
+    FS -->|"onSnapshot (liga/dados, users, publicProfiles, treinadores)"| UI
 ```
 
 ---
 
-## 🎟️ 2. Vinculação de Conta via Token (`/vincular`) & Geração do `trainer_id`
+## 🎟️ 2. Vinculação de Conta (`/vincular`) & `Trainer ID` (`TR-001`)
 
-### Problema que resolve no site atual:
-Atualmente, no componente de onboarding (`<dialog className="onboard">`) e no formulário de `/perfil`, o usuário digita qualquer nick manualmente no campo `Nick do Minecraft` e marca as próprias insígnias clicando nelas (`onToggle`).
-Com o token:
-1. O jogador entra no servidor Minecraft e digita `/vincular`.
-2. O servidor gera um código de 6 caracteres (ex: `FIRMA-8K2P`) e envia para `POST https://poke-firma.vercel.app/api/minecraft/link/create`:
+### Fluxo Completo:
+1. O jogador entra no servidor Minecraft e digita **`/vincular`**.
+2. O script KubeJS (`kubejs/server_scripts/web_sync_bridge.js`) gera um código de 6 caracteres (ex: `FIRMA-8K2P`), envia uma requisição para `POST https://poke-firma.vercel.app/api/minecraft/link/create` com o header `X-Minecraft-Secret` e também já dispara um sync inicial dos dados do jogador:
    ```json
    {
      "token": "FIRMA-8K2P",
@@ -57,40 +62,33 @@ Com o token:
      "expires_at": 1793990000000
    }
    ```
-3. No site (`/perfil` ou no modal de onboarding), o usuário logado com Google insere o token `FIRMA-8K2P`.
-4. A validação do token:
-   - Gera automaticamente um **Trainer ID único** (ex: `TR-001`, `TR-002`, usando um contador em `liga/meta` ou sequencial).
-   - Salva em `users/{uid}` e em `publicProfiles/{nick_lowercase}`:
-     ```json
-     {
-       "nick": "Mayronsf",
-       "trainer_id": "TR-001",
-       "minecraft_uuid": "d94721b0-7454-4d13-a691-d76a9c40cf4c",
-       "verificado": true
-     }
-     ```
-   - Trava a edição manual de `nick` e o clique manual nas `insignias` (que passam a vir sincronizadas do servidor!).
-   - Opcionalmente já adiciona o jogador na lista `jogadores` dentro de `liga/dados` com `{ nick: "Mayronsf", trainer_id: "TR-001", uuid: "d94721b0-...", pontos: 0, vitorias: 0, derrotas: 0, titulos: [] }`.
+3. No site (`/perfil` ou janela de boas-vindas), o jogador logado com Google cola o código (aceita com ou sem o prefixo `FIRMA-` e em maiúsculas/minúsculas).
+4. O frontend chama `POST /api/minecraft/link/redeem` enviando `{ "token": "FIRMA-8K2P" }` e `Authorization: Bearer <idToken>`.
+5. A função valida o token em transação atômica, atribui o **`trainer_id`** sequencial (`TR-001`, `TR-002`...), migra o perfil público para o nick real do Minecraft, trava a edição manual de nick/insígnias no site e cadastra o jogador na lista da Liga.
 
 ---
 
-## 🏅 3. Sincronização em Tempo Real do Perfil, Insígnias, Party e Pokédex
+## 🏅 3. Sincronização em Tempo Real do Treinador (`POST /api/minecraft/sync/player`)
 
-### Compatibilidade com os IDs de Insígnias do `BadgeCase` atual:
-No código atual do site (`Profile.js`), o componente `BadgeCase` usa exatamente estes IDs para as insígnias:
+### Gatilhos Automáticos no Servidor (`web_sync_bridge.js`):
+O KubeJS sincroniza automaticamente os dados do jogador (com debounce anti-spam) quando:
+- O jogador entra (`PlayerEvents.loggedIn`) ou sai (`PlayerEvents.loggedOut`) do servidor;
+- O jogador captura um Pokémon (`CobblemonEvents.POKEMON_CAPTURED`), evolui (`EVOLUTION_COMPLETE`), choca um ovo (`HATCH_EGG_POST`) ou vence/termina uma batalha (`BATTLE_VICTORY` / `BATTLE_FAINTED`);
+- O jogador executa `/vincular` ou `/sincronizar`.
+
+### IDs Oficiais de Insígnias (`BadgeCase`):
 - **Kanto (Cap. 1):** `"kanto-1"` a `"kanto-8"`, `"kanto-elite"`, `"kanto-campeao"`
 - **Johto (Cap. 2):** `"johto-1"` a `"johto-8"`, `"johto-elite"`, `"johto-campeao"`
 - **Hoenn (Cap. 3):** `"hoenn-1"` a `"hoenn-8"`, `"hoenn-elite"`, `"hoenn-campeao"`
 - **Sinnoh (Cap. 4):** `"sinnoh-1"` a `"sinnoh-8"`, `"sinnoh-elite"`, `"sinnoh-campeao"`
 
-### Payload de Sincronização (`POST /api/minecraft/sync/player`):
-O servidor Minecraft envia os dados já mapeados para o formato do site:
+### Payload Completo (`POST /api/minecraft/sync/player`):
 ```json
 {
   "uuid": "d94721b0-7454-4d13-a691-d76a9c40cf4c",
   "nick": "Mayronsf",
   "capitulo": 1,
-  "level_cap": 25,
+  "level_cap": 27,
   "insignias": ["kanto-1", "kanto-2"],
   "pokedex": {
     "vistos": [1, 4, 7, 25, 94, 130],
@@ -102,60 +100,75 @@ O servidor Minecraft envia os dados já mapeados para o formato do site:
     {
       "dex": 25,
       "especie": "pikachu",
+      "forma": null,
       "apelido": "Sparky",
       "nivel": 25,
+      "sexo": "M",
       "shiny": true,
       "habilidade": "static",
-      "natureza": "Timid",
-      "item": "Light Ball",
+      "natureza": "timid",
+      "item": "light_ball",
+      "tera": "electric",
       "golpes": ["thunderbolt", "quick-attack", "iron-tail", "thunder-wave"],
       "ivs": { "hp": 31, "atk": 12, "def": 28, "spa": 31, "spd": 25, "spe": 31 },
       "evs": { "hp": 0, "atk": 0, "def": 4, "spa": 252, "spd": 0, "spe": 252 }
     }
+  ],
+  "pc": [
+    {
+      "caixa": 1,
+      "slot": 1,
+      "dex": 130,
+      "especie": "gyarados",
+      "forma": null,
+      "apelido": "Leviathan",
+      "nivel": 24,
+      "sexo": "M",
+      "shiny": false,
+      "habilidade": "intimidate",
+      "natureza": "adamant",
+      "item": "leftovers",
+      "tera": "flying",
+      "golpes": ["waterfall", "dragon-dance", "ice-fang", "crunch"],
+      "ivs": { "hp": 29, "atk": 31, "def": 24, "spa": 10, "spd": 22, "spe": 31 },
+      "evs": { "hp": 4, "atk": 252, "def": 0, "spa": 0, "spd": 0, "spe": 252 }
+    }
   ]
 }
 ```
-> **No Frontend (`StoreProvider` e `PlayerPublic.js`):**
-> - Trocar o `getDoc(doc(db, "users", y.uid))` e `getDoc(doc(db, "publicProfiles", nick))` por **`onSnapshot`** para que, quando o jogador ganhe uma insígnia ou capture um Pokémon no servidor, a tela `/perfil` e `/jogador/:nick` brilhem e atualizem na mesma hora sem precisar dar F5!
 
 ---
 
-## 🏆 4. Painel da Liga (`/admin`) & Torneios com `trainer_id` e Placar Automático
+## 🏆 4. Resultados Automáticos de Torneios (`POST /api/minecraft/tournament/match-result`)
 
-### Como o `/admin` funciona hoje:
-- Na aba **Jogadores**, existe um `<input list="perfis-cadastrados">` que busca de `publicProfiles`.
-- Na aba **Torneios**, o componente `xe` inscreve jogadores puxando de `r.jogadores` (ranking) e cria partidas em `t.chave` no formato:
-  `{ fase: "Grupos" | "Semifinal" | "Final", grupo: "A", a: "NickA", b: "NickB", pa: 0, pb: 0, placar: null, koA: 0, koB: 0, timeA: [dex...], timeB: [dex...] }`.
+Quando uma batalha PvP (`battle.isPvP()`) termina no servidor Minecraft, o script `web_sync_bridge.js` identifica o vencedor e o perdedor, calcula os KOs e os 6 Pokémon de cada equipe, e envia para `POST /api/minecraft/tournament/match-result`:
 
-### Melhorias a implementar no `/admin`:
-1. **Cadastro de Jogadores por Seletor Vinculado (`trainer_id` + `uuid`):**
-   - Na aba **Jogadores** e na inscrição do **Torneio**, em vez de digitação livre de texto, exibir um Seletor/Autocomplete dos jogadores que já vincularam o token no perfil:
-     `[ 🔍 Mayronsf | ID: TR-001 (Verificado ✓) ]`.
-   - Salvar em `liga/dados -> jogadores` e em `torneios -> inscritos` os campos `{ nick, trainer_id, uuid }`.
-2. **Automação de Resultados de Partida (`POST /api/minecraft/tournament/match-result`):**
-   - Quando dois jogadores inscritos numa partida aberta (`placar === null`) batalham no Minecraft, o KubeJS envia ao fim da luta:
-     ```json
-     {
-       "torneio_id": "copa-kanto",
-       "winner_uuid": "uuid_do_vencedor",
-       "loser_uuid": "uuid_do_perdedor",
-       "ko_winner": 6,
-       "ko_loser": 4,
-       "team_winner_dex": [94, 130, 65, 112, 3, 59],
-       "team_loser_dex": [248, 212, 181, 197, 230, 214]
-     }
-     ```
-   - A API localiza a partida correspondente em `liga/dados -> torneios`, atualiza `pa` / `pb`, `placar`, `koA` (`ko_winner`), `koB` (`ko_loser`), `timeA` e `timeB`, e soma automaticamente `+3 pontos` e `+1 vitória` no ranking de `liga/dados`!
-   - Como o site **já usa `onSnapshot(doc(db, "liga", "dados"))`**, a tabela de grupos, o saldo de KOs, os sprites dos times usados e o chaveamento atualizam ao vivo na tela de todo mundo!
+```json
+{
+  "battle_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "winner_uuid": "uuid_do_vencedor",
+  "loser_uuid": "uuid_do_perdedor",
+  "ko_winner": 6,
+  "ko_loser": 4,
+  "team_winner_dex": [94, 130, 65, 112, 3, 59],
+  "team_loser_dex": [248, 212, 181, 197, 230, 214]
+}
+```
+- **Idempotência por `battle_id`:** O UUID único da batalha do Cobblemon (`battle.getBattleId()`) garante que um mesmo duelo nunca seja contabilizado duas vezes.
+- **Suporte a `MD1` e `MD3`:** A API verifica o formato configurado para a fase atual (`formatoGrupos` ou `formatoMataMata`), incrementa a série (`jogos`) e, ao atingir o número de vitórias necessário (1 na MD1 ou 2 na MD3), fecha a partida, soma **+3 pontos** e **+1 vitória** no ranking e, se for a Grande Final, coroa automaticamente o **Campeão**.
 
 ---
 
-## 🔧 5. Pequenos Ajustes de Conteúdo Detectados no Site Atual
-Ao analisar o bundle atual de `poke-firma.vercel.app`, notamos alguns detalhes que podem ser atualizados no código do site:
-1. **Versão do Modpack (`Q.modpack`):** Atualizar de `2.7.0` (122 mods) para **`2.8.0`** (**130 mods no cliente** / **115 no servidor**).
-2. **Texto da Engenharia na página `/lore` (`Ns` e `Ss`):** Na página `/lore`, os textos da seção *"Engenharia da Firma"* ainda citam `Tech Reborn` e `Powah! ReFabric` (da época do rascunho em Fabric), enquanto a página `/mods` já lista corretamente **Mekanism, Create, Powah! e Applied Energistics 2** (NeoForge). Vale alinhar os nomes dos itens-chave na `/lore` para `Mekanism` e `Create`!
-3. **Level Caps na página `/liga` (`Q.levelCaps`):** Atualmente estão como `null` (`[A DEFINIR]`). Podem ser preenchidos com os tetos das 4 temporadas:
-   - `1` (Kanto): `60` (Início no Nv. 15 → Brock Nv. 15 → Misty Nv. 27 → ... → Campeão Blue Nv. 60)
-   - `2` (Johto): `75`
-   - `3` (Hoenn): `90`
-   - `4` (Sinnoh): `100`
+## 🔑 5. Configuração do Segredo no Servidor Minecraft
+
+Para ativar a comunicação do servidor Minecraft com o site:
+1. Abra o arquivo [`kubejs/config/web_sync.json`](../kubejs/config/web_sync.json) no servidor (ou defina a variável de ambiente `MINECRAFT_SECRET` no painel da host).
+2. Preencha o campo `"secret"` com o mesmo valor de `MINECRAFT_SECRET` cadastrado na Vercel:
+   ```json
+   {
+     "enabled": true,
+     "api_base_url": "https://poke-firma.vercel.app",
+     "secret": "COLE_AQUI_O_SEU_MINECRAFT_SECRET"
+   }
+   ```
+3. Execute `/reload` no servidor (ou reinicie). O comando `/vincular`, `/sincronizar` e os eventos automáticos já estarão funcionando!
