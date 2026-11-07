@@ -10,7 +10,6 @@ const $Priority = Java.loadClass('com.cobblemon.mod.common.api.Priority')
 const $PokemonSpecies = Java.loadClass('com.cobblemon.mod.common.api.pokemon.PokemonSpecies')
 const $Stats = Java.loadClass('com.cobblemon.mod.common.api.pokemon.stats.Stats')
 const $PlayerState = Java.loadClass('com.gitlab.srcmc.rctmod.api.data.sync.PlayerState')
-const $Commands = Java.loadClass('net.minecraft.commands.Commands')
 
 // Java 21 HTTP Client classes (whitelisted via kubejs.classfilter.txt in zzz-firma-league-core)
 let $URI = null
@@ -167,7 +166,6 @@ const BADGE_TRAINER_MAP = {
     'sinnoh-campeao': ['champion_cynthia_03a5', 'champion_cynthia_05a2', 'champion_cynthia_05a7', 'sinnohchampion_cynthia']
 }
 
-// Level Caps progressivos por insígnia caso RCTMod retorne fallback
 const KANTO_CAP_LADDER = [15, 27, 33, 41, 50, 50, 54, 57, 60, 60]
 
 function extractBadgesAndProgress(player) {
@@ -202,7 +200,6 @@ function extractBadgesAndProgress(player) {
         console.warn('[FirmaWebSync] Aviso ao ler PlayerState do RCTMod: ' + err)
     }
 
-    // Também verifica se o jogador tem insígnias salvas em persistentData
     try {
         if (player.persistentData.contains('firma_badges')) {
             let customBadges = player.persistentData.getCompound('firma_badges')
@@ -216,7 +213,6 @@ function extractBadgesAndProgress(player) {
         }
     } catch (e) {}
 
-    // Determina o capítulo atual (1=Kanto, 2=Johto, 3=Hoenn, 4=Sinnoh) e o Level Cap
     let hasSinnoh = insignias.some(b => b.indexOf('sinnoh-') === 0)
     let hasHoenn = insignias.some(b => b.indexOf('hoenn-') === 0) || insignias.indexOf('johto-campeao') !== -1
     let hasJohto = insignias.some(b => b.indexOf('johto-') === 0) || insignias.indexOf('kanto-campeao') !== -1
@@ -370,16 +366,18 @@ function serializePokemon(pkmn, extraFields) {
 }
 
 function buildPlayerSyncPayload(player) {
-    let uuid = String(player.uuid)
-    let nick = String(player.username)
+    let playerUuidObj = player.getUUID()
+    let uuid = String(playerUuidObj.toString())
+    let nick = String(player.getGameProfile().getName())
     let progress = extractBadgesAndProgress(player)
 
-    // 1. Party (até 6 Pokémon)
+    // 1. Party (usa iterator() para não colidir com PokemonStore.get(UUID) no Rhino!)
     let partyArr = []
     try {
         let partyStore = $Cobblemon.INSTANCE.getStorage().getParty(player)
-        for (let i = 0; i < 6; i++) {
-            let pkmn = partyStore.get(i)
+        let partyIter = partyStore.iterator()
+        while (partyIter.hasNext()) {
+            let pkmn = partyIter.next()
             if (pkmn != null) {
                 let serialized = serializePokemon(pkmn, null)
                 if (serialized) partyArr.push(serialized)
@@ -389,19 +387,23 @@ function buildPlayerSyncPayload(player) {
         console.warn('[FirmaWebSync] Erro ao ler Party de ' + nick + ': ' + err)
     }
 
-    // 2. PC Boxes
+    // 2. PC Boxes (usa getNonEmptySlots() para evitar colisão de sobrecarga e otimizar leitura)
     let pcArr = []
     try {
         let pcStore = $Cobblemon.INSTANCE.getStorage().getPC(player)
         let boxes = pcStore.getBoxes()
         for (let b = 0; b < boxes.size(); b++) {
             let box = boxes.get(b)
-            for (let s = 0; s < 30; s++) {
-                let pkmn = box.get(s)
+            let nonEmpty = box.getNonEmptySlots()
+            let slotEntries = nonEmpty.entrySet().toArray()
+            for (let j = 0; j < slotEntries.length; j++) {
+                let slotEntry = slotEntries[j]
+                let slotIdx = Number(slotEntry.getKey())
+                let pkmn = slotEntry.getValue()
                 if (pkmn != null) {
                     let serialized = serializePokemon(pkmn, {
                         caixa: b + 1,
-                        slot: s + 1
+                        slot: slotIdx + 1
                     })
                     if (serialized) pcArr.push(serialized)
                 }
@@ -415,7 +417,7 @@ function buildPlayerSyncPayload(player) {
     let vistosSet = {}
     let capturadosSet = {}
     try {
-        let dexManager = $Cobblemon.INSTANCE.getPlayerDataManager().getPokedexData(player)
+        let dexManager = $Cobblemon.INSTANCE.getPlayerDataManager().getPokedexData(playerUuidObj)
         let records = dexManager.getSpeciesRecords()
         let entries = records.entrySet().toArray()
         for (let i = 0; i < entries.length; i++) {
@@ -440,7 +442,6 @@ function buildPlayerSyncPayload(player) {
         console.warn('[FirmaWebSync] Erro ao ler Pokedex de ' + nick + ': ' + err)
     }
 
-    // Garante que todos os Pokémon da Party e do PC também constem como vistos/capturados
     for (let i = 0; i < partyArr.length; i++) {
         let d = partyArr[i].dex
         if (d > 0) {
@@ -476,16 +477,16 @@ function buildPlayerSyncPayload(player) {
     }
 }
 
-// Debounce por jogador para evitar flood de requisições seguidas
 const LAST_SYNC_TIME = {}
 
 function syncPlayerToWeb(player, forceImmediate, feedbackCallback) {
-    if (!player || player.level.isClientSide()) return
-    if (!isAllowedServerEnvironment(player.server)) {
+    if (!player) return
+    let srv = player.getServer()
+    if (!isAllowedServerEnvironment(srv)) {
         if (feedbackCallback) feedbackCallback(false, 'Sincronizacao ativa apenas no servidor dedicado oficial (EnxadaHost).')
         return
     }
-    let uuid = String(player.uuid)
+    let uuid = String(player.getUUID().toString())
     let now = Date.now()
     if (!forceImmediate && LAST_SYNC_TIME[uuid] && (now - LAST_SYNC_TIME[uuid] < 4000)) {
         return
@@ -526,28 +527,28 @@ ServerEvents.commandRegistry(event => {
         Commands.literal('vincular')
             .executes(ctx => {
                 let player = ctx.source.playerOrException
-                if (!isAllowedServerEnvironment(player.server)) {
+                let srv = player.getServer()
+                if (!isAllowedServerEnvironment(srv)) {
                     player.tell(Text.of('§c[Firma League] O comando /vincular so pode ser usado dentro do servidor oficial da EnxadaHost!'))
                     return 0
                 }
                 let token = generateLinkCode()
                 let expiresAt = Date.now() + 3600 * 1000 // 1 hora
+                let uuidStr = String(player.getUUID().toString())
+                let nickStr = String(player.getGameProfile().getName())
 
                 player.tell(Text.of('§e[Firma League] §7Gerando codigo de vinculacao com §bpoke-firma.vercel.app§7...'))
-
-                // Sincroniza os dados atuais do jogador (Party, PC, Pokédex, Insígnias)
-                syncPlayerToWeb(player, true, null)
 
                 postWebhookAsync(
                     '/api/minecraft/link/create',
                     {
                         token: token,
-                        minecraft_uuid: String(player.uuid),
-                        minecraft_nick: String(player.username),
+                        minecraft_uuid: uuidStr,
+                        minecraft_nick: nickStr,
                         expires_at: expiresAt
                     },
                     (status, body) => {
-                        player.server.execute(() => {
+                        srv.execute(() => {
                             player.tell(Text.of('§6====================================================='))
                             player.tell(Text.of('§a§l✔ CODIGO DE VINCULACAO GERADO COM SUCESSO!'))
                             player.tell(Text.of('§fSeu codigo: §b§l' + token + ' §7(valido por 1 hora)'))
@@ -558,11 +559,16 @@ ServerEvents.commandRegistry(event => {
                         })
                     },
                     (err) => {
-                        player.server.execute(() => {
+                        srv.execute(() => {
                             player.tell(Text.of('§c[Firma League] Falha ao comunicar com o site: ' + err))
                         })
                     }
                 )
+
+                // Sincroniza os dados atuais do jogador (Party, PC, Pokédex, Insígnias)
+                srv.scheduleInTicks(10, () => {
+                    syncPlayerToWeb(player, true, null)
+                })
                 return 1
             })
     )
@@ -572,9 +578,10 @@ ServerEvents.commandRegistry(event => {
         Commands.literal('sincronizar')
             .executes(ctx => {
                 let player = ctx.source.playerOrException
+                let srv = player.getServer()
                 player.tell(Text.of('§e[Firma League] §7Sincronizando Time, PC, Pokedex e Insignias com o site...'))
                 syncPlayerToWeb(player, true, (ok, info) => {
-                    player.server.execute(() => {
+                    srv.execute(() => {
                         if (ok) {
                             player.tell(Text.of('§a[Firma League] ✔ Perfil sincronizado ao vivo em §bpoke-firma.vercel.app§a!'))
                         } else {
@@ -601,14 +608,13 @@ PlayerEvents.loggedOut(event => {
     syncPlayerToWeb(event.player, true, null)
 })
 
-// Registra os hooks nos eventos do Cobblemon ao carregar o servidor (evita duplicatas sem tocar em global)
 ServerEvents.loaded(serverEvent => {
     // Captura de Pokémon
     $CobblemonEvents.POKEMON_CAPTURED.subscribe($Priority.NORMAL, event => {
         try {
             let player = event.getPlayer()
-            if (player) {
-                player.server.scheduleInTicks(20, () => {
+            if (player && player.getServer()) {
+                player.getServer().scheduleInTicks(20, () => {
                     syncPlayerToWeb(player, false, null)
                 })
             }
@@ -620,8 +626,8 @@ ServerEvents.loaded(serverEvent => {
         try {
             let pkmn = event.getPokemon()
             let player = pkmn ? pkmn.getOwnerPlayer() : null
-            if (player) {
-                player.server.scheduleInTicks(20, () => {
+            if (player && player.getServer()) {
+                player.getServer().scheduleInTicks(20, () => {
                     syncPlayerToWeb(player, false, null)
                 })
             }
@@ -632,8 +638,8 @@ ServerEvents.loaded(serverEvent => {
     $CobblemonEvents.HATCH_EGG_POST.subscribe($Priority.NORMAL, event => {
         try {
             let player = event.getPlayer()
-            if (player) {
-                player.server.scheduleInTicks(20, () => {
+            if (player && player.getServer()) {
+                player.getServer().scheduleInTicks(20, () => {
                     syncPlayerToWeb(player, false, null)
                 })
             }
@@ -649,25 +655,23 @@ ServerEvents.loaded(serverEvent => {
             let winners = event.getWinners()
             let losers = event.getLosers()
 
-            // Sincroniza todos os jogadores humanos envolvidos na batalha (ex: após vencer Líder de Ginásio)
             let playersList = battle.getPlayers()
             for (let i = 0; i < playersList.size(); i++) {
                 let p = playersList.get(i)
-                if (p) {
-                    p.server.scheduleInTicks(40, () => {
+                if (p && p.getServer()) {
+                    p.getServer().scheduleInTicks(40, () => {
                         syncPlayerToWeb(p, true, null)
                     })
                 }
             }
 
-            // Se for Batalha PvP (1v1 entre jogadores), envia resultado para o Torneio no site!
             if (battle.isPvP() && winners.size() >= 1 && losers.size() >= 1) {
                 let winnerActor = winners.get(0)
                 let loserActor = losers.get(0)
 
-                let winnerUuid = String(winnerActor.getUuid())
-                let loserUuid = String(loserActor.getUuid())
-                let battleId = String(battle.getBattleId())
+                let winnerUuid = String(winnerActor.getUuid().toString())
+                let loserUuid = String(loserActor.getUuid().toString())
+                let battleId = String(battle.getBattleId().toString())
 
                 let winnerTeamDex = []
                 let winnerFaintedCount = 0
