@@ -42,6 +42,7 @@ try {
 function getWebSyncConfig() {
     let cfg = {
         enabled: true,
+        only_dedicated_server: true,
         api_base_url: 'https://poke-firma.vercel.app',
         secret: ''
     }
@@ -49,6 +50,7 @@ function getWebSyncConfig() {
         let raw = JsonIO.read('kubejs/config/web_sync.json')
         if (raw) {
             if (raw.enabled !== undefined) cfg.enabled = Boolean(raw.enabled)
+            if (raw.only_dedicated_server !== undefined) cfg.only_dedicated_server = Boolean(raw.only_dedicated_server)
             if (raw.api_base_url) cfg.api_base_url = String(raw.api_base_url).replace(/\/+$/, '')
             if (raw.secret) cfg.secret = String(raw.secret).trim()
         }
@@ -56,6 +58,15 @@ function getWebSyncConfig() {
         // Ignora se arquivo ainda não existir
     }
     return cfg
+}
+
+function isAllowedServerEnvironment(server) {
+    let cfg = getWebSyncConfig()
+    if (!cfg.enabled) return false
+    if (cfg.only_dedicated_server && server && !server.isDedicatedServer()) {
+        return false
+    }
+    return true
 }
 
 function postWebhookAsync(endpoint, payloadObj, onSuccess, onError) {
@@ -470,6 +481,10 @@ const LAST_SYNC_TIME = {}
 
 function syncPlayerToWeb(player, forceImmediate, feedbackCallback) {
     if (!player || player.level.isClientSide()) return
+    if (!isAllowedServerEnvironment(player.server)) {
+        if (feedbackCallback) feedbackCallback(false, 'Sincronizacao ativa apenas no servidor dedicado oficial (EnxadaHost).')
+        return
+    }
     let uuid = String(player.uuid)
     let now = Date.now()
     if (!forceImmediate && LAST_SYNC_TIME[uuid] && (now - LAST_SYNC_TIME[uuid] < 4000)) {
@@ -511,6 +526,10 @@ ServerEvents.commandRegistry(event => {
         Commands.literal('vincular')
             .executes(ctx => {
                 let player = ctx.source.playerOrException
+                if (!isAllowedServerEnvironment(player.server)) {
+                    player.tell(Text.of('§c[Firma League] O comando /vincular so pode ser usado dentro do servidor oficial da EnxadaHost!'))
+                    return 0
+                }
                 let token = generateLinkCode()
                 let expiresAt = Date.now() + 3600 * 1000 // 1 hora
 

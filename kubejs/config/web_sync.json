@@ -1,5 +1,6 @@
 {
   "enabled": true,
+  "only_dedicated_server": true,
   "api_base_url": "https://poke-firma.vercel.app",
   "secret": "COLE_AQUI_O_VALOR_DO_MINECRAFT_SECRET"
 }
