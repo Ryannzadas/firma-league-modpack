@@ -582,10 +582,8 @@ PlayerEvents.loggedOut(event => {
     syncPlayerToWeb(event.player, true, null)
 })
 
-// Registra os hooks nos eventos do Cobblemon uma única vez por inicialização
-if (!global.firmaCobblemonHooksRegistered) {
-    global.firmaCobblemonHooksRegistered = true
-
+// Registra os hooks nos eventos do Cobblemon ao carregar o servidor (evita duplicatas sem tocar em global)
+ServerEvents.loaded(serverEvent => {
     // Captura de Pokémon
     $CobblemonEvents.POKEMON_CAPTURED.subscribe($Priority.NORMAL, event => {
         try {
@@ -700,4 +698,4 @@ if (!global.firmaCobblemonHooksRegistered) {
             console.error('[FirmaWebSync] Erro ao processar BATTLE_VICTORY: ' + err)
         }
     })
-}
+})
