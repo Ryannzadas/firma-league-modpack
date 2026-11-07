@@ -12,25 +12,74 @@ const $Stats = Java.loadClass('com.cobblemon.mod.common.api.pokemon.stats.Stats'
 const $PlayerState = Java.loadClass('com.gitlab.srcmc.rctmod.api.data.sync.PlayerState')
 
 // Java 21 HTTP Client classes (whitelisted via kubejs.classfilter.txt in zzz-firma-league-core)
+// Uses vararg Method.invoke on public java.net.http interfaces so Rhino's JPMS module
+// never calls setAccessible(true) on internal jdk.internal.net.http.* implementation classes.
 let $URI = null
-let $HttpClient = null
-let $HttpRequest = null
-let $BodyPublishers = null
-let $BodyHandlers = null
 let $Duration = null
+let $String = null
+let $HttpClient = null
+let $HttpClientBuilder = null
+let $HttpRequest = null
+let $HttpRequestBuilder = null
+let $BodyPublisher = null
+let $BodyPublishers = null
+let $BodyHandler = null
+let $BodyHandlers = null
+let $HttpResponse = null
+let $CompletableFuture = null
+
 let HTTP_CLIENT = null
+let _mConnectTimeout = null
+let _mClientBuild = null
+let _mSendAsync = null
+let _mHeader = null
+let _mTimeout = null
+let _mPost = null
+let _mReqBuild = null
+let _mStatusCode = null
+let _mBody = null
+let _mIsDone = null
+let _mIsCompletedExceptionally = null
+let _mJoin = null
 
 try {
     $URI = Java.loadClass('java.net.URI')
-    $HttpClient = Java.loadClass('java.net.http.HttpClient')
-    $HttpRequest = Java.loadClass('java.net.http.HttpRequest')
-    $BodyPublishers = Java.loadClass('java.net.http.HttpRequest$BodyPublishers')
-    $BodyHandlers = Java.loadClass('java.net.http.HttpResponse$BodyHandlers')
     $Duration = Java.loadClass('java.time.Duration')
-    HTTP_CLIENT = $HttpClient.newBuilder()
-        .connectTimeout($Duration.ofSeconds(10))
-        .build()
-    console.info('[FirmaWebSync] HttpClient inicializado com sucesso!')
+    $String = Java.loadClass('java.lang.String')
+    $HttpClient = Java.loadClass('java.net.http.HttpClient')
+    $HttpClientBuilder = Java.loadClass('java.net.http.HttpClient$Builder')
+    $HttpRequest = Java.loadClass('java.net.http.HttpRequest')
+    $HttpRequestBuilder = Java.loadClass('java.net.http.HttpRequest$Builder')
+    $BodyPublisher = Java.loadClass('java.net.http.HttpRequest$BodyPublisher')
+    $BodyPublishers = Java.loadClass('java.net.http.HttpRequest$BodyPublishers')
+    $BodyHandler = Java.loadClass('java.net.http.HttpResponse$BodyHandler')
+    $BodyHandlers = Java.loadClass('java.net.http.HttpResponse$BodyHandlers')
+    $HttpResponse = Java.loadClass('java.net.http.HttpResponse')
+    $CompletableFuture = Java.loadClass('java.util.concurrent.CompletableFuture')
+
+    let cBuilderCls = $HttpClientBuilder.__javaObject__
+    let cClientCls = $HttpClient.__javaObject__
+    let rBuilderCls = $HttpRequestBuilder.__javaObject__
+    let rRespCls = $HttpResponse.__javaObject__
+    let cfCls = $CompletableFuture.__javaObject__
+
+    _mConnectTimeout = cBuilderCls.getMethod('connectTimeout', $Duration)
+    _mClientBuild = cBuilderCls.getMethod('build')
+    _mSendAsync = cClientCls.getMethod('sendAsync', $HttpRequest, $BodyHandler)
+    _mHeader = rBuilderCls.getMethod('header', $String, $String)
+    _mTimeout = rBuilderCls.getMethod('timeout', $Duration)
+    _mPost = rBuilderCls.getMethod('POST', $BodyPublisher)
+    _mReqBuild = rBuilderCls.getMethod('build')
+    _mStatusCode = rRespCls.getMethod('statusCode')
+    _mBody = rRespCls.getMethod('body')
+    _mIsDone = cfCls.getMethod('isDone')
+    _mIsCompletedExceptionally = cfCls.getMethod('isCompletedExceptionally')
+    _mJoin = cfCls.getMethod('join')
+
+    let cb = $HttpClient.newBuilder()
+    _mConnectTimeout.invoke(cb, $Duration.ofSeconds(10))
+    HTTP_CLIENT = _mClientBuild.invoke(cb)
+    console.info('[FirmaWebSync] HttpClient inicializado com sucesso (JPMS Safe Mode)!')
 } catch (err) {
     console.error('[FirmaWebSync] Falha ao carregar java.net.http.HttpClient. Verifique se zzz-firma-league-core-2.0.0.jar esta atualizado: ' + err)
 }
@@ -59,16 +108,64 @@ function getWebSyncConfig() {
     return cfg
 }
 
+function isDedicatedServerInstance(server) {
+    if (!server) return false
+    try {
+        let s = String(server)
+        if (s.indexOf('DedicatedServer') !== -1) return true
+        if (s.indexOf('IntegratedServer') !== -1) return false
+        if (typeof server.isDedicated === 'function') return Boolean(server.isDedicated())
+    } catch (e) {}
+    return true
+}
+
 function isAllowedServerEnvironment(server) {
     let cfg = getWebSyncConfig()
     if (!cfg.enabled) return false
-    if (cfg.only_dedicated_server && server && !server.isDedicatedServer()) {
+    if (cfg.only_dedicated_server && server && !isDedicatedServerInstance(server)) {
         return false
     }
     return true
 }
 
-function postWebhookAsync(endpoint, payloadObj, onSuccess, onError) {
+function pollFutureOnServer(server, future, endpoint, onSuccess, onError, attempt) {
+    if (!server || (!onSuccess && !onError)) return
+    let tries = attempt || 0
+    server.scheduleInTicks(5, () => {
+        try {
+            if (String(_mIsDone.invoke(future)) !== 'true') {
+                if (tries < 60) {
+                    pollFutureOnServer(server, future, endpoint, onSuccess, onError, tries + 1)
+                } else if (onError) {
+                    onError('Timeout aguardando resposta de ' + endpoint)
+                }
+                return
+            }
+            if (String(_mIsCompletedExceptionally.invoke(future)) === 'true') {
+                if (onError) onError('Falha de rede ao conectar em ' + endpoint)
+                return
+            }
+            let response = _mJoin.invoke(future)
+            if (!response) {
+                if (onError) onError('Resposta vazia de ' + endpoint)
+                return
+            }
+            let status = Number(String(_mStatusCode.invoke(response)))
+            let body = String(_mBody.invoke(response) || '')
+            if (status >= 200 && status < 300) {
+                if (onSuccess) onSuccess(status, body)
+            } else {
+                console.warn('[FirmaWebSync] Erro HTTP ' + status + ' em ' + endpoint + ': ' + body)
+                if (onError) onError('HTTP ' + status + ': ' + body)
+            }
+        } catch (err) {
+            console.error('[FirmaWebSync] Erro ao processar resposta de ' + endpoint + ': ' + err)
+            if (onError) onError(String(err))
+        }
+    })
+}
+
+function postWebhookAsync(server, endpoint, payloadObj, onSuccess, onError) {
     let cfg = getWebSyncConfig()
     if (!cfg.enabled) return
     if (!cfg.secret || cfg.secret === 'COLE_AQUI_O_VALOR_DO_MINECRAFT_SECRET') {
@@ -84,29 +181,17 @@ function postWebhookAsync(endpoint, payloadObj, onSuccess, onError) {
     try {
         let url = cfg.api_base_url + endpoint
         let jsonBody = JSON.stringify(payloadObj)
-        let request = $HttpRequest.newBuilder($URI.create(url))
-            .header('Content-Type', 'application/json; charset=utf-8')
-            .header('X-Minecraft-Secret', cfg.secret)
-            .timeout($Duration.ofSeconds(15))
-            .POST($BodyPublishers.ofString(jsonBody))
-            .build()
+        let rb = $HttpRequest.newBuilder($URI.create(url))
+        _mHeader.invoke(rb, 'Content-Type', 'application/json; charset=utf-8')
+        _mHeader.invoke(rb, 'X-Minecraft-Secret', cfg.secret)
+        _mTimeout.invoke(rb, $Duration.ofSeconds(15))
+        _mPost.invoke(rb, $BodyPublishers.ofString(jsonBody))
+        let request = _mReqBuild.invoke(rb)
 
-        HTTP_CLIENT.sendAsync(request, $BodyHandlers.ofString())
-            .thenAccept(response => {
-                let status = response.statusCode()
-                let body = String(response.body() || '')
-                if (status >= 200 && status < 300) {
-                    if (onSuccess) onSuccess(status, body)
-                } else {
-                    console.warn('[FirmaWebSync] Erro HTTP ' + status + ' em ' + endpoint + ': ' + body)
-                    if (onError) onError('HTTP ' + status + ': ' + body)
-                }
-            })
-            .exceptionally(ex => {
-                console.error('[FirmaWebSync] Excecao na chamada para ' + endpoint + ': ' + ex)
-                if (onError) onError(String(ex))
-                return null
-            })
+        let future = _mSendAsync.invoke(HTTP_CLIENT, request, $BodyHandlers.ofString())
+        if (server && (onSuccess || onError)) {
+            pollFutureOnServer(server, future, endpoint, onSuccess, onError, 0)
+        }
     } catch (err) {
         console.error('[FirmaWebSync] Erro ao montar requisicao para ' + endpoint + ': ' + err)
         if (onError) onError(String(err))
@@ -190,8 +275,9 @@ function extractBadgesAndProgress(player) {
                 }
             }
             try {
+                let currentSeries = String(ps.getCurrentSeries() || '').trim()
                 let rctCap = ps.getLevelCap()
-                if (rctCap > 0 && rctCap <= 100) {
+                if (currentSeries && currentSeries !== 'empty' && currentSeries !== 'null' && rctCap > 0 && rctCap <= 100) {
                     levelCap = rctCap
                 }
             } catch (e) {}
@@ -495,6 +581,7 @@ function syncPlayerToWeb(player, forceImmediate, feedbackCallback) {
 
     let payload = buildPlayerSyncPayload(player)
     postWebhookAsync(
+        srv,
         '/api/minecraft/sync/player',
         payload,
         (status, body) => {
@@ -540,6 +627,7 @@ ServerEvents.commandRegistry(event => {
                 player.tell(Text.of('§e[Firma League] §7Gerando codigo de vinculacao com §bpoke-firma.vercel.app§7...'))
 
                 postWebhookAsync(
+                    srv,
                     '/api/minecraft/link/create',
                     {
                         token: token,
@@ -548,20 +636,16 @@ ServerEvents.commandRegistry(event => {
                         expires_at: expiresAt
                     },
                     (status, body) => {
-                        srv.execute(() => {
-                            player.tell(Text.of('§6====================================================='))
-                            player.tell(Text.of('§a§l✔ CODIGO DE VINCULACAO GERADO COM SUCESSO!'))
-                            player.tell(Text.of('§fSeu codigo: §b§l' + token + ' §7(valido por 1 hora)'))
-                            player.tell(Text.of('§71. Acesse §b§nhttps://poke-firma.vercel.app/perfil'))
-                            player.tell(Text.of('§72. Faca login e cole o codigo §e' + token))
-                            player.tell(Text.of('§73. Voce recebera seu §aTrainer ID (TR-XXX)§7 verificado!'))
-                            player.tell(Text.of('§6====================================================='))
-                        })
+                        player.tell(Text.of('§6====================================================='))
+                        player.tell(Text.of('§a§l✔ CODIGO DE VINCULACAO GERADO COM SUCESSO!'))
+                        player.tell(Text.of('§fSeu codigo: §b§l' + token + ' §7(valido por 1 hora)'))
+                        player.tell(Text.of('§71. Acesse §b§nhttps://poke-firma.vercel.app/perfil'))
+                        player.tell(Text.of('§72. Faca login e cole o codigo §e' + token))
+                        player.tell(Text.of('§73. Voce recebera seu §aTrainer ID (TR-XXX)§7 verificado!'))
+                        player.tell(Text.of('§6====================================================='))
                     },
                     (err) => {
-                        srv.execute(() => {
-                            player.tell(Text.of('§c[Firma League] Falha ao comunicar com o site: ' + err))
-                        })
+                        player.tell(Text.of('§c[Firma League] Falha ao comunicar com o site: ' + err))
                     }
                 )
 
@@ -578,16 +662,13 @@ ServerEvents.commandRegistry(event => {
         Commands.literal('sincronizar')
             .executes(ctx => {
                 let player = ctx.source.playerOrException
-                let srv = player.getServer()
                 player.tell(Text.of('§e[Firma League] §7Sincronizando Time, PC, Pokedex e Insignias com o site...'))
                 syncPlayerToWeb(player, true, (ok, info) => {
-                    srv.execute(() => {
-                        if (ok) {
-                            player.tell(Text.of('§a[Firma League] ✔ Perfil sincronizado ao vivo em §bpoke-firma.vercel.app§a!'))
-                        } else {
-                            player.tell(Text.of('§c[Firma League] Erro ao sincronizar: ' + info))
-                        }
-                    })
+                    if (ok) {
+                        player.tell(Text.of('§a[Firma League] ✔ Perfil sincronizado ao vivo em §bpoke-firma.vercel.app§a!'))
+                    } else {
+                        player.tell(Text.of('§c[Firma League] Erro ao sincronizar: ' + info))
+                    }
                 })
                 return 1
             })
@@ -699,6 +780,7 @@ ServerEvents.loaded(serverEvent => {
                 let koLoser = winnerFaintedCount
 
                 postWebhookAsync(
+                    serverEvent.server,
                     '/api/minecraft/tournament/match-result',
                     {
                         battle_id: battleId,
