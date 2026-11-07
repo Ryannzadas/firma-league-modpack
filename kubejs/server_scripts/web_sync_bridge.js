@@ -11,79 +11,26 @@ const $PokemonSpecies = Java.loadClass('com.cobblemon.mod.common.api.pokemon.Pok
 const $Stats = Java.loadClass('com.cobblemon.mod.common.api.pokemon.stats.Stats')
 const $PlayerState = Java.loadClass('com.gitlab.srcmc.rctmod.api.data.sync.PlayerState')
 
-// Java 21 HTTP Client classes (whitelisted via kubejs.classfilter.txt in zzz-firma-league-core)
-// Uses vararg Method.invoke on public java.net.http interfaces so Rhino's JPMS module
-// never calls setAccessible(true) on internal jdk.internal.net.http.* implementation classes.
-let $URI = null
-let $Duration = null
-let $String = null
-let $HttpClient = null
-let $HttpClientBuilder = null
-let $HttpRequest = null
-let $HttpRequestBuilder = null
-let $BodyPublisher = null
-let $BodyPublishers = null
-let $BodyHandler = null
-let $BodyHandlers = null
-let $HttpResponse = null
-let $CompletableFuture = null
-
-let HTTP_CLIENT = null
-let _mConnectTimeout = null
-let _mClientBuild = null
-let _mSendAsync = null
-let _mHeader = null
-let _mTimeout = null
-let _mPost = null
-let _mReqBuild = null
-let _mStatusCode = null
-let _mBody = null
-let _mIsDone = null
-let _mIsCompletedExceptionally = null
-let _mJoin = null
+// HTTP Client assincrono para KubeJS via Apache HttpComponents (incluso nativamente no Minecraft 1.21.1)
+// Nao depende de reflexao nem de classes internas encapsuladas pelo JPMS do Java 21.
+let $HttpClients = null
+let $HttpPost = null
+let $StringEntity = null
+let $EntityUtils = null
+let $RequestConfig = null
+let $Thread = null
 
 try {
-    $URI = Java.loadClass('java.net.URI')
-    $Duration = Java.loadClass('java.time.Duration')
-    $String = Java.loadClass('java.lang.String')
-    $HttpClient = Java.loadClass('java.net.http.HttpClient')
-    $HttpClientBuilder = Java.loadClass('java.net.http.HttpClient$Builder')
-    $HttpRequest = Java.loadClass('java.net.http.HttpRequest')
-    $HttpRequestBuilder = Java.loadClass('java.net.http.HttpRequest$Builder')
-    $BodyPublisher = Java.loadClass('java.net.http.HttpRequest$BodyPublisher')
-    $BodyPublishers = Java.loadClass('java.net.http.HttpRequest$BodyPublishers')
-    $BodyHandler = Java.loadClass('java.net.http.HttpResponse$BodyHandler')
-    $BodyHandlers = Java.loadClass('java.net.http.HttpResponse$BodyHandlers')
-    $HttpResponse = Java.loadClass('java.net.http.HttpResponse')
-    $CompletableFuture = Java.loadClass('java.util.concurrent.CompletableFuture')
-
-    let cBuilderCls = $HttpClientBuilder.__javaObject__
-    let cClientCls = $HttpClient.__javaObject__
-    let rBuilderCls = $HttpRequestBuilder.__javaObject__
-    let rRespCls = $HttpResponse.__javaObject__
-    let cfCls = $CompletableFuture.__javaObject__
-
-    _mConnectTimeout = cBuilderCls.getMethod('connectTimeout', $Duration)
-    _mClientBuild = cBuilderCls.getMethod('build')
-    _mSendAsync = cClientCls.getMethod('sendAsync', $HttpRequest, $BodyHandler)
-    _mHeader = rBuilderCls.getMethod('header', $String, $String)
-    _mTimeout = rBuilderCls.getMethod('timeout', $Duration)
-    _mPost = rBuilderCls.getMethod('POST', $BodyPublisher)
-    _mReqBuild = rBuilderCls.getMethod('build')
-    _mStatusCode = rRespCls.getMethod('statusCode')
-    _mBody = rRespCls.getMethod('body')
-    _mIsDone = cfCls.getMethod('isDone')
-    _mIsCompletedExceptionally = cfCls.getMethod('isCompletedExceptionally')
-    _mJoin = cfCls.getMethod('join')
-
-    let cb = $HttpClient.newBuilder()
-    _mConnectTimeout.invoke(cb, $Duration.ofSeconds(10))
-    HTTP_CLIENT = _mClientBuild.invoke(cb)
-    console.info('[FirmaWebSync] HttpClient inicializado com sucesso (JPMS Safe Mode)!')
+    $HttpClients = Java.loadClass('org.apache.http.impl.client.HttpClients')
+    $HttpPost = Java.loadClass('org.apache.http.client.methods.HttpPost')
+    $StringEntity = Java.loadClass('org.apache.http.entity.StringEntity')
+    $EntityUtils = Java.loadClass('org.apache.http.util.EntityUtils')
+    $RequestConfig = Java.loadClass('org.apache.http.client.config.RequestConfig')
+    $Thread = Java.loadClass('java.lang.Thread')
+    console.info('[FirmaWebSync] Apache HttpClient assincrono carregado com sucesso!')
 } catch (err) {
-    console.error('[FirmaWebSync] Falha ao carregar java.net.http.HttpClient. Verifique se zzz-firma-league-core-2.0.0.jar esta atualizado: ' + err)
+    console.warn('[FirmaWebSync] Apache HttpClient nao carregado: ' + err)
 }
-
 // ----------------------------------------------------------------------------
 // 1. CONFIGURAÇÃO E CREDENCIAIS
 // ----------------------------------------------------------------------------
@@ -128,43 +75,6 @@ function isAllowedServerEnvironment(server) {
     return true
 }
 
-function pollFutureOnServer(server, future, endpoint, onSuccess, onError, attempt) {
-    if (!server || (!onSuccess && !onError)) return
-    let tries = attempt || 0
-    server.scheduleInTicks(5, () => {
-        try {
-            if (String(_mIsDone.invoke(future)) !== 'true') {
-                if (tries < 60) {
-                    pollFutureOnServer(server, future, endpoint, onSuccess, onError, tries + 1)
-                } else if (onError) {
-                    onError('Timeout aguardando resposta de ' + endpoint)
-                }
-                return
-            }
-            if (String(_mIsCompletedExceptionally.invoke(future)) === 'true') {
-                if (onError) onError('Falha de rede ao conectar em ' + endpoint)
-                return
-            }
-            let response = _mJoin.invoke(future)
-            if (!response) {
-                if (onError) onError('Resposta vazia de ' + endpoint)
-                return
-            }
-            let status = Number(String(_mStatusCode.invoke(response)))
-            let body = String(_mBody.invoke(response) || '')
-            if (status >= 200 && status < 300) {
-                if (onSuccess) onSuccess(status, body)
-            } else {
-                console.warn('[FirmaWebSync] Erro HTTP ' + status + ' em ' + endpoint + ': ' + body)
-                if (onError) onError('HTTP ' + status + ': ' + body)
-            }
-        } catch (err) {
-            console.error('[FirmaWebSync] Erro ao processar resposta de ' + endpoint + ': ' + err)
-            if (onError) onError(String(err))
-        }
-    })
-}
-
 function postWebhookAsync(server, endpoint, payloadObj, onSuccess, onError) {
     let cfg = getWebSyncConfig()
     if (!cfg.enabled) return
@@ -173,28 +83,70 @@ function postWebhookAsync(server, endpoint, payloadObj, onSuccess, onError) {
         if (onError) onError('MINECRAFT_SECRET nao configurado no servidor.')
         return
     }
-    if (!HTTP_CLIENT) {
-        if (onError) onError('HttpClient indisponivel no KubeJS.')
+    if (!$HttpClients || !$HttpPost || !$StringEntity) {
+        let msg = 'Apache HttpClient indisponivel no servidor.'
+        console.warn('[FirmaWebSync] ' + msg)
+        if (onError) onError(msg)
         return
     }
 
-    try {
-        let url = cfg.api_base_url + endpoint
-        let jsonBody = JSON.stringify(payloadObj)
-        let rb = $HttpRequest.newBuilder($URI.create(url))
-        _mHeader.invoke(rb, 'Content-Type', 'application/json; charset=utf-8')
-        _mHeader.invoke(rb, 'X-Minecraft-Secret', cfg.secret)
-        _mTimeout.invoke(rb, $Duration.ofSeconds(15))
-        _mPost.invoke(rb, $BodyPublishers.ofString(jsonBody))
-        let request = _mReqBuild.invoke(rb)
+    let urlStr = cfg.api_base_url + endpoint
+    let jsonBody = JSON.stringify(payloadObj)
 
-        let future = _mSendAsync.invoke(HTTP_CLIENT, request, $BodyHandlers.ofString())
-        if (server && (onSuccess || onError)) {
-            pollFutureOnServer(server, future, endpoint, onSuccess, onError, 0)
-        }
-    } catch (err) {
-        console.error('[FirmaWebSync] Erro ao montar requisicao para ' + endpoint + ': ' + err)
-        if (onError) onError(String(err))
+    try {
+        let t = new $Thread(() => {
+            let client = null
+            try {
+                client = $HttpClients.createDefault()
+                let post = new $HttpPost(urlStr)
+                post.setHeader('Content-Type', 'application/json; charset=utf-8')
+                post.setHeader('X-Minecraft-Secret', cfg.secret)
+
+                if ($RequestConfig) {
+                    let reqConfig = $RequestConfig.custom()
+                        .setConnectTimeout(8000)
+                        .setSocketTimeout(12000)
+                        .build()
+                    post.setConfig(reqConfig)
+                }
+
+                post.setEntity(new $StringEntity(jsonBody, 'UTF-8'))
+                let response = client.execute(post)
+                let status = response.getStatusLine().getStatusCode()
+                let respText = ''
+                if (response.getEntity() != null && $EntityUtils) {
+                    respText = String($EntityUtils.toString(response.getEntity(), 'UTF-8'))
+                }
+
+                if (server) {
+                    server.scheduleInTicks(1, () => {
+                        if (status >= 200 && status < 300) {
+                            if (onSuccess) onSuccess(status, respText)
+                        } else {
+                            console.warn('[FirmaWebSync] Erro HTTP ' + status + ' em ' + endpoint + ': ' + respText)
+                            if (onError) onError('HTTP ' + status + ': ' + respText)
+                        }
+                    })
+                }
+            } catch (netErr) {
+                console.error('[FirmaWebSync] Falha de conexao com ' + endpoint + ': ' + netErr)
+                if (server && onError) {
+                    server.scheduleInTicks(1, () => {
+                        onError('Falha de conexao com ' + endpoint + ': ' + netErr)
+                    })
+                }
+            } finally {
+                if (client != null) {
+                    try { client.close() } catch (e) {}
+                }
+            }
+        })
+        t.setDaemon(true)
+        t.setName('FirmaWebSync-Worker')
+        t.start()
+    } catch (startErr) {
+        console.error('[FirmaWebSync] Falha ao disparar thread assincrona: ' + startErr)
+        if (onError) onError(String(startErr))
     }
 }
 
