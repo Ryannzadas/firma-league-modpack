@@ -34,6 +34,54 @@ try {
 // ----------------------------------------------------------------------------
 // 1. CONFIGURAÇÃO E CREDENCIAIS
 // ----------------------------------------------------------------------------
+// ============================================================================
+// HELPER COMPATIBILIDADE MINECRAFT / KUBEJS (Player, UUID, Nick, Server)
+// ============================================================================
+function getPlayerUuid(player) {
+    if (!player) return null
+    try {
+        if (player.uuid) return player.uuid
+        if (typeof player.getUuid === 'function') return player.getUuid()
+        if (typeof player.getUUID === 'function') return player.getUUID()
+        if (player.gameProfile && player.gameProfile.id) return player.gameProfile.id
+        if (typeof player.getGameProfile === 'function' && player.getGameProfile()) return player.getGameProfile().getId()
+    } catch (e) {}
+    return null
+}
+
+function getPlayerUuidString(player) {
+    if (!player) return ''
+    try {
+        if (player.stringUuid) return String(player.stringUuid)
+        let u = getPlayerUuid(player)
+        if (u) return String(u.toString())
+    } catch (e) {}
+    return ''
+}
+
+function getPlayerNick(player) {
+    if (!player) return ''
+    try {
+        if (player.username) return String(player.username)
+        if (player.gameProfile && player.gameProfile.name) return String(player.gameProfile.name)
+        if (typeof player.getGameProfile === 'function' && player.getGameProfile()) return String(player.getGameProfile().getName())
+        if (player.name && player.name.string) return String(player.name.string)
+    } catch (e) {}
+    return ''
+}
+
+function getPlayerServer(player) {
+    if (!player) return null
+    try {
+        if (player.server) return player.server
+        if (typeof player.getServer === 'function') return player.getServer()
+    } catch (e) {}
+    try {
+        if (typeof Utils !== 'undefined' && Utils.server) return Utils.server
+    } catch (e) {}
+    return null
+}
+
 function getWebSyncConfig() {
     let cfg = {
         enabled: true,
@@ -404,9 +452,9 @@ function serializePokemon(pkmn, extraFields) {
 }
 
 function buildPlayerSyncPayload(player) {
-    let playerUuidObj = player.getUUID()
-    let uuid = String(playerUuidObj.toString())
-    let nick = String(player.getGameProfile().getName())
+    let playerUuidObj = getPlayerUuid(player)
+    let uuid = getPlayerUuidString(player)
+    let nick = getPlayerNick(player)
     let progress = extractBadgesAndProgress(player)
 
     // 1. Party (usa iterator() para não colidir com PokemonStore.get(UUID) no Rhino!)
@@ -519,12 +567,12 @@ const LAST_SYNC_TIME = {}
 
 function syncPlayerToWeb(player, forceImmediate, feedbackCallback) {
     if (!player) return
-    let srv = player.getServer()
+    let srv = getPlayerServer(player)
     if (!isAllowedServerEnvironment(srv)) {
         if (feedbackCallback) feedbackCallback(false, 'Sincronizacao ativa apenas no servidor dedicado oficial (EnxadaHost).')
         return
     }
-    let uuid = String(player.getUUID().toString())
+    let uuid = getPlayerUuidString(player)
     let now = Date.now()
     if (!forceImmediate && LAST_SYNC_TIME[uuid] && (now - LAST_SYNC_TIME[uuid] < 4000)) {
         return
@@ -566,15 +614,15 @@ ServerEvents.commandRegistry(event => {
         Commands.literal('vincular')
             .executes(ctx => {
                 let player = ctx.source.playerOrException
-                let srv = player.getServer()
+                let srv = getPlayerServer(player)
                 if (!isAllowedServerEnvironment(srv)) {
                     player.tell(Text.of('§c[Firma League] O comando /vincular so pode ser usado dentro do servidor oficial da EnxadaHost!'))
                     return 0
                 }
                 let token = generateLinkCode()
                 let expiresAt = Date.now() + 3600 * 1000 // 1 hora
-                let uuidStr = String(player.getUUID().toString())
-                let nickStr = String(player.getGameProfile().getName())
+                let uuidStr = getPlayerUuidString(player)
+                let nickStr = getPlayerNick(player)
 
                 player.tell(Text.of('§e[Firma League] §7Gerando codigo de vinculacao com §bpoke-firma.vercel.app§7...'))
 
@@ -646,8 +694,9 @@ ServerEvents.loaded(serverEvent => {
     $CobblemonEvents.POKEMON_CAPTURED.subscribe($Priority.NORMAL, event => {
         try {
             let player = event.getPlayer()
-            if (player && player.getServer()) {
-                player.getServer().scheduleInTicks(20, () => {
+            let srv = getPlayerServer(player)
+            if (player && srv) {
+                srv.scheduleInTicks(20, () => {
                     syncPlayerToWeb(player, false, null)
                 })
             }
@@ -659,8 +708,9 @@ ServerEvents.loaded(serverEvent => {
         try {
             let pkmn = event.getPokemon()
             let player = pkmn ? pkmn.getOwnerPlayer() : null
-            if (player && player.getServer()) {
-                player.getServer().scheduleInTicks(20, () => {
+            let srv = getPlayerServer(player)
+            if (player && srv) {
+                srv.scheduleInTicks(20, () => {
                     syncPlayerToWeb(player, false, null)
                 })
             }
@@ -671,8 +721,9 @@ ServerEvents.loaded(serverEvent => {
     $CobblemonEvents.HATCH_EGG_POST.subscribe($Priority.NORMAL, event => {
         try {
             let player = event.getPlayer()
-            if (player && player.getServer()) {
-                player.getServer().scheduleInTicks(20, () => {
+            let srv = getPlayerServer(player)
+            if (player && srv) {
+                srv.scheduleInTicks(20, () => {
                     syncPlayerToWeb(player, false, null)
                 })
             }
@@ -691,8 +742,9 @@ ServerEvents.loaded(serverEvent => {
             let playersList = battle.getPlayers()
             for (let i = 0; i < playersList.size(); i++) {
                 let p = playersList.get(i)
-                if (p && p.getServer()) {
-                    p.getServer().scheduleInTicks(40, () => {
+                let psrv = getPlayerServer(p)
+                if (p && psrv) {
+                    psrv.scheduleInTicks(40, () => {
                         syncPlayerToWeb(p, true, null)
                     })
                 }
