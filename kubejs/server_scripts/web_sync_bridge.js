@@ -11,25 +11,15 @@ const $PokemonSpecies = Java.loadClass('com.cobblemon.mod.common.api.pokemon.Pok
 const $Stats = Java.loadClass('com.cobblemon.mod.common.api.pokemon.stats.Stats')
 const $PlayerState = Java.loadClass('com.gitlab.srcmc.rctmod.api.data.sync.PlayerState')
 
-// HTTP Client assincrono para KubeJS via Apache HttpComponents (incluso nativamente no Minecraft 1.21.1)
-// Nao depende de reflexao nem de classes internas encapsuladas pelo JPMS do Java 21.
-let $HttpClients = null
-let $HttpPost = null
-let $StringEntity = null
-let $EntityUtils = null
-let $RequestConfig = null
-let $Thread = null
+// HTTP Client assincrono nativo para KubeJS via FirmaWebClient (zzz-firma-league-core)
+// Executa em thread Java daemon nativa sem restricoes de JPMS nem reflexao.
+let $FirmaWebClient = null
 
 try {
-    $HttpClients = Java.loadClass('org.apache.http.impl.client.HttpClients')
-    $HttpPost = Java.loadClass('org.apache.http.client.methods.HttpPost')
-    $StringEntity = Java.loadClass('org.apache.http.entity.StringEntity')
-    $EntityUtils = Java.loadClass('org.apache.http.util.EntityUtils')
-    $RequestConfig = Java.loadClass('org.apache.http.client.config.RequestConfig')
-    $Thread = Java.loadClass('java.lang.Thread')
-    console.info('[FirmaWebSync] Apache HttpClient assincrono carregado com sucesso!')
+    $FirmaWebClient = Java.loadClass('com.firmaleague.core.FirmaWebClient')
+    console.info('[FirmaWebSync] FirmaWebClient assincrono carregado com sucesso!')
 } catch (err) {
-    console.warn('[FirmaWebSync] Apache HttpClient nao carregado: ' + err)
+    console.warn('[FirmaWebSync] FirmaWebClient nao encontrado: ' + err)
 }
 // ----------------------------------------------------------------------------
 // 1. CONFIGURAÇÃO E CREDENCIAIS
@@ -131,8 +121,8 @@ function postWebhookAsync(server, endpoint, payloadObj, onSuccess, onError) {
         if (onError) onError('MINECRAFT_SECRET nao configurado no servidor.')
         return
     }
-    if (!$HttpClients || !$HttpPost || !$StringEntity) {
-        let msg = 'Apache HttpClient indisponivel no servidor.'
+    if (!$FirmaWebClient) {
+        let msg = 'FirmaWebClient indisponivel no servidor. Verifique zzz-firma-league-core-2.0.0.jar.'
         console.warn('[FirmaWebSync] ' + msg)
         if (onError) onError(msg)
         return
@@ -142,59 +132,21 @@ function postWebhookAsync(server, endpoint, payloadObj, onSuccess, onError) {
     let jsonBody = JSON.stringify(payloadObj)
 
     try {
-        let t = new $Thread(() => {
-            let client = null
-            try {
-                client = $HttpClients.createDefault()
-                let post = new $HttpPost(urlStr)
-                post.setHeader('Content-Type', 'application/json; charset=utf-8')
-                post.setHeader('X-Minecraft-Secret', cfg.secret)
-
-                if ($RequestConfig) {
-                    let reqConfig = $RequestConfig.custom()
-                        .setConnectTimeout(8000)
-                        .setSocketTimeout(12000)
-                        .build()
-                    post.setConfig(reqConfig)
-                }
-
-                post.setEntity(new $StringEntity(jsonBody, 'UTF-8'))
-                let response = client.execute(post)
-                let status = response.getStatusLine().getStatusCode()
-                let respText = ''
-                if (response.getEntity() != null && $EntityUtils) {
-                    respText = String($EntityUtils.toString(response.getEntity(), 'UTF-8'))
-                }
-
-                if (server) {
-                    server.scheduleInTicks(1, () => {
-                        if (status >= 200 && status < 300) {
-                            if (onSuccess) onSuccess(status, respText)
-                        } else {
-                            console.warn('[FirmaWebSync] Erro HTTP ' + status + ' em ' + endpoint + ': ' + respText)
-                            if (onError) onError('HTTP ' + status + ': ' + respText)
-                        }
-                    })
-                }
-            } catch (netErr) {
-                console.error('[FirmaWebSync] Falha de conexao com ' + endpoint + ': ' + netErr)
-                if (server && onError) {
-                    server.scheduleInTicks(1, () => {
-                        onError('Falha de conexao com ' + endpoint + ': ' + netErr)
-                    })
-                }
-            } finally {
-                if (client != null) {
-                    try { client.close() } catch (e) {}
-                }
+        $FirmaWebClient.postAsync(urlStr, jsonBody, cfg.secret, (status, respText) => {
+            if (server) {
+                server.scheduleInTicks(1, () => {
+                    if (status >= 200 && status < 300) {
+                        if (onSuccess) onSuccess(status, String(respText || ''))
+                    } else {
+                        console.warn('[FirmaWebSync] Erro HTTP ' + status + ' em ' + endpoint + ': ' + respText)
+                        if (onError) onError('HTTP ' + status + ': ' + respText)
+                    }
+                })
             }
         })
-        t.setDaemon(true)
-        t.setName('FirmaWebSync-Worker')
-        t.start()
-    } catch (startErr) {
-        console.error('[FirmaWebSync] Falha ao disparar thread assincrona: ' + startErr)
-        if (onError) onError(String(startErr))
+    } catch (err) {
+        console.error('[FirmaWebSync] Erro ao disparar requisicao web: ' + err)
+        if (onError) onError(String(err))
     }
 }
 
